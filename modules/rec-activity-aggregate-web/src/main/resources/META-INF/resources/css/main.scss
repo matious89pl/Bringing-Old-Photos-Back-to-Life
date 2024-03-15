@@ -1,0 +1,158 @@
+button {
+	font-size: 12px;
+}
+
+p.goToStatus {
+	margin-bottom: 0;
+}
+
+th {
+	color: #9b9b9b;
+	font-size: 12px;
+	font-weight: normal;
+	letter-spacing: .25px;
+	line-height: 18px;
+	border: none
+}
+
+td {
+	padding: 5px;
+	border: none;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+    margin-top: 3%;
+}
+
+tr {
+	border-bottom: solid 3px #ececec;
+	background: none !important;
+}
+
+a.rpa_newActivity {
+	background: #b1c568;
+	padding: 11px;
+	border-radius: 6px;
+	color: white;
+	font-size: 12px;
+	border: 0;
+	margin-right: 12px;
+	float: right;
+	margin-left: 11px;
+	
+}
+
+.actionColumn {
+    padding-left: 1%;
+}
+
+input#rpa_updateStatusButton {
+    background-color: #70ada3 !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: white;
+    margin: 0 auto;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+input[type="button"] {
+	padding: 10px;
+	border-radius: 6px;
+	width: fit-content;
+	margin-bottom: 0;
+	font-size: 12px;
+	border: 0;
+	margin-left: 15px;
+}
+
+.deleteActivity, .saveButton{
+	background-color: #70ada3 !important;
+	color: white !important;
+    font-weight: normal;
+    float: right;
+}
+
+.deleteActivity{
+	background-color: #70ada3 !important;
+	color: white !important;
+    font-weight: normal;
+}
+
+.saveButton {
+	padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.cancelButton {
+	width: fit-content;
+    padding: 11px;
+    border-radius: 6px !important;
+    font-size: 13px !important;
+    border: none;
+    font-weight: normal;
+    margin-left: 10px;
+	text-decoration: underline !important;
+    color: black !important;
+    font-size: 15px !important;
+	background: #cdced9 !important
+}
+.importCSVdiv {
+	display: none;
+	float: left;
+}
+
+.csvDataFile {
+	float: left;
+	margin-right: 25px;
+	margin-top: 5px;
+}
+
+.importCSVbtn {
+	float: left;
+	margin-right: 10px;
+}
+
+.cancelCSVbtn {
+	float: left;
+	margin-right: 10px;
+}
+
+.importMainDiv {
+	float: right;
+}
+
+#rpa_updateStatus_popup{
+	display: none;
+}
+
+#div_rpa_popup{
+    width: 270px !important;
+    height: auto;
+    text-align: center;
+}
+
+.popupSolutions {
+	padding: 25px 20px 20px 20px !important;
+}
+
+.aggregateButton{
+    padding: 11px;
+    border-radius: 6px;
+    color: white;
+    font-size: 12px;
+    border: 0;
+    margin-right: 12px;
+    float: right;
+    background: #4d8934;
+    margin-left: 5%;
+}
+
+a:hover.aggregateButton {
+    color: white;
+}

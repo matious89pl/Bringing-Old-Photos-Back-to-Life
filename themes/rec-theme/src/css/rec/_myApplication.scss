@@ -1,0 +1,304 @@
+.applications-detail {
+    .right {
+        float: right;
+    }
+    
+    #AddEntry {
+        margin-right: 10px
+    }
+    
+    div.clear {
+        clear:both;
+    }
+    
+    .ddl-list .container-fluid{
+        margin: 0 !important;
+        padding: 0;
+    }
+    .ddl-list .portlet-content{
+        padding: 0 !important;
+    }
+
+    p.bold {
+        font-weight: bold;
+    }
+
+    #Detail-f {
+        background: white;
+        border-radius: 4px;
+        padding: 15px;
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        li {
+            font-size: 15px;
+            font-family: "Roboto-bold" !important;
+            letter-spacing: 0.25px;
+            line-height: 18px;
+        }
+    }
+
+    .form-control-file, form {
+        margin-top: 15px;
+    }
+
+    h1 {
+        margin-left: 15px;
+        margin-bottom: 25px;
+    }
+        .actions {
+            background: #b1c568;
+            border-radius: 5px;
+            color: white;
+            font-size: 12px;
+            font-weight: normal;
+            letter-spacing: 0.25px;
+            line-height: 18px;
+            height: 36px;
+            border: none;
+            padding: 9px 16px 9px 17px;
+        }
+        a.actions {
+            background: #7b282e;
+        }
+        button {
+            margin-top: 12px;
+        }
+        button.subtablinks, button.subtablinks2 {
+            background-color: white;
+            border: none;
+            font-size: 16px;
+            font-weight: normal;
+            letter-spacing: 0.5px;
+            line-height: 24px;
+            border-radius: 0px;
+            height: 40px;
+            padding: 0px 1%;
+        }
+        
+    
+        button.subtablinks:focus, button.subtablinks:focus {
+            outline: none;
+        }
+        
+    
+        button.subtablinks.active, button.subtablinks2.active {
+            font-family: "Roboto-bold" !important;
+            border-bottom: 2px solid rgb(77, 137, 52);
+        }
+        #AddEntry {
+            background: #b1c568;
+            border-radius: 5px;
+            color: white;
+            font-size: 12px;
+            font-weight: normal;
+            letter-spacing: 0.25px;
+            line-height: 18px;
+            height: 36px;
+            border: none;
+            padding: 9px 16px 9px 17px;
+        }
+}
+
+#myApplication, #activityLogs, #milestone, #docsLogs{
+
+    #myApplicationTableList, .tableList{
+        border-style: none;
+        border-collapse: collapse;
+        width: 98%;
+        margin-left: 1%;
+
+        tr {
+            border-bottom: solid 3px #ececec;
+        }
+
+        th {
+            color: #9b9b9b;
+            font-size: 12px;
+            font-weight: normal;
+            height: 18px;
+            letter-spacing: 0.25px;
+            line-height: 18px;    
+        }
+
+        .reference {
+            font-weight: 700;
+        }
+
+        .applicationStatus{
+            letter-spacing: .25px;
+        }
+
+        .applicationStatusComplete p{
+            background: #b1c568;
+            padding: 3px;
+            border-radius: 2px;
+            color: white;
+            width: fit-content;
+            margin-bottom: 0;
+            font-size: 12px;
+        }
+
+        .applicationStatusInprogress p{
+            background: #f5b01e;
+            padding: 3px;
+            border-radius: 2px;
+            color: white;
+            width: fit-content;
+            margin-bottom: 0;
+            font-size: 12px;
+        }
+
+        p.img {
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 4px; 
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+        }
+    }
+
+    .filterOpt{
+        float: right; 
+        font-size: 17px;
+        width: 9%;
+    }
+
+    .filterOpt img{
+        width: 20px;
+    }
+
+    .filterOpt a{
+    color:black;
+    }
+
+    td {
+        padding: 5px;
+    }
+
+    #myApplicationTitle{
+        float: left;
+        color: black;
+        font-size: 32px;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        line-height: 48px;
+        font-family: "Roboto-medium" !important;
+		width: 84%;
+    }
+
+    div#myApplicationButtons {
+        margin-bottom: 40px;  
+
+        #newApplication{
+            background: #b1c568;
+            padding: 10px;
+            border-radius: 3px;
+            color: white;
+            width: fit-content;
+            margin-bottom: 0;
+            font-size: 12px;
+            border: none;
+            margin-right: 12px;
+        }
+
+        #askHelp{
+            background: #7b282e;
+            padding: 10px;
+            border-radius: 3px;
+            color: white;
+            width: fit-content;
+            margin-bottom: 0;
+            font-size: 12px;
+            border: none;
+            margin-right: 12px;
+        }
+    }
+
+    #myApplicationContent{
+        background-color: white;
+        border-radius: 4px;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+        margin-top: 1%;
+        padding-top: 1%;
+    }
+
+    img.img {
+        background: rgba(0,0,0,0.25);
+        border-radius: 4px;
+        padding: 10px;
+    }
+
+}
+
+#tabsDetails{
+	padding-bottom: 10px;
+}
+
+#milestone, #activityLogs, #docsLogs{
+   
+    background-color: white;
+    padding: 5px;
+    padding-bottom: 20px;
+    padding-top: 15px;
+    height: auto;
+    margin-right: -11px;
+    margin-left: -11px;
+
+    .title{
+        float: left;
+        color: black;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        margin-left: 12px;
+        line-height: 48px;
+        font-family: "Roboto-medium" !important;
+    }
+
+	th {
+        padding-left: 5px;    
+    }
+    
+    tr{
+        border: none !important;
+    }
+    
+     td{
+    	border-width: 0;
+	}
+    
+    .table-sort-indicator{
+        display: none;
+    }
+
+	.table-x-scroller, .table-y-scroller-container {
+	    border: none;
+	}
+	
+	.table-striped tbody tr:nth-of-type(odd) td, .table-striped tbody tr:nth-of-type(odd) th {
+	    background-color: #ffffff;
+	}
+	
+	.table thead td, .table thead th {
+	    border-bottom: none; 
+	}
+	
+	.table-col-PM_Status {
+	            font-family: Roboto-Bold;
+	font-size: 10px;
+	font-weight: bold;
+	height: 15px;
+	letter-spacing: 0.25px;
+	line-height: 15px;
+	width: 44px;
+	display: unset;
+	     }
+	
+	.lfr-spreadsheet-add-rows-buttons{
+	    display: none;
+	}
+}

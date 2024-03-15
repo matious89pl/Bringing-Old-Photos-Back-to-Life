@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.3.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_3_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="rec.customnotification">
+	<namespace>REC</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="NotificationRpa" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="customNotificationId" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		
+		<column name="plidPage" type="long" />
+		<column name="targetName" type="String" />
+		<column name="notificationTitle" type="String"/>
+		<column name="notificationBody" type="String"/>
+		<column name="url" type="String"/>
+		<column name="deliveryMethod" type="String"/>
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="createDate" />
+		</order>
+
+		<!-- Finder methods -->
+		
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+		
+		<finder name="GroupIdPlidPage" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="plidPage" />
+		</finder>
+		
+		<finder name="NotificationTitle" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="plidPage" />
+			<finder-column name="notificationTitle" />
+		</finder>
+		
+		<finder name="NotificationBody" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="plidPage" />
+			<finder-column name="notificationBody" />
+		</finder>
+		
+		<finder name="CreateDate" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="plidPage" />
+			<finder-column name="createDate" />
+		</finder>
+		
+		<finder name="TargetName" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="plidPage" />
+			<finder-column name="targetName" />
+		</finder>
+
+	</entity>
+</service-builder>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="4.5px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>D457F54C-A7EA-4A76-9473-6956E1B9F152@3x</title>
+    <defs>
+        <path d="M17.5229527,24.3756444 L31.3644712,10.6394558 C32.7205904,9.2946978 31.7627301,7 29.8467991,7 L2.15314604,7 C0.2373202,7 -0.720645277,9.2946978 0.635579053,10.6394558 L14.4769925,24.3756444 C15.3164998,25.2081185 16.6834453,25.2081185 17.5229527,24.3756444 Z M17.5229527,24.3756444 L31.3644712,10.6394558 C32.7205904,9.2946978 31.7627301,7 29.8467991,7 L2.15314604,7 C0.2373202,7 -0.720645277,9.2946978 0.635579053,10.6394558 L14.4769925,24.3756444 C15.3164998,25.2081185 16.6834453,25.2081185 17.5229527,24.3756444 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Atom/Icon/Caret">
+            <rect id="Frame" x="0" y="0" width="8" height="4.5"></rect>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Icon" fill="#222331" fill-rule="nonzero" xlink:href="#path-1"></use>
+            <g id="Group" mask="url(#mask-2)">
+                <g transform="translate(-34.000000, -33.840376)">
+                    <rect id="Colour/General/Black" fill="#000000" x="0" y="0" width="100" height="100"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

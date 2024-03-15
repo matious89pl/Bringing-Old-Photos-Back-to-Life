@@ -1,0 +1,6 @@
+Bundle-Name: rec-notification-portlet
+Bundle-SymbolicName: rec.notification.portlet
+Bundle-Version: 1.0.0
+Export-Package: rec.notification.portlet.constants
+Import-Package: \
+    *;resolution:=optional

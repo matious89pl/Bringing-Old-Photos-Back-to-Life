@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.everis.rec.remediation.tracker.model.RemediationTracker">
+		<field name="uuid" type="String" />
+		<field name="remediationTrackerId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="title" type="String" />
+		<field name="orgSiteId" type="long" />
+		<field name="specificParty" type="String" />
+		<field name="category" type="String" />
+		<field name="description" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="dueDate" type="String" />
+		<field name="dueDateFormated" type="Date" />
+		<field name="status" type="String" />
+		<field name="calendarBookingId" type="long" />
+	</model>
+</model-hints>

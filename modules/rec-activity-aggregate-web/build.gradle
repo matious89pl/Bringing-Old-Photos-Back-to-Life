@@ -1,0 +1,32 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+	compileOnly group: "com.liferay", name: "com.liferay.asset.taglib"
+	compileOnly group: "com.liferay", name: "com.liferay.comment.taglib"
+	compileOnly group: "com.liferay", name: "com.liferay.frontend.taglib"
+	compileOnly group: "com.liferay", name: "com.liferay.frontend.taglib.dynamic.section"
+	compileOnly group: "com.liferay", name: "com.liferay.frontend.taglib.form.navigator"
+	compileOnly group: "com.liferay", name: "com.liferay.frontend.taglib.util"
+	compileOnly group: "com.liferay", name: "com.liferay.journal.taglib"
+	compileOnly group: "com.liferay", name: "com.liferay.layout.taglib"
+	compileOnly group: "com.liferay", name: "com.liferay.site.taglib"
+	compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel"
+	compileOnly group: "com.liferay.portal", name: "com.liferay.util.taglib"
+	compileOnly group: "javax.portlet", name: "portlet-api"
+	compileOnly group: "javax.servlet", name: "javax.servlet-api"
+	compileOnly group: "jstl", name: "jstl"
+	compileOnly group: "org.osgi", name: "org.osgi.service.component.annotations"
+		
+	compileInclude group: "com.zaxxer", name: "SparseBitSet", version: "1.2"
+	compileInclude group: "org.apache.commons", name: "commons-collections4", version: "4.3"
+	compileInclude group: "org.apache.commons", name: "commons-compress", version: "1.19"
+	compileInclude group: "org.apache.poi", name: "poi", version: "4.1.2"
+	compileInclude group: "org.apache.poi", name: "poi-ooxml", version: "4.1.2"
+	compileInclude group: "org.apache.poi", name: "poi-ooxml-schemas", version: "4.1.2"
+	compileInclude group: "org.apache.xmlbeans", name: "xmlbeans", version: "3.1.0"
+	
+	compileOnly project(":modules:rec-maintenance-activity:rec-maintenance-activity-api")
+	
+	compileOnly project(":modules:messages:messages-api")
+	compileOnly project(":modules:rec-filter-api")
+	compileOnly project(":modules:rec-cproposal:rec-cproposal-service")
+}

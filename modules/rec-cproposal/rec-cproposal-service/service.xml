@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.3.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_3_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.everis.cproposal">
+	<namespace>CPROPOSAL</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="recFormArticle" remote-service="true">
+	
+	<column name="formId" type="long" primary="true" />
+    <column name="articleId" type="long" />
+    <column name="articleStatus" type="String" />
+    <column name="articleReleaseSchedule" type="String" />
+    <column name="alternativeFormIds" type="String" />
+    <column name="articleImplementationDate" type="Date" />
+    <column name="articleChangePath" type="String" />
+    <column name="articleResponsibleCommittee" type="String" />
+    <column name="articleImpactedParties" type="String" />
+    <column name="articleChangeCategory" type="String" />
+    <column name="articleImpacts" type="String" />
+    
+    <finder name="articleReleaseScheduleAndarticleStatus" return-type="Collection">
+		<finder-column name="articleStatus" comparator="="/>
+		<finder-column name="articleReleaseSchedule" comparator="="/>
+	</finder>
+	
+	 <finder name="alternativeArticleIdAndArticleId" return-type="Collection">
+		<finder-column name="articleId" comparator="="/>
+		<finder-column name="alternativeFormIds" comparator="="/>
+	</finder>
+
+	<finder name="articleId" return-type="Collection">
+		<finder-column name="articleId" comparator="="/>
+	</finder>
+
+	</entity>
+	
+	
+</service-builder>

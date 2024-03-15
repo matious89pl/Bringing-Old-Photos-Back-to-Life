@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.everis.rec.impacts.model.Impacts">
+		<field name="impactId" type="long" />
+		<field name="impactName" type="String" />
+		<field name="impactCategory" type="String" />
+	</model>
+</model-hints>

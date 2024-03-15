@@ -1,0 +1,181 @@
+
+.rec-support-resources-portlet button{
+  
+	font-size: 12px;
+}
+
+p.goToStatus {
+	margin-bottom: 0;
+}
+
+
+.rec-support-resources-portlet th {
+	color: #9b9b9b;
+	font-size: 14px;
+	font-weight: normal;
+	letter-spacing: .25px;
+	line-height: 18px;
+	border: none
+}
+
+.rec-support-resources-portlet td {
+	padding: 10px;
+	border: none;
+    color: black !important;
+	background: white !important;
+}
+
+.rec-support-resources-portlet a{
+    color: black !important;
+}
+
+#importButtons a:hover {
+    text-decoration: none;
+}
+
+.rec-support-resources-portlet table {
+	border-collapse: collapse;
+	width: 100%;
+    border: none !important;
+}
+
+.rec-support-resources-portlet tr {
+	border-bottom: solid 3px #ececec;
+	background: none !important;
+}
+
+.new_supportResource {
+    background: #b1c568 !important;
+    margin-bottom: 15px;
+	padding: 11px;
+	border-radius: 6px !important;
+	color: white !important;
+	font-size: 13px !important;
+	float: right;
+    border:none;  
+	font-weight: normal;
+	margin-left: 10px;
+}
+
+.rec-support-resources-portlet .lfr-search-container {
+    overflow: initial;
+}
+
+.rec-support-resources-portlet .noContent{
+	font-style: italic;
+}
+
+/*
+.order-arrow-up-active{
+	display: none !important;
+}
+
+
+.subnav-tbar-primary .component-link {
+    display: none !important;
+}
+*/
+
+#importButtons {
+    display: -webkit-box;
+}
+
+.actionButtons{
+	padding: 10px;
+	border-radius: 6px;
+	width: fit-content;
+	margin-bottom: 0;
+	font-size: 12px;
+	border: 0;
+	margin-left: 15px;
+	color: black !important;
+}
+
+#rpa_updateStatus_popup{
+	display: none;
+}
+
+#div_rpa_popup{
+    width: 270px !important;
+    height: auto;
+    text-align: center;
+}
+.popupSolutions {
+	padding-bottom: 20px !important;
+}
+
+input#rpa_updateStatusButton {
+    background-color: #70ada3 !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: white;
+    margin: 0 auto;
+}
+
+input[type="button"], .actionButtons{
+	padding: 10px;
+	border-radius: 6px;
+	width: fit-content;
+	margin-bottom: 0;
+	font-size: 12px;
+	border: 0;
+	background-color: rgb(239, 239, 239) !important;
+}
+
+.deleteResource, .saveButton{
+	background-color: #70ada3 !important;
+	color: white !important;
+    font-weight: normal;
+    float: right;
+}
+
+.deleteResource{
+	background-color: #70ada3 !important;
+	color: white !important;
+    font-weight: normal;
+}
+
+.saveButton {
+	padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.cancelButton {
+	width: fit-content;
+    padding: 11px;
+    border-radius: 6px !important;
+    font-size: 13px !important;
+    border: none;
+    font-weight: normal;
+    margin-left: 10px;
+	text-decoration: underline !important;
+    color: black !important;
+    font-size: 15px !important;
+	background: #cdced9 !important
+}
+
+.importCSVdiv {
+	display: none;
+	float: left;
+}
+
+.csvDataFile {
+	float: left;
+	margin-right: 25px;
+	margin-top: 5px;
+}
+
+.importCSVbtn {
+	float: left;
+	margin-right: 10px;
+}
+
+.cancelCSVbtn {
+	float: left;
+	margin-right: 10px;
+}
+
+.importMainDiv {
+	float: right;
+}

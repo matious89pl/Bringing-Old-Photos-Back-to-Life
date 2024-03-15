@@ -1,0 +1,1 @@
+create index IX_606B600E on rec_cpImpact_Impacts (impactCategory[$COLUMN_LENGTH:75$]);

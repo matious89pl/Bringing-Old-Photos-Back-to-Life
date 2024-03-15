@@ -1,0 +1,6 @@
+Bundle-Name: rec-file-upload-validation
+Bundle-SymbolicName: com.everis.file.upload.validation
+Bundle-Version: 1.0.0
+Export-Package: com.everis.file.upload.validation.constants
+Import-Package: \
+    *;resolution:=optional

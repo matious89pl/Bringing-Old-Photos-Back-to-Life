@@ -1,0 +1,250 @@
+@import 'components/breadcrumb';
+@import 'components/color';
+@import 'components/group-item';
+@import 'components/info-panel';
+@import 'components/navbars';
+@import 'components/sidebar';
+@import 'components/splitter';
+@import 'components/table';
+@import 'components/widget';
+@import 'portlet/portlet';
+@import 'portlet/portlet_decorators';
+@import 'portlet/portlet_hello_world';
+
+@import 'custom_properties';
+
+@import 'rec/form_change_proposal';
+@import 'rec/notifications';
+@import 'rec/change_register';
+@import 'rec/impact_assessment';
+@import 'rec/change_proposal_details';
+@import 'rec/header';
+@import 'rec/home';
+@import 'rec/service_management';
+@import 'rec/raise_ticket';
+@import 'rec/my-tickets';
+@import 'rec/popup';
+@import 'rec/committee_management';
+@import 'rec/consultation_register';
+@import 'rec/party_management';
+@import 'fonts';
+@import 'rec/dinamicDataList'; 
+@import 'rec/myApplication';
+@import 'rec/change_calendar';
+@import 'rec/dashboard'; 
+@import 'rec/organisations';
+@import 'rec/nominations_voting'; 
+@import 'rec/upload-file-form-pa';
+@import 'rec/rec_documents';
+
+*:not(i){
+	font-family: "Roboto-regular" !important;
+}
+
+#content > div.alert-info{
+   display: none;
+}
+
+#rec-theme .portlet-layout .portlet .portlet-title-text, 
+.panel.panel-default .taglib-custom-attributes-list .lfr-ddm-field-group.field-wrapper {
+	display: none;
+}
+
+// Useful Documents
+.docuseful a{
+	color:rgb(0, 0, 0);
+}
+.docuseful ul{
+	padding-left: 0px;
+}
+.docuseful li{
+	display: block;
+}
+
+#usefulDocument{
+	background: rgba(112, 173, 163,0.2);
+	border-radius: 4px;
+	height: auto;
+	padding-bottom: 1px;
+}
+#usefulDocument div{
+	padding-left: 8px;
+}
+
+#usefulDocument h2{
+	padding: 10px;
+	font-size: 20px;
+	font-weight: 700 !important;
+	background: rgba(112, 173, 163,0.3);
+}
+
+
+#usefulDocument .box {
+	border: 1px solid transparent;
+	border-radius: 0.25rem;
+	box-shadow: none;
+	color: #272833;
+	display: inline-block;
+	line-height: 1.5;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	user-select: none;
+	background: rgb(255, 255, 255);
+	border-radius: 4px;
+	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+}
+
+#usefulDocument .usefulDocuments {
+	text-decoration: none !important;
+	font-size: 16px !important;
+	line-height: 36px !important;
+	padding-left: 20px !important;
+}
+
+#usefulDocument .grid_item{
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+#usefulDocument .fileImg{
+	width: 20px;
+}
+
+body {
+	
+	div.applications-menu-sites .sticker-overlay img{
+		padding: 16%;
+	}
+
+	
+
+	div.col-md-10.rec-right-column section#content {
+		max-width: 100% !important;
+		padding: 0;
+	}
+	
+	#main-contents {
+		background-color: rgba(0, 0, 0, 0.02);
+		/*background-image: url(../images/forms/logo2.png);
+    	background-repeat: no-repeat;
+    	background-position: 98% 21%;*/
+	}
+	/*Para ocultar el chevron que le aparece al lorena al hacer click en un IA */
+	p.component-title.h4 > span.header-back-to {
+		display: none;
+	}
+
+
+	header {
+		.field-wrapper {
+			position: absolute;
+			right: 4px;
+			top: 2px;
+
+			a {
+				color: #fff;
+			}
+		}
+
+		.field-wrapper,
+		.form-group {
+			margin-bottom: 0;
+		}
+
+		.portlet {
+			margin-bottom: 0;
+
+			&:hover {
+				z-index: 1034;
+			}
+		}
+
+		.search-input {
+			font-size: 0.88rem;
+			padding: 0.28rem 2rem 0.28rem 1rem;
+		}
+
+		.text-default {
+			color: #6b6c7e;
+			font-weight: 600;
+		}
+
+		.user-personal-bar {
+			.fieldset {
+				position: relative;
+			}
+
+			.user-avatar-link .panel-notifications-count {
+				right: calc(100% - 0.75rem);
+				top: -0.35rem;
+			}
+		}
+	}
+
+	.user-avatar-link {
+		display: block;
+		position: relative;
+
+		.panel-notifications-count {
+			display: block;
+			margin: 0;
+			max-width: none;
+			position: absolute;
+			right: calc(100% - 0.7rem);
+			top: -0.4rem;
+		}
+
+		.text-default {
+			align-items: center;
+			display: flex;
+
+			.user-full-name {
+				margin-left: 0.5rem;
+
+				@include media-breakpoint-down(xs) {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.btn-group + .info-panel {
+	@include media-breakpoint-up(sm) {
+		top: auto;
+	}
+}
+
+#footer {
+	background-color: $complementary-color;
+	color: #fff;
+	margin-top: 1rem;
+
+	> .container {
+		padding-bottom: 3rem;
+		padding-top: 3rem;
+	}
+}
+
+.taglib-empty-result-message-header {
+	display: none;
+}
+
+button#_com_liferay_journal_web_portlet_JournalPortlet_Menu {
+	display: none;
+}
+
+
+
+#portlet_com_liferay_users_admin_web_portlet_UsersAdminPortlet .control-label{
+	width: 100% !important;
+}
+	
+#portlet_com_liferay_users_admin_web_portlet_UsersAdminPortlet label[for]{
+	width: 45% !important;		
+}
+
+button#_com_liferay_dynamic_data_lists_web_portlet_DDLDisplayPortlet_saveButton,
+button#_com_liferay_dynamic_data_lists_web_portlet_DDLPortlet_saveButton,
+button#_com_liferay_wiki_web_portlet_WikiPortlet_saveButton {
+	display: none !important;
+}

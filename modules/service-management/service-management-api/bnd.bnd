@@ -1,0 +1,10 @@
+Bundle-Name: service-management-api
+Bundle-SymbolicName: com.everis.service.management.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.everis.service.management.exception,\
+	com.everis.service.management.model,\
+	com.everis.service.management.service,\
+	com.everis.service.management.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../service-management-service/service.xml

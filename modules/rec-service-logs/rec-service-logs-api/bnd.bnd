@@ -1,0 +1,10 @@
+Bundle-Name: rec-service-logs-api
+Bundle-SymbolicName: com.everis.rec.service.activity.logs.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.everis.rec.service.activity.logs.exception,\
+	com.everis.rec.service.activity.logs.model,\
+	com.everis.rec.service.activity.logs.service,\
+	com.everis.rec.service.activity.logs.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../rec-service-logs-service/service.xml

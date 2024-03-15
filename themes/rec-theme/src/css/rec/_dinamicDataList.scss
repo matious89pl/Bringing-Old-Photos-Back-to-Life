@@ -1,0 +1,116 @@
+#rec-theme {
+
+    #view_records_id{
+        //Columns heading
+        th {
+            color: #9b9b9b;
+            font-family: Roboto-Regular;
+            font-size: 12px;
+            font-weight: normal;
+            height: 18px;
+            letter-spacing: 0.25px;
+            line-height: 18px;
+            padding-top: 5px;
+        }
+
+        //Activity/Milestone
+        td.lfr-activity\/milestone-column{
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        //Date
+        td.lfr-due-date-column, td.lfr-completed-date-column{
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            line-height: 24px;
+        }
+        
+        //Progress
+        td.lfr-progress-column{
+            font-size: 10px;
+            letter-spacing: .25px;
+        }
+
+        .lfr-progress-column a{
+            padding: 3px;
+            border-radius: 2px;
+            color: white !important;
+        }
+
+        //table borders
+        .table-responsive tr{
+           border-bottom: solid 3px #ececec;
+        }
+
+       //delete previous table borders 
+       .table-list {
+            border-style: none;
+            border-collapse: collapse;
+        } 
+
+        //Styles for change proposal milestone tab
+        //Delete extra content (rigths bottons, navigation bar, search)
+        ul.navbar-nav, nav.management-bar.management-bar-light.navbar.navbar-expand-md  {
+            display: none;
+            //visibility: hidden;
+        }
+
+
+        //Delete checkbox and extra columns 
+        td.text-left.text-middle.lfr-checkbox-column, .lfr-status-column, .lfr-checkbox-column, .lfr-modified-date-column, .lfr-author-column {
+            display: none;
+        }
+   
+        .container-fluid {
+   			margin-left: -28px;
+        }
+        
+        //Force activity log columns view
+        .activity-cell {
+       		display: table-cell !important;
+        }
+        
+    }
+
+         //Delete bottom buttons 
+        div#view_selected_records_id {
+            display: none;
+        }
+
+        //Progress status colours
+        .progressCompleted{
+            background: #b1c568;
+        }
+
+        .progressInProgress{
+            background: #e7ab00;
+        }
+
+        .progressNotStarted{
+            background: #be6516;
+        }
+        
+        .progressRejected{
+            background:#7b282e;
+        }
+
+        .progressOtherStatus{
+            background: #70ada3;
+        }
+
+        .progressEmpty{
+            background: white;
+        }
+
+        //DDL PM Operational Contacts Register. Lyrics Status colours
+        span.label.label-success.status.workflow-status-approved.approved.workflow-value {
+            color: green !important;
+        }
+        span.label.label-danger.status.workflow-status-denied.denied.workflow-value {
+            color: red !important;
+        }
+        span.label.label-info.status.workflow-status-pending.pending.workflow-value {
+            color: #2e5aac !important;
+        }
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="rec.everis.forms.service.model.MaintenanceActivityForms">
+		<field name="uuid" type="String" />
+		<field name="maintenanceactivityformId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="formType" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="year" type="int" />
+		<field name="submitDate" type="Date" />
+		<field name="approvalDate" type="Date" />
+		<field name="submitDateFormatted" type="String" />
+		<field name="approvalDateFormatted" type="String" />
+		<field name="status" type="String" />
+		<field name="formInstanceRecordVersionId" type="long" />
+		<field name="orgSiteId" type="long" />
+		<field name="viewUrl" type="String">
+			<hint name="max-length">2500</hint>
+		</field>
+		<field name="formInstanceId" type="long" />
+		<field name="formInstanceRecordId" type="long" />
+	</model>
+</model-hints>

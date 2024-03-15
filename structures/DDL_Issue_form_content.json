@@ -1,0 +1,554 @@
+{
+    "availableLanguageIds": [
+        "en_GB"
+    ],
+    "defaultLanguageId": "en_GB",
+    "fields": [
+        {
+            "label": {
+                "en_GB": "Name"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "Issue_Name",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Email Address"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "Issue_EmailAddress",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Telephone number"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "Issue_TelephoneNumber",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Source of the Issue"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "Issue_SourceOfTheIssue",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Issue Title"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "Issue_IssueTitle",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Description of the issue"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "Issue_DescriptionOfTheIssue",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Description of any action, activity or investigation that has already been completed"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "Issue_DescriptionOfAnyAction",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Impacted REC products"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "Issue_ImpactedRECProducts",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "What outcomes are required to resolve the issue (if known)"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "Issue_WhatOutcomes",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Please provide views on the urgency of the Issue being investigated"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "Issue_PleaseProvideViews",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Related previous/existing REC Change Proposal or Helpdesk Ticket"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "Issue_RelatedPrevious",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Reference (to fill in by Change Management Team)"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "Issue_Reference",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Date Raised (to fill in by Change Management Team)"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "date",
+            "fieldNamespace": "ddm",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "Issue_DateRaised",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-date"
+        },
+        {
+            "label": {
+                "en_GB": "Lead Analyst (to fill in by Change Management Team)"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "Issue_LeadAnalyst",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Status (to fill in by Change Management Team)"
+            },
+            "options": [
+                {
+                    "value": "New Triage",
+                    "label": {
+                        "en_GB": "New Triage"
+                    }
+                },
+                {
+                    "value": "Investigation",
+                    "label": {
+                        "en_GB": "Investigation"
+                    }
+                },
+                {
+                    "value": "Resolution in progress",
+                    "label": {
+                        "en_GB": "Resolution in progress"
+                    }
+                },
+                {
+                    "value": "Resolved/closed",
+                    "label": {
+                        "en_GB": "Resolved/closed"
+                    }
+                },
+                {
+                    "value": "Rejected/closed",
+                    "label": {
+                        "en_GB": "Rejected/closed"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_GB": [
+                    ""
+                ]
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "multiple": false,
+            "name": "Issue_Status",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "select"
+        },
+        {
+            "label": {
+                "en_GB": "Action(s) (to fill in by Change Management Team)"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "text",
+            "localizable": true,
+            "name": "Issue_Actions",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "textarea",
+            "nestedFields": [
+                {
+                    "label": {
+                        "en_GB": "Action(s) due date (to fill in by Change Management Team)"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "date",
+                    "fieldNamespace": "ddm",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "Issue_ActionSDueDate",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "ddm-date"
+                }
+            ]
+        },
+        {
+            "label": {
+                "en_GB": "Mitigation/resolution activity (to fill in by Change Management Team)"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "Issue_MitigationResolutionActivity",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Mitigation/resolution category (outcome) (to fill in by Change Management Team)"
+            },
+            "options": [
+                {
+                    "value": "Category 1",
+                    "label": {
+                        "en_GB": "Category 1"
+                    }
+                },
+                {
+                    "value": "Category 2",
+                    "label": {
+                        "en_GB": "Category 2"
+                    }
+                },
+                {
+                    "value": "Category 3",
+                    "label": {
+                        "en_GB": "Category 3"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_GB": [
+                    ""
+                ]
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "multiple": false,
+            "name": "MitigationResolutionCategoryOutcomeToFillInByChangeManagementTeam",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "select"
+        },
+        {
+            "label": {
+                "en_GB": "Mitigation/resolution owner (to fill in by Change Management Team)"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "Issue_MitigationResolutionOwner",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Issue closure date (to fill in by Change Management Team)"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "date",
+            "fieldNamespace": "ddm",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "Issue_IssueClosureDate",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-date"
+        }
+    ]
+}

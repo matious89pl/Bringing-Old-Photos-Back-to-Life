@@ -1,0 +1,5 @@
+Bundle-Name: notification-26
+Bundle-SymbolicName: com.everis.notification26
+Bundle-Version: 1.0.0
+Export-Package: com.everis.notification26.constants
+Import-Package: *; version="0";resolution:=optional

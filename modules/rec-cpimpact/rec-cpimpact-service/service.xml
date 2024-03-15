@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.3.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_3_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.everis.rec.cpimpact">
+	<namespace>rec_cpImpact</namespace>
+	<entity local-service="true" name="Impacts" remote-service="true">
+		<column name="impactId" primary="true" type="long" />
+		<column name="impactName" type="String" />
+		<column name="impactCategory" type="String" />
+        <finder name="ImpactCategory" return-type="Collection">
+        	<finder-column name="impactCategory" />
+        </finder>
+	</entity>
+</service-builder>

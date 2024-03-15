@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.3.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_3_0.dtd">
+
+<service-builder dependency-injector="ds"
+	package-path="rec.supporting.resources">
+	<namespace>RECsr</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" 
+		remote-service="false" session-factory="sampleSessionFactory" table="foo" 
+		tx-manager="sampleTransactionManager uuid="true""> -->
+	<entity local-service="true" name="supportR"
+		remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="supportRId" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="specificParty" type="String" />
+		<column name="orgSiteId" type="long" />
+		<column name="type" type="String" />
+		<column name="title" type="String" />
+		<column name="description" type="String" />
+		<column name="dueDate" type="Date" />
+		<column name="status" type="String" />
+		<column name="link" type="String" />
+		<column name="displayLink" type="String" />
+		<column name="calendarBookingId" type="long" />
+		
+
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="createDate" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+		<finder name="SupportingResourceTitle" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="title" />
+		</finder>
+		<finder name="SupportingResourceType" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="type" />
+		</finder>
+		<finder name="CreateDate" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="createDate" />
+		</finder>
+		<finder name="DueDate" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="dueDate" />
+		</finder>
+		<finder name="CreateDateAndDueDate" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="dueDate" />
+			<finder-column name="createDate" />
+		</finder>
+		<finder name="Status" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="status" />
+		</finder>
+		<finder name="StatusOnly" return-type="Collection">
+			<finder-column name="status" />
+		</finder>
+		<finder name="Link" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="link" />
+		</finder>
+
+	</entity>
+</service-builder>

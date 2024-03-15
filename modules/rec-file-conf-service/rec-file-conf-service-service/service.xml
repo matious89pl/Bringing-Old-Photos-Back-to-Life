@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.3.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_3_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="rec.file.conf.service">
+	<namespace>REC</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="File_Conf" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="docConfigId" primary="true" type="long" />
+
+		<!-- Group instance -->
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="docConfName" type="String" />
+		<column name="docFileType" type="String" />
+		<column name="docConfigJSON" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="docConfName" />
+		</order>
+		
+		<finder name="docConfName" return-type="File_Conf">
+            <finder-column name="docConfName"></finder-column>
+        </finder>
+        <finder name="docFileType" return-type="File_Conf">
+            <finder-column name="docFileType"></finder-column>
+        </finder>
+
+	</entity>
+</service-builder>

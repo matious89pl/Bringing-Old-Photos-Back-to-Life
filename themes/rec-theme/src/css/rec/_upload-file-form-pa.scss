@@ -1,0 +1,129 @@
+#rec-theme {
+    #upload-file-form-pa {
+			
+			    label {
+			        font-size: 16px;
+			        font-weight: unset;
+			        letter-spacing: 0.25px;
+			    }
+			
+			    input, select {
+			        border-radius: 5px;
+			        box-shadow: inset 0 1px 4px 0px rgba(0, 0, 0 , 0.30);
+			        border-color: #e7e7ed;
+			        border-style: solid;
+			        display: -webkit-box;
+			    }
+			
+			    input[type="file"] {
+			        border-style: none;
+			        box-shadow: none;
+			    }
+			
+			    select#select1 {
+			        height: 28px;
+			        padding-left: 10px;
+			        padding-right: 10px;
+			    }
+			
+			   select#select2 {
+			        height: 28px;
+			        padding-left: 10px;
+			        padding-right: 10px;
+			    }
+			
+			    .greenButton {
+			        background: #70ada3;
+			        border-radius: 5px;
+			        color: white;
+			        font-size: 16px;
+			        font-weight: normal;
+			        letter-spacing: 0.25px;
+			        height: 36px;
+			        border: none;
+			        padding: 6px 16px 9px 17px;
+			    }
+			
+			    .greenButton:hover{
+			        color: white;
+			        text-decoration: none;
+			    }
+			
+			
+			    input[type="file"]#uploadedFile {
+			        width: 0.1px;
+			        height: 0.1px;
+			        opacity: 0;
+			        overflow: hidden;
+			        position: absolute;
+			        z-index: -1;
+			    }
+			
+			    label[for="uploadedFile"] {
+			        background: #A5A5A5;
+			        border-radius: 5px;
+			        color: white;
+			        font-size: 18px;
+			        font-weight: normal;
+			        letter-spacing: 0.25px;
+			        line-height: 16px;
+			        height: 36px;
+			        border: none;
+			        padding: 9px 16px 9px 17px
+			    }
+			
+			    div#uploadFileButton {
+			        display: -webkit-box;
+			    }
+			
+			    div#fileName {
+			        margin-left: 20px;
+			        margin-top: 5px;
+			    }
+			
+			    #submitFormButton{
+			        float:right;
+			        margin-right: 20px;
+			    }
+			
+			
+			    p#assuranceNote {
+			        padding-top: 24px;
+			        padding-left: 15px;
+			    }
+			
+			    p#titleAssuranceNote {
+			        padding-top: 4px;
+			        padding-left: 15px;
+			    }
+			
+			    h2#titleAssurance {
+			        float: left;
+			        margin-bottom: 10px;
+			    }
+			    
+			    div#titleAssuranceDiv {
+			       display: inline-flex;
+			    }   
+			
+			    div#assurancePeriodDiv{
+			       display: inline-flex; 
+			    }
+
+				p#assurancePeriod {
+					width: 200px;
+				}
+
+				.grayButton {
+					background: #a5a5a5;
+			        border-radius: 5px;
+			        color: white;
+			        font-size: 16px;
+			        font-weight: normal;
+			        letter-spacing: 0.25px;
+			        height: 36px;
+			        border: none;
+			        padding: 6px 16px 9px 17px;
+				}
+		}
+ }

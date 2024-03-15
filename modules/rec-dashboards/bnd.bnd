@@ -1,0 +1,7 @@
+Bundle-Name: rec-dashboards
+Bundle-SymbolicName: rec.dashboards
+Bundle-Version: 1.0.0
+Export-Package: rec.dashboards.constants
+-metatype: *
+Import-Package: \
+    *;resolution:=optional

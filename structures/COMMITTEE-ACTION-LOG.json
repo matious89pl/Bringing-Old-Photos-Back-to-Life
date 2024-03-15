@@ -1,0 +1,218 @@
+{
+    "availableLanguageIds": [
+        "en_GB"
+    ],
+    "defaultLanguageId": "en_GB",
+    "fields": [
+        {
+            "label": {
+                "en_GB": "ID"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "ActionLog_ID",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Description"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "ActionLog_Description",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Assigner Email Address"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "ActionLog_AssignerEmail",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Assignee Email Address"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "ActionLog_AssigneeEmail",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Due Date"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "date",
+            "fieldNamespace": "ddm",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "ActionLog_DueDate",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-date"
+        },
+        {
+            "label": {
+                "en_GB": "Next Update Due "
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "date",
+            "fieldNamespace": "ddm",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "ActionLog_NextUpdateDue",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-date"
+        },
+        {
+            "label": {
+                "en_GB": "Status"
+            },
+            "options": [
+                {
+                    "value": "Open",
+                    "label": {
+                        "en_GB": "Open"
+                    }
+                },
+                {
+                    "value": "Withdrawn",
+                    "label": {
+                        "en_GB": "Withdrawn"
+                    }
+                },
+                {
+                    "value": "Completed",
+                    "label": {
+                        "en_GB": "Completed"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_GB": [
+                    ""
+                ]
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "multiple": false,
+            "name": "ActionLog_Status",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "select"
+        },
+        {
+            "label": {
+                "en_GB": "Completion Date"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "date",
+            "fieldNamespace": "ddm",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "ActionLog_CompletionDate",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-date"
+        }
+    ]
+}

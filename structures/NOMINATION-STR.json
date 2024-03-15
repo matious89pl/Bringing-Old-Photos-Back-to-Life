@@ -1,0 +1,72 @@
+{
+    "availableLanguageIds": [
+        "en_GB"
+    ],
+    "defaultLanguageId": "en_GB",
+    "fields": [
+        {
+            "label": {
+                "en_GB": "Closing Date"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "date",
+            "fieldNamespace": "ddm",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "ClosingDate",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-date"
+        },
+        {
+            "label": {
+                "en_GB": "Status"
+            },
+            "options": [
+                {
+                    "value": "In Progress",
+                    "label": {
+                        "en_GB": "In Progress"
+                    }
+                },
+                {
+                    "value": "Completed",
+                    "label": {
+                        "en_GB": "Completed"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_GB": [
+                    ""
+                ]
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "multiple": false,
+            "name": "Status",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "select"
+        }
+    ]
+}

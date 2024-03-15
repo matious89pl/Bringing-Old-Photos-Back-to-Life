@@ -1,0 +1,5 @@
+Bundle-Name: rec-calendar
+Bundle-SymbolicName: rec.calendar
+Bundle-Version: 1.0.0
+Fragment-Host: com.liferay.calendar.web;bundle-version="4.0.50"
+Portal-Bundle-Version: 7.3.10

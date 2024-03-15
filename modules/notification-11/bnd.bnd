@@ -1,0 +1,5 @@
+Bundle-Name: notification-11
+Bundle-SymbolicName: com.everis.notification11
+Bundle-Version: 1.0.0
+Export-Package: com.everis.notification11.constants
+Import-Package: *; version="0";resolution:=optional

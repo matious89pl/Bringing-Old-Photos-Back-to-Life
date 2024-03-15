@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.everis.rec.rfilogs.model.RfiLogs">
+		<field name="uuid" type="String" />
+		<field name="rfilogId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="reqId" type="long" />
+		<field name="specificParty" type="String" />
+		<field name="orgSiteId" type="long" />
+		<field name="title" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="dueDate" type="String" />
+		<field name="status" type="String" />
+		<field name="reqDesc" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="rationale" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="dueDateFormated" type="Date" />
+		<field name="calendarBookingId" type="long" />
+	</model>
+</model-hints>

@@ -1,0 +1,10 @@
+Bundle-Name: rec-ddl-journal-article-api
+Bundle-SymbolicName: com.everis.rec.ddl.journal.article.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.everis.rec.ddl.journal.article.exception,\
+	com.everis.rec.ddl.journal.article.model,\
+	com.everis.rec.ddl.journal.article.service,\
+	com.everis.rec.ddl.journal.article.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../rec-ddl-journal-article-service/service.xml

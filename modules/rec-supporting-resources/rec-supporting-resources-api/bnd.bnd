@@ -1,0 +1,10 @@
+Bundle-Name: rec-supporting-resources-api
+Bundle-SymbolicName: rec.supporting.resources.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	rec.supporting.resources.exception,\
+	rec.supporting.resources.model,\
+	rec.supporting.resources.service,\
+	rec.supporting.resources.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../rec-supporting-resources-service/service.xml

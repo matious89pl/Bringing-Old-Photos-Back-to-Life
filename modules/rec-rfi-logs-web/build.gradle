@@ -1,0 +1,24 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+
+	compileOnly project(":modules:rec-rfilogs-service:rec-rfilogs-service-api")
+	
+	compileInclude group: "com.zaxxer", name: "SparseBitSet", version: "1.2"
+	compileInclude group: "org.apache.commons", name: "commons-collections4", version: "4.3"
+	compileInclude group: "org.apache.commons", name: "commons-compress", version: "1.19"
+	compileInclude group: "org.apache.poi", name: "poi", version: "4.1.2"
+	compileInclude group: "org.apache.poi", name: "poi-ooxml", version: "4.1.2"
+	compileInclude group: "org.apache.poi", name: "poi-ooxml-schemas", version: "4.1.2"
+	compileInclude group: "org.apache.xmlbeans", name: "xmlbeans", version: "3.1.0"
+	
+	cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.0.2"
+	
+	compileOnly group: "com.liferay", name: "com.liferay.calendar.api", version: "2.0.4"
+	compileOnly group: "com.liferay", name: "com.liferay.calendar.service", version: "2.1.23"
+	
+	compileOnly project(":modules:rec-maintenance-activity:rec-maintenance-activity-api")
+	compileOnly project(":modules:messages:messages-api")
+	compileOnly project(":modules:rec-filter-api")
+	compileOnly project(":modules:rec-cproposal:rec-cproposal-service")
+	
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.3.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_3_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="rec.everis.forms.service">
+	<namespace>AMAF</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="MaintenanceActivityForms" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="maintenanceactivityformId" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="formType" type="String" />
+		<column name="year" type="int" />
+		<column name="submitDate" type="Date" />
+		<column name="approvalDate" type="Date" />
+		<column name="submitDateFormatted" type="String" />
+		<column name="approvalDateFormatted" type="String" />
+		<column name="status" type="String" />
+		<column name="formInstanceRecordVersionId" type="long" />
+		<column name="orgSiteId" type="long" />
+		<column name="viewUrl" type="String" />
+		<column name="formInstanceId" type="long" />
+		<column name="formInstanceRecordId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="submitDate" />
+		</order>
+        <finder name="formInstanceRecordVersionId" return-type="Collection">
+            <finder-column name="formInstanceRecordVersionId"></finder-column>
+        </finder>
+        <finder name="GroupId" return-type="Collection">
+            <finder-column name="groupId"></finder-column>
+        </finder>
+
+		
+	</entity>
+</service-builder>

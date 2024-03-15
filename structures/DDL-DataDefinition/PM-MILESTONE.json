@@ -1,0 +1,102 @@
+{
+    "availableLanguageIds": [
+        "en_GB"
+    ],
+    "defaultLanguageId": "en_GB",
+    "fields": [
+        {
+            "label": {
+                "en_GB": "Milestone"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "PM_Milestone",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Due Date"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "date",
+            "fieldNamespace": "ddm",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "PM_DueDate",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-date"
+        },
+        {
+            "label": {
+                "en_GB": "Progress"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "PM_Progress",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Completed Date"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "date",
+            "fieldNamespace": "ddm",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "PM_CompletedDate",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-date"
+        }
+    ]
+}

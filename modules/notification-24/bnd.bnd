@@ -1,0 +1,5 @@
+Bundle-Name: notification-24
+Bundle-SymbolicName: com.everis.notification24
+Bundle-Version: 1.0.0
+Export-Package: com.everis.notification24.constants
+Import-Package: *; version="0";resolution:=optional

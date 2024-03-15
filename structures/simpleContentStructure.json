@@ -1,0 +1,129 @@
+{
+    "availableLanguageIds": [
+        "en_GB"
+    ],
+    "defaultLanguageId": "en_GB",
+    "fields": [
+        {
+            "label": {
+                "en_GB": "HTML"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "html",
+            "fieldNamespace": "ddm",
+            "indexType": "text",
+            "localizable": true,
+            "name": "HTML15bd",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": false,
+            "type": "ddm-text-html"
+        },
+        {
+            "label": {
+                "en_GB": "TitleCommittee"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "TitleCommittee",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text",
+            "nestedFields": [
+                {
+                    "label": {
+                        "en_GB": "DescriptionCommittee"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "string",
+                    "indexType": "text",
+                    "localizable": true,
+                    "name": "DescriptionCommittee",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "textarea"
+                }
+            ]
+        },
+        {
+            "label": {
+                "en_GB": "TitleDoc"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "TitleDoc",
+            "readOnly": false,
+            "repeatable": true,
+            "required": false,
+            "showLabel": true,
+            "type": "text",
+            "nestedFields": [
+                {
+                    "label": {
+                        "en_GB": "Document"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "document-library",
+                    "fieldNamespace": "ddm",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "DocumentUseFul",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "ddm-documentlibrary"
+                }
+            ]
+        }
+    ]
+}

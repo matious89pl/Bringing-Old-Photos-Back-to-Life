@@ -1,0 +1,6 @@
+Bundle-Name: rec-listeners
+Bundle-SymbolicName: com.everis.rec.listeners
+Bundle-Version: 1.0.0
+Export-Package: com.everis.rec.listeners.constants
+Import-Package: \
+    *;resolution:=optional

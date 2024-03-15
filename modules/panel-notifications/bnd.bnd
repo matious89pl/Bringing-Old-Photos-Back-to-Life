@@ -1,0 +1,4 @@
+Bundle-Name: panel-notifications
+Bundle-SymbolicName: com.everis.panel.notifications
+Bundle-Version: 1.0.0
+Export-Package: com.everis.panel.notifications.constants

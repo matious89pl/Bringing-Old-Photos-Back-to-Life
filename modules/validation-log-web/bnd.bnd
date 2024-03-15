@@ -1,0 +1,4 @@
+Bundle-Name: validation-log-web
+Bundle-SymbolicName: com.everis.validation.log.web
+Bundle-Version: 1.0.0
+Export-Package: com.everis.validation.log.web.constants

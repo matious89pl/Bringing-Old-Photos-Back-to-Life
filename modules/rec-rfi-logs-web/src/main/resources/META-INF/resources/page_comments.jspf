@@ -1,0 +1,9 @@
+<liferay-comment:discussion 
+	className="com.everis.rec.rfilogs.model.RfiLogs"
+	classPK="<%=rfi.getRfilogId()%>" 
+	formName="fm"
+	ratingsEnabled="<%=true%>"
+	redirect="<%=themeDisplay.getURLCurrent()%>"
+	userId="<%=themeDisplay.getUserId()%>" />
+	
+<!-- page_comments -->	

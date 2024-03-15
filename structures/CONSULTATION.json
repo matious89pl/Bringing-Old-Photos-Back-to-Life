@@ -1,0 +1,213 @@
+{
+    "availableLanguageIds": [
+        "en_GB"
+    ],
+    "defaultLanguageId": "en_GB",
+    "fields": [
+        {
+            "label": {
+                "en_GB": "ID CP"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "TextIDChangeProposal",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Targeted Audience"
+            },
+            "options": [
+                {
+                    "value": "Responsible Service Provider",
+                    "label": {
+                        "en_GB": "Responsible Service Provider"
+                    }
+                },
+                {
+                    "value": "REC Parties",
+                    "label": {
+                        "en_GB": "REC Parties"
+                    }
+                },
+                {
+                    "value": "Non-REC Parties",
+                    "label": {
+                        "en_GB": "Non-REC Parties"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_GB": [
+                    ""
+                ]
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "multiple": true,
+            "name": "Consultation_TargetedAudience",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "select"
+        },
+        {
+            "label": {
+                "en_GB": "Choose Question Template"
+            },
+            "options": [
+                {
+                    "value": "A",
+                    "label": {
+                        "en_GB": "A Document"
+                    }
+                },
+                {
+                    "value": "B",
+                    "label": {
+                        "en_GB": "B Answers and Document"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_GB": [
+                    ""
+                ]
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "multiple": false,
+            "name": "Consultation_ChooseQATemplate",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "select"
+        },
+        {
+            "label": {
+                "en_GB": "Change Proposal Link"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "TextLinkChangeProposalID",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Documents and Media"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "document-library",
+            "fieldNamespace": "ddm",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "TextDocumentConsultation",
+            "readOnly": false,
+            "repeatable": true,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-documentlibrary",
+            "nestedFields": [
+                {
+                    "label": {
+                        "en_GB": "Document Title"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "string",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "Consultation_Document_Title",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "label": {
+                "en_GB": "Responses Deadline"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "date",
+            "fieldNamespace": "ddm",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "TextDate",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "ddm-date"
+        }
+    ]
+}

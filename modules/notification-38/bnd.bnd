@@ -1,0 +1,5 @@
+Bundle-Name: notification-38
+Bundle-SymbolicName: com.everis.notification38
+Bundle-Version: 1.0.0
+Export-Package: com.everis.notification38.constants
+Import-Package: *; version="0";resolution:=optional

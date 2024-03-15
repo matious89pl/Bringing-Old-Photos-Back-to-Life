@@ -1,0 +1,12 @@
+Bundle-Name: rec-customnotification-api
+Bundle-SymbolicName: rec.customnotification.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	rec.customnotification.exception,\
+	rec.customnotification.model,\
+	rec.customnotification.service,\
+	rec.customnotification.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../rec-customnotification-service/service.xml
+Import-Package: \
+    *;resolution:=optional

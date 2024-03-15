@@ -1,0 +1,6 @@
+Bundle-Name: rec-activity-aggregate-web
+Bundle-SymbolicName: com.everis.rec.activity.aggretate
+Bundle-Version: 1.0.0
+Export-Package: com.everis.rec.activity.aggretate.constants
+Import-Package: \
+    *;resolution:=optional

@@ -1,0 +1,2 @@
+create index IX_9CEEBF0A on AMA_MaintenanceActivity (status[$COLUMN_LENGTH:75$], status[$COLUMN_LENGTH:75$]);
+create index IX_AF8A31B2 on AMA_MaintenanceActivity (uuid_[$COLUMN_LENGTH:75$], companyId);

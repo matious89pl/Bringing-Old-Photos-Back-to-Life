@@ -1,0 +1,524 @@
+{
+    "availableLanguageIds": [
+        "en_GB"
+    ],
+    "defaultLanguageId": "en_GB",
+    "fields": [
+        {
+            "label": {
+                "en_GB": "Main title"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "MainTitle",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Main description"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "MainDescription",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Title1"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "Title1",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Main icon "
+            },
+            "options": [
+                {
+                    "value": "none",
+                    "label": {
+                        "en_GB": "None"
+                    }
+                },
+                {
+                    "value": "add_document_green",
+                    "label": {
+                        "en_GB": "Document plus"
+                    }
+                },
+                {
+                    "value": "bell",
+                    "label": {
+                        "en_GB": "Bell"
+                    }
+                },
+                {
+                    "value": "user_friend_green",
+                    "label": {
+                        "en_GB": "User friend"
+                    }
+                },
+                {
+                    "value": "user-big",
+                    "label": {
+                        "en_GB": "User"
+                    }
+                },
+                {
+                    "value": "user-cog-big",
+                    "label": {
+                        "en_GB": "User cog"
+                    }
+                },
+                {
+                    "value": "calendar-green",
+                    "label": {
+                        "en_GB": "Calendar"
+                    }
+                },
+                {
+                    "value": "category-green",
+                    "label": {
+                        "en_GB": "Category"
+                    }
+                },
+                {
+                    "value": "code-branch-green",
+                    "label": {
+                        "en_GB": "Code branch"
+                    }
+                },
+                {
+                    "value": "cog-big",
+                    "label": {
+                        "en_GB": "Cog"
+                    }
+                },
+                {
+                    "value": "document-green",
+                    "label": {
+                        "en_GB": "Document"
+                    }
+                },
+                {
+                    "value": "download-big",
+                    "label": {
+                        "en_GB": "Download"
+                    }
+                },
+                {
+                    "value": "envelope-green",
+                    "label": {
+                        "en_GB": "Envelope"
+                    }
+                },
+                {
+                    "value": "exclamation",
+                    "label": {
+                        "en_GB": "Exclamation"
+                    }
+                },
+                {
+                    "value": "expand-green",
+                    "label": {
+                        "en_GB": "Expand"
+                    }
+                },
+                {
+                    "value": "file-big",
+                    "label": {
+                        "en_GB": "File"
+                    }
+                },
+                {
+                    "value": "question-green",
+                    "label": {
+                        "en_GB": "Question"
+                    }
+                },
+                {
+                    "value": "tools-big",
+                    "label": {
+                        "en_GB": "Tools"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_GB": [
+                    ""
+                ]
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "multiple": false,
+            "name": "MainIcon",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "select"
+        },
+        {
+            "label": {
+                "en_GB": "Description1"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "Description1",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Icon2"
+            },
+            "options": [
+                {
+                    "value": "none",
+                    "label": {
+                        "en_GB": "None"
+                    }
+                },
+                {
+                    "value": "add_document",
+                    "label": {
+                        "en_GB": "Document plus"
+                    }
+                },
+                {
+                    "value": "bell-white",
+                    "label": {
+                        "en_GB": "Bell"
+                    }
+                },
+                {
+                    "value": "book_open",
+                    "label": {
+                        "en_GB": "Book open"
+                    }
+                },
+                {
+                    "value": "user_friend_party",
+                    "label": {
+                        "en_GB": "User friend"
+                    }
+                },
+                {
+                    "value": "user-white",
+                    "label": {
+                        "en_GB": "User"
+                    }
+                },
+                {
+                    "value": "user-cog-white",
+                    "label": {
+                        "en_GB": "User cog"
+                    }
+                },
+                {
+                    "value": "calendar",
+                    "label": {
+                        "en_GB": "Calendar"
+                    }
+                },
+                {
+                    "value": "category",
+                    "label": {
+                        "en_GB": "Category"
+                    }
+                },
+                {
+                    "value": "code-branch-big",
+                    "label": {
+                        "en_GB": "Code branch"
+                    }
+                },
+                {
+                    "value": "cog-white",
+                    "label": {
+                        "en_GB": "Cog"
+                    }
+                },
+                {
+                    "value": "document",
+                    "label": {
+                        "en_GB": "Document"
+                    }
+                },
+                {
+                    "value": "download-white",
+                    "label": {
+                        "en_GB": "Download"
+                    }
+                },
+                {
+                    "value": "envelope-white",
+                    "label": {
+                        "en_GB": "Envelope"
+                    }
+                },
+                {
+                    "value": "exclamation-white",
+                    "label": {
+                        "en_GB": "Exclamation"
+                    }
+                },
+                {
+                    "value": "expand",
+                    "label": {
+                        "en_GB": "Expand"
+                    }
+                },
+                {
+                    "value": "file-white",
+                    "label": {
+                        "en_GB": "File"
+                    }
+                },
+                {
+                    "value": "filter-white",
+                    "label": {
+                        "en_GB": "Filter"
+                    }
+                },
+                {
+                    "value": "grid-white",
+                    "label": {
+                        "en_GB": "Grid"
+                    }
+                },
+                {
+                    "value": "home-white",
+                    "label": {
+                        "en_GB": "Home"
+                    }
+                },
+                {
+                    "value": "lamp-white",
+                    "label": {
+                        "en_GB": "Lamp"
+                    }
+                },
+                {
+                    "value": "link-white",
+                    "label": {
+                        "en_GB": "Link"
+                    }
+                },
+                {
+                    "value": "log-white",
+                    "label": {
+                        "en_GB": "Log"
+                    }
+                },
+                {
+                    "value": "network",
+                    "label": {
+                        "en_GB": "Network"
+                    }
+                },
+                {
+                    "value": "pencil-white",
+                    "label": {
+                        "en_GB": "Pencil"
+                    }
+                },
+                {
+                    "value": "phone-white",
+                    "label": {
+                        "en_GB": "Phone"
+                    }
+                },
+                {
+                    "value": "question-white",
+                    "label": {
+                        "en_GB": "Question"
+                    }
+                },
+                {
+                    "value": "tools-white",
+                    "label": {
+                        "en_GB": "Tools"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_GB": [
+                    ""
+                ]
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "multiple": false,
+            "name": "Icon2",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "select"
+        },
+        {
+            "label": {
+                "en_GB": "Link1"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "Link1",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Text up Link 2"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "TextUpLink2",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Main text Link 2"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "MainTextLink2",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Link2"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "Link2",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        }
+    ]
+}

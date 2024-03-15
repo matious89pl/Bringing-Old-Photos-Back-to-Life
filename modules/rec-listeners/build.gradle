@@ -1,0 +1,20 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+
+	cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.0.2"
+	
+	compileOnly project(":modules:rec-cproposal:rec-cproposal-api")
+	compileOnly project(":modules:rec-cproposal:rec-cproposal-service")
+	
+	compileOnly project(":modules:messages:messages-api")
+	compileOnly project(":modules:messages:messages-service")
+	
+	compileOnly project(":modules:rec-service-logs:rec-service-logs-api")
+	compileOnly project(":modules:rec-service-logs:rec-service-logs-service")
+	
+	compileOnly project(":modules:rec-confidential-message:rec-confidential-message-api")
+	compileOnly project(":modules:rec-confidential-message:rec-confidential-message-service")
+	
+	compileOnly project(":modules:rec-ddl-journal-article:rec-ddl-journal-article-api")
+	compileOnly project(":modules:rec-ddl-journal-article:rec-ddl-journal-article-service")
+}

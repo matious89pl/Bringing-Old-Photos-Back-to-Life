@@ -1,0 +1,11 @@
+dependencies {
+	compile project(":modules:rec-remediation-tracker-service:rec-remediation-tracker-service-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+}
+
+buildService {
+	apiDir = "../rec-remediation-tracker-service-api/src/main/java"
+}
+
+group = "com.everis.rec.remediation.tracker"

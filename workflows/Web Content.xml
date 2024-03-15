@@ -1,0 +1,853 @@
+<?xml version="1.0"?>
+
+<workflow-definition
+	xmlns="urn:liferay.com:liferay-workflow_7.3.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="urn:liferay.com:liferay-workflow_7.3.0 http://www.liferay.com/dtd/liferay-workflow-definition_7_3_0.xsd"
+>
+	<version>1</version>
+	<condition>
+		<name>Filter By Structure</name>
+		<metadata>
+			<![CDATA[
+				{
+					"xy": [
+						244.98751831054688,
+						23
+					]
+				}
+			]]>
+		</metadata>
+		<script>
+			<![CDATA[
+
+import com.liferay.asset.kernel.model.AssetCategory;
+import com.liferay.asset.kernel.model.AssetEntry;
+import com.liferay.asset.kernel.model.AssetRenderer;
+import com.liferay.asset.kernel.model.AssetRendererFactory;
+import com.liferay.asset.kernel.service.AssetEntryLocalServiceUtil;
+import com.liferay.portal.kernel.util.GetterUtil;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
+import com.liferay.portal.kernel.workflow.WorkflowHandler;
+import com.liferay.portal.kernel.workflow.WorkflowHandlerRegistryUtil;
+import com.liferay.portal.kernel.util.Validator;
+import java.util.List;
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.dynamic.data.mapping.model.DDMStructure;
+import com.liferay.dynamic.data.mapping.service.DDMStructureLocalServiceUtil;
+import com.liferay.journal.model.JournalArticle;
+import com.liferay.journal.service.JournalArticleLocalServiceUtil;
+
+Log logger = LogFactoryUtil.getLog("Log........");
+
+logger.info("Starting condition from workflow...");
+String className = (String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_NAME);
+logger.info("1. className: " + className);
+WorkflowHandler workflowHandler = WorkflowHandlerRegistryUtil.getWorkflowHandler(className);
+logger.info("2. workflowHandler: " + workflowHandler);
+AssetRendererFactory assetRendererFactory = workflowHandler.getAssetRendererFactory();
+long classPK = GetterUtil.getLong((String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_PK));
+logger.info("3. classPK: " + classPK);
+AssetRenderer assetRenderer = workflowHandler.getAssetRenderer(classPK);
+AssetEntry assetEntry = assetRendererFactory.getAssetEntry(assetRendererFactory.getClassName(), assetRenderer.getClassPK());
+logger.info("4. assetEntry: " + assetEntry);
+long classTypeId = assetEntry.getClassTypeId();
+logger.info("5. classTypeId: " + classTypeId);
+
+DDMStructure ddmStructure = DDMStructureLocalServiceUtil.getStructure(classTypeId);
+logger.info("6. ddmStructureName: " + ddmStructure.getName());
+if (ddmStructure.getName().contains("PARTY-MANAGEMENT")) {
+    long id_ = classPK;
+    logger.info("7. id_: " + id_);
+	double version = 1.0;
+	JournalArticle journalArticle = JournalArticleLocalServiceUtil.getArticle(id_);
+	logger.info("8. journalArticle: " + journalArticle);
+	if (Validator.isNotNull(journalArticle) && journalArticle.getVersion() == version){
+        logger.info("10. journalArticle: " + journalArticle.getVersion());
+        logger.info("PARTY...");
+        returnValue = "Party";
+    }
+    else {
+    	logger.info("NONE...");
+    	returnValue = "None";
+    }
+}
+else if (ddmStructure.getName().contains("CATEGORY-3")) {
+	long id_ = classPK;
+    logger.info("7. id_: " + id_);
+	double version = 1.0;
+	JournalArticle journalArticle = JournalArticleLocalServiceUtil.getArticle(id_);
+	logger.info("8. journalArticle: " + journalArticle);
+	if (Validator.isNotNull(journalArticle) && journalArticle.getVersion() == version){
+        logger.info("10. journalArticle: " + journalArticle.getVersion());
+        logger.info("CATEGORY-3...");
+        returnValue = "Category3";
+    }
+    else {
+    	logger.info("NONE...");
+    	returnValue = "None";
+    }
+}
+else if (ddmStructure.getName().contains("COMMITTE-VOTING")) {
+	long id_ = classPK;
+    logger.info("7. id_: " + id_);
+	JournalArticle journalArticle = JournalArticleLocalServiceUtil.getArticle(id_);
+	logger.info("8. journalArticle: " + journalArticle);
+	if (Validator.isNotNull(journalArticle)){
+        logger.info("10. journalArticle: " + journalArticle.getVersion());
+        logger.info("COMMITTE-VOTING...");
+        returnValue = "Voting";
+    }
+    else {
+    	logger.info("NONE...");
+    	returnValue = "None";
+    }
+}
+else if (ddmStructure.getName().contains("CROSS-CODE-STEERING-VOTE")) {
+	long id_ = classPK;
+    logger.info("7. id_: " + id_);
+	JournalArticle journalArticle = JournalArticleLocalServiceUtil.getArticle(id_);
+	logger.info("8. journalArticle: " + journalArticle);
+	if (Validator.isNotNull(journalArticle)){
+        logger.info("10. journalArticle: " + journalArticle.getVersion());
+        logger.info("COMMITTE-VOTING...");
+        returnValue = "Voting";
+    }
+    else {
+    	logger.info("NONE...");
+    	returnValue = "None";
+    }
+}
+else {
+    logger.info("NONE...");
+    returnValue = "None";
+}
+
+
+
+
+
+
+
+
+]]>
+		</script>
+		<script-language>groovy</script-language>
+		<transitions>
+			<transition>
+				<name>Party</name>
+				<target>Review Application</target>
+				<default>true</default>
+			</transition>
+			<transition>
+				<name>Category3</name>
+				<target>Complete Category3 Change Form</target>
+				<default>false</default>
+			</transition>
+			<transition>
+				<name>None</name>
+				<target>Approved</target>
+				<default>false</default>
+			</transition>
+			<transition>
+				<name>Voting</name>
+				<target>Cross Code Steering</target>
+				<default>false</default>
+			</transition>
+		</transitions>
+	</condition>
+	<state>
+		<name>Submit for Publication</name>
+		<metadata>
+			<![CDATA[
+				{
+					"xy": [
+						34.02783203125,
+						38.993072509765625
+					]
+				}
+			]]>
+		</metadata>
+		<initial>true</initial>
+		<transitions>
+			<transition>
+				<name>Published</name>
+				<target>Filter By Structure</target>
+				<default>true</default>
+			</transition>
+		</transitions>
+	</state>
+	<state>
+		<name>PM Approved</name>
+		<metadata>
+			<![CDATA[
+				{
+					"terminal": true,
+					"xy": [
+						23,
+						384.00001525878906
+					]
+				}
+			]]>
+		</metadata>
+		<actions>
+			<action>
+				<name>Approve</name>
+				<description>Approve</description>
+				<script>
+					<![CDATA[com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil.updateStatus(com.liferay.portal.kernel.workflow.WorkflowConstants.getLabelStatus("approved"), workflowContext);]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onEntry</execution-type>
+			</action>
+			<action>
+				<name>Send Custom Notification to RPA</name>
+				<description>REC Performance Assurance(org)</description>
+				<script>
+					<![CDATA[import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
+import com.liferay.portal.kernel.workflow.WorkflowHandler;
+import com.liferay.portal.kernel.workflow.WorkflowHandlerRegistryUtil;
+import com.liferay.asset.kernel.model.AssetRendererFactory;
+import com.liferay.portal.kernel.util.GetterUtil;
+import com.liferay.journal.model.JournalArticle;
+import com.liferay.journal.service.JournalArticleLocalServiceUtil;
+
+import com.everis.messages.service.builder.service.MessagesLocalServiceUtil
+import com.liferay.portal.kernel.service.UserLocalServiceUtil
+
+Log logger = LogFactoryUtil.getLog("Log........");
+
+String className = (String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_NAME);
+
+logger.info("1. Classname" + className);
+
+WorkflowHandler workflowHandler = WorkflowHandlerRegistryUtil.getWorkflowHandler(className);
+
+AssetRendererFactory assetRendererFactory = workflowHandler.getAssetRendererFactory();
+
+long classPK = GetterUtil.getLong((String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_PK));
+
+logger.info("2. ClassPK - " + classPK);
+
+JournalArticle article = JournalArticleLocalServiceUtil.getJournalArticle(classPK);
+
+long resourcePrimKey = article.getResourcePrimKey();
+
+logger.info("2. resourcePrimKey - " + resourcePrimKey);
+
+String userId = (String)workflowContext.get(WorkflowConstants.CONTEXT_USER_ID);
+
+logger.info("userId.... " + userId);
+
+user = UserLocalServiceUtil.getUser(Long.parseLong(userId))
+
+MessagesLocalServiceUtil.sendNotification32(user, resourcePrimKey)]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onEntry</execution-type>
+			</action>
+			<notification>
+				<name>Notify Acceptance to asset creator</name>
+				<description>
+					<![CDATA[]]>
+				</description>
+				<template>
+					<![CDATA[Your Party Application has been accepted.]]>
+				</template>
+				<template-language>freemarker</template-language>
+				<notification-type>user-notification</notification-type>
+				<recipients receptionType="to">
+					<user />
+				</recipients>
+				<execution-type>onEntry</execution-type>
+			</notification>
+			<notification>
+				<name>Notify Third Parties</name>
+				<description>
+					<![CDATA[]]>
+				</description>
+				<template>
+					<![CDATA[New Party Application has been accepted.]]>
+				</template>
+				<template-language>freemarker</template-language>
+				<notification-type>user-notification</notification-type>
+				<recipients receptionType="to">
+					<roles>
+						<role>
+							<role-type>regular</role-type>
+							<name>Authority_Ofgem</name>
+							<auto-create>false</auto-create>
+						</role>
+						<role>
+							<role-type>regular</role-type>
+							<name>Application_Administrator</name>
+							<auto-create>false</auto-create>
+						</role>
+					</roles>
+				</recipients>
+				<execution-type>onEntry</execution-type>
+			</notification>
+		</actions>
+	</state>
+	<state>
+		<name>Approved</name>
+		<metadata>
+			<![CDATA[
+				{
+					"terminal": true,
+					"xy": [
+						532.9861755371094,
+						33.98150634765625
+					]
+				}
+			]]>
+		</metadata>
+		<actions>
+			<action>
+				<name>Approve</name>
+				<script>
+					<![CDATA[com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil.updateStatus(com.liferay.portal.kernel.workflow.WorkflowConstants.getLabelStatus("approved"), workflowContext);]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onEntry</execution-type>
+			</action>
+		</actions>
+	</state>
+	<state>
+		<name>PM Rejected</name>
+		<metadata>
+			<![CDATA[
+				{
+					"terminal": true,
+					"xy": [
+						194,
+						376.00001525878906
+					]
+				}
+			]]>
+		</metadata>
+		<actions>
+			<action>
+				<name>Rejected</name>
+				<script>
+					<![CDATA[import com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil;
+						import com.liferay.portal.kernel.workflow.WorkflowConstants;
+
+						WorkflowStatusManagerUtil.updateStatus(WorkflowConstants.getLabelStatus("denied"), workflowContext);]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onEntry</execution-type>
+			</action>
+			<action>
+				<name>Custom notification rejection</name>
+				<script>
+					<![CDATA[import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
+import com.liferay.portal.kernel.workflow.WorkflowHandler;
+import com.liferay.portal.kernel.workflow.WorkflowHandlerRegistryUtil;
+import com.liferay.asset.kernel.model.AssetRendererFactory;
+import com.liferay.portal.kernel.util.GetterUtil;
+import com.everis.messages.service.builder.service.MessagesLocalServiceUtil;
+import com.liferay.portal.kernel.service.UserLocalServiceUtil;
+
+Log logger = LogFactoryUtil.getLog("Log........");
+
+String className = (String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_NAME);
+
+WorkflowHandler workflowHandler = WorkflowHandlerRegistryUtil.getWorkflowHandler(className);
+
+AssetRendererFactory assetRendererFactory = workflowHandler.getAssetRendererFactory();
+
+Long classPK = GetterUtil.getLong((String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_PK));
+
+String companyIdString = (String)workflowContext.get(WorkflowConstants.CONTEXT_COMPANY_ID);
+
+
+String comments = (String)workflowContext.get(WorkflowConstants.CONTEXT_TASK_COMMENTS);
+
+logger.info("1. comments - " + comments);]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onEntry</execution-type>
+			</action>
+			<notification>
+				<name>Notify Rejection to asset creator</name>
+				<description>
+					<![CDATA[]]>
+				</description>
+				<template>
+					<![CDATA[Your application has been rejected for the following reason(s):  ${taskComments}]]>
+				</template>
+				<template-language>freemarker</template-language>
+				<notification-type>user-notification</notification-type>
+				<recipients receptionType="to">
+					<user />
+				</recipients>
+				<execution-type>onEntry</execution-type>
+			</notification>
+		</actions>
+	</state>
+	<state>
+		<name>Rejected</name>
+		<metadata>
+			<![CDATA[
+				{
+					"terminal": true,
+					"xy": [
+						657,
+						235.8000030517578
+					]
+				}
+			]]>
+		</metadata>
+		<actions>
+			<action>
+				<name>reject</name>
+				<script>
+					<![CDATA[
+						import com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil;
+						import com.liferay.portal.kernel.workflow.WorkflowConstants;
+
+						WorkflowStatusManagerUtil.updateStatus(WorkflowConstants.getLabelStatus("denied"), workflowContext);]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onEntry</execution-type>
+			</action>
+			<notification>
+				<name>Notification to Change Proposer</name>
+				<description>
+					<![CDATA[]]>
+				</description>
+				<template>
+					<![CDATA[Your Category3 Change Form has been rejected.]]>
+				</template>
+				<template-language>freemarker</template-language>
+				<notification-type>user-notification</notification-type>
+				<recipients receptionType="to">
+					<user />
+				</recipients>
+				<execution-type>onEntry</execution-type>
+			</notification>
+		</actions>
+	</state>
+	<state>
+		<name>Awaiting Implementation</name>
+		<metadata>
+			<![CDATA[
+				{
+					"terminal": true,
+					"xy": [
+						799.0162048339844,
+						364.9768600463867
+					]
+				}
+			]]>
+		</metadata>
+		<actions>
+			<action>
+				<name>Send custom notification to RSP (org)</name>
+				<description>Awaiting implementation</description>
+				<script>
+					<![CDATA[]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onEntry</execution-type>
+			</action>
+		</actions>
+	</state>
+	<state>
+		<name>Finished</name>
+		<metadata>
+			<![CDATA[
+				{
+					"terminal": true,
+					"xy": [
+						573.3999938964844,
+						516.200008392334
+					]
+				}
+			]]>
+		</metadata>
+		<actions>
+			<action>
+				<name>Approve</name>
+				<script>
+					<![CDATA[com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil.updateStatus(com.liferay.portal.kernel.workflow.WorkflowConstants.getLabelStatus("approved"), workflowContext);]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onEntry</execution-type>
+			</action>
+		</actions>
+	</state>
+	<task>
+		<name>Review Application</name>
+		<metadata>
+			<![CDATA[
+				{
+					"xy": [
+						107,
+						223.00001525878906
+					]
+				}
+			]]>
+		</metadata>
+		<actions>
+			<notification>
+				<name>Review Aplication</name>
+				<description>
+					<![CDATA[]]>
+				</description>
+				<template>
+					<![CDATA[${userName} sent you a party application for review.]]>
+				</template>
+				<template-language>freemarker</template-language>
+				<notification-type>user-notification</notification-type>
+				<recipients receptionType="to">
+					<roles>
+						<role>
+							<role-type>regular</role-type>
+							<name>Operational_Account_Manager</name>
+							<auto-create>false</auto-create>
+						</role>
+					</roles>
+				</recipients>
+				<execution-type>onAssignment</execution-type>
+			</notification>
+		</actions>
+		<assignments>
+			<roles>
+				<role>
+					<role-type>regular</role-type>
+					<name>Application_Administrator</name>
+					<auto-create>false</auto-create>
+				</role>
+				<role>
+					<role-type>regular</role-type>
+					<name>Operational_Account_Manager</name>
+					<auto-create>false</auto-create>
+				</role>
+			</roles>
+		</assignments>
+		<transitions>
+			<transition>
+				<name>Accept</name>
+				<target>PM Approved</target>
+				<default>true</default>
+			</transition>
+			<transition>
+				<name>Reject</name>
+				<target>PM Rejected</target>
+				<default>false</default>
+			</transition>
+		</transitions>
+	</task>
+	<task>
+		<name>Complete Category3 Change Form</name>
+		<description>Category3 Change Log</description>
+		<metadata>
+			<![CDATA[
+				{
+					"xy": [
+						371,
+						237.80001831054688
+					]
+				}
+			]]>
+		</metadata>
+		<actions>
+			<notification>
+				<name>Notification to Change Management Team (CMT)</name>
+				<description>
+					<![CDATA[]]>
+				</description>
+				<template>
+					<![CDATA[A new Category 3 Form has been submitted for your review]]>
+				</template>
+				<template-language>freemarker</template-language>
+				<notification-type>user-notification</notification-type>
+				<recipients receptionType="to">
+					<roles>
+						<role>
+							<role-type>regular</role-type>
+							<name>Change_Management_Team</name>
+							<auto-create>false</auto-create>
+						</role>
+					</roles>
+				</recipients>
+				<execution-type>onAssignment</execution-type>
+			</notification>
+		</actions>
+		<assignments>
+			<roles>
+				<role>
+					<role-type>regular</role-type>
+					<name>Change_Management_Team</name>
+					<auto-create>false</auto-create>
+				</role>
+			</roles>
+		</assignments>
+		<transitions>
+			<transition>
+				<name>Reject</name>
+				<target>Rejected</target>
+				<default>true</default>
+			</transition>
+			<transition>
+				<name>Accept</name>
+				<target>Review Changes</target>
+				<default>false</default>
+			</transition>
+		</transitions>
+	</task>
+	<task>
+		<name>Review Changes</name>
+		<metadata>
+			<![CDATA[
+				{
+					"xy": [
+						554.9884948730469,
+						345.00001525878906
+					]
+				}
+			]]>
+		</metadata>
+		<actions>
+			<action>
+				<name>Approved</name>
+				<script>
+					<![CDATA[
+						import com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil;
+						import com.liferay.portal.kernel.workflow.WorkflowConstants;
+
+						WorkflowStatusManagerUtil.updateStatus(WorkflowConstants.getLabelStatus("approved"), workflowContext);]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onEntry</execution-type>
+			</action>
+			<action>
+				<name>Send custom notification to RSP (org)</name>
+				<description>Accepted</description>
+				<script>
+					<![CDATA[import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
+import com.liferay.portal.kernel.workflow.WorkflowHandler;
+import com.liferay.portal.kernel.workflow.WorkflowHandlerRegistryUtil;
+import com.liferay.asset.kernel.model.AssetRendererFactory;
+import com.liferay.portal.kernel.util.GetterUtil;
+import com.liferay.journal.model.JournalArticle;
+import com.liferay.journal.service.JournalArticleLocalServiceUtil;
+
+import com.everis.messages.service.builder.service.MessagesLocalServiceUtil
+import com.liferay.portal.kernel.service.UserLocalServiceUtil
+
+Log logger = LogFactoryUtil.getLog("Log........");
+
+String className = (String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_NAME);
+
+logger.info("1. Classname" + className);
+
+WorkflowHandler workflowHandler = WorkflowHandlerRegistryUtil.getWorkflowHandler(className);
+
+AssetRendererFactory assetRendererFactory = workflowHandler.getAssetRendererFactory();
+
+long classPK = GetterUtil.getLong((String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_PK));
+
+logger.info("2. ClassPK - " + classPK);
+
+JournalArticle article = JournalArticleLocalServiceUtil.getJournalArticle(classPK);
+
+long resourcePrimKey = article.getResourcePrimKey();
+
+logger.info("2. resourcePrimKey - " + resourcePrimKey);
+
+String userId = (String)workflowContext.get(WorkflowConstants.CONTEXT_USER_ID);
+
+logger.info("userId.... " + userId);
+
+user = UserLocalServiceUtil.getUser(Long.parseLong(userId))
+
+MessagesLocalServiceUtil.sendNotification24(user, 0)]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onEntry</execution-type>
+			</action>
+			<action>
+				<name>Send Custom Notification 22 to Asset Creator</name>
+				<script>
+					<![CDATA[import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
+import com.liferay.portal.kernel.workflow.WorkflowHandler;
+import com.liferay.portal.kernel.workflow.WorkflowHandlerRegistryUtil;
+import com.liferay.asset.kernel.model.AssetRendererFactory;
+import com.liferay.portal.kernel.util.GetterUtil;
+import com.liferay.journal.model.JournalArticle;
+import com.liferay.journal.service.JournalArticleLocalServiceUtil;
+
+import com.everis.messages.service.builder.service.MessagesLocalServiceUtil;
+import com.liferay.portal.kernel.service.UserLocalServiceUtil;
+
+Log logger = LogFactoryUtil.getLog("Log........");
+
+String className = (String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_NAME);
+
+logger.info("1. Classname" + className);
+
+WorkflowHandler workflowHandler = WorkflowHandlerRegistryUtil.getWorkflowHandler(className);
+
+AssetRendererFactory assetRendererFactory = workflowHandler.getAssetRendererFactory();
+
+long classPK = GetterUtil.getLong((String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_PK));
+
+logger.info("2. ClassPK - " + classPK);
+
+JournalArticle article = JournalArticleLocalServiceUtil.getJournalArticle(classPK);
+
+long resourcePrimKey = article.getResourcePrimKey();
+
+logger.info("2. resourcePrimKey - " + resourcePrimKey);
+
+String userId = (String)workflowContext.get(WorkflowConstants.CONTEXT_USER_ID);
+
+logger.info("userId.... " + userId);
+
+user = UserLocalServiceUtil.getUser(Long.parseLong(userId))
+
+long journalArticleUserId = article.getUserId();
+
+MessagesLocalServiceUtil.sendNotification22(user, journalArticleUserId, resourcePrimKey)]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onEntry</execution-type>
+			</action>
+			<action>
+				<name>FriendlyURL JournalArticle</name>
+				<script>
+					<![CDATA[import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
+import com.liferay.portal.kernel.workflow.WorkflowHandler;
+import com.liferay.portal.kernel.workflow.WorkflowHandlerRegistryUtil;
+import com.liferay.asset.kernel.model.AssetRendererFactory;
+import com.liferay.portal.kernel.util.GetterUtil;
+import com.liferay.journal.model.JournalArticle;
+import com.liferay.journal.service.JournalArticleLocalServiceUtil;
+
+import com.liferay.portal.kernel.model.Layout;
+import com.liferay.portal.kernel.service.LayoutLocalServiceUtil;
+
+
+Log logger = LogFactoryUtil.getLog("Log........");
+
+String className = (String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_NAME);
+
+logger.info("1. Classname" + className);
+
+WorkflowHandler workflowHandler = WorkflowHandlerRegistryUtil.getWorkflowHandler(className);
+
+AssetRendererFactory assetRendererFactory = workflowHandler.getAssetRendererFactory();
+
+long classPK = GetterUtil.getLong((String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_PK));
+
+logger.info("2. ClassPK - " + classPK);
+
+JournalArticle article = JournalArticleLocalServiceUtil.getJournalArticle(classPK);
+
+layout = LayoutLocalServiceUtil.getLayout(418);
+		
+String layoutUuid = layout.getUuid();
+
+logger.info("3. layoutUuid - " + layoutUuid);
+
+article.setLayoutUuid(layoutUuid);
+
+JournalArticleLocalServiceUtil.updateJournalArticle(article);	]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onExit</execution-type>
+			</action>
+			<notification>
+				<name>Send notification to CMT</name>
+				<description>
+					<![CDATA[]]>
+				</description>
+				<template>
+					<![CDATA[Please update the Category 3 status to "In Progress"]]>
+				</template>
+				<template-language>freemarker</template-language>
+				<notification-type>user-notification</notification-type>
+				<recipients receptionType="to">
+					<roles>
+						<role>
+							<role-type>regular</role-type>
+							<name>Change_Management_Team</name>
+							<auto-create>false</auto-create>
+						</role>
+					</roles>
+				</recipients>
+				<execution-type>onEntry</execution-type>
+			</notification>
+		</actions>
+		<assignments>
+			<roles>
+				<role>
+					<role-type>regular</role-type>
+					<name>Change_Management_Team</name>
+					<auto-create>false</auto-create>
+				</role>
+			</roles>
+		</assignments>
+		<transitions>
+			<transition>
+				<name>Status Updated</name>
+				<target>Awaiting Implementation</target>
+				<default>true</default>
+			</transition>
+		</transitions>
+	</task>
+	<task>
+		<name>Cross Code Steering</name>
+		<metadata>
+			<![CDATA[
+				{
+					"xy": [
+						311.3874816894531,
+						471.200008392334
+					]
+				}
+			]]>
+		</metadata>
+		<actions>
+			<notification>
+				<name>Notification To Asset Creator</name>
+				<description>
+					<![CDATA[]]>
+				</description>
+				<template>
+					<![CDATA[You have sent the notifications to vote ]]>
+				</template>
+				<template-language>freemarker</template-language>
+				<notification-type>user-notification</notification-type>
+				<recipients receptionType="to">
+					<user />
+				</recipients>
+				<execution-type>onEntry</execution-type>
+			</notification>
+		</actions>
+		<assignments>
+			<user />
+		</assignments>
+		<transitions>
+			<transition>
+				<name>Send Vote</name>
+				<target>Finished</target>
+				<default>true</default>
+			</transition>
+		</transitions>
+	</task>
+</workflow-definition>

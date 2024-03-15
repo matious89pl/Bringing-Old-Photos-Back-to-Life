@@ -1,0 +1,751 @@
+<?xml version="1.0"?>
+
+<workflow-definition
+	xmlns="urn:liferay.com:liferay-workflow_7.3.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="urn:liferay.com:liferay-workflow_7.3.0 http://www.liferay.com/dtd/liferay-workflow-definition_7_3_0.xsd"
+>
+	<version>1</version>
+	<condition>
+		<name>isSubmit</name>
+		<metadata>
+			<![CDATA[
+				{
+					"xy": [
+						220.93753051757812,
+						5
+					]
+				}
+			]]>
+		</metadata>
+		<script>
+			<![CDATA[import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
+import com.liferay.portal.kernel.workflow.WorkflowHandler;
+import com.liferay.portal.kernel.workflow.WorkflowHandlerRegistryUtil;
+import com.liferay.asset.kernel.model.AssetRendererFactory;
+import com.liferay.portal.kernel.util.GetterUtil;
+import com.everis.cproposal.service.recFormArticleLocalServiceUtil;
+import com.liferay.dynamic.data.mapping.model.DDMFormInstanceRecordVersion;
+import com.liferay.dynamic.data.mapping.service.DDMFormInstanceRecordVersionLocalServiceUtil;
+
+Log logger = LogFactoryUtil.getLog("Log........");
+
+String className = (String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_NAME);
+
+logger.info("0. Classname" + className);
+
+
+WorkflowHandler workflowHandler = WorkflowHandlerRegistryUtil.getWorkflowHandler(className);
+
+AssetRendererFactory assetRendererFactory = workflowHandler.getAssetRendererFactory();
+
+logger.info("1. Starting script to create a CP");
+
+long formId = GetterUtil.getLong((String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_PK));
+
+logger.info("2. formId - " + formId);
+
+DDMFormInstanceRecordVersion ddv = DDMFormInstanceRecordVersionLocalServiceUtil.getFormInstanceRecordVersion(formId);
+
+if(ddv.getMvccVersion() == 1) {
+    returnValue = "skip";
+}else{
+    returnValue = "true";
+}]]>
+		</script>
+		<script-language>groovy</script-language>
+		<transitions>
+			<transition>
+				<name>true</name>
+				<target>Review</target>
+				<default>true</default>
+			</transition>
+			<transition>
+				<name>skip</name>
+				<target>Skip</target>
+				<default>false</default>
+			</transition>
+		</transitions>
+	</condition>
+	<fork>
+		<name>In Progress</name>
+		<metadata>
+			<![CDATA[
+				{
+					"xy": [
+						297.9875183105469,
+						271
+					]
+				}
+			]]>
+		</metadata>
+		<actions>
+			<action>
+				<name>Create a Change Proposal Page</name>
+				<description>Create a Change Proposal Page based on form</description>
+				<script>
+					<![CDATA[import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
+import com.liferay.portal.kernel.workflow.WorkflowHandler;
+import com.liferay.portal.kernel.workflow.WorkflowHandlerRegistryUtil;
+import com.liferay.asset.kernel.model.AssetRendererFactory;
+import com.liferay.portal.kernel.util.GetterUtil;
+import com.everis.cproposal.service.recFormArticleLocalServiceUtil;
+
+Log logger = LogFactoryUtil.getLog("Log........");
+
+String className = (String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_NAME);
+
+logger.info("0. Classname" + className);
+
+
+WorkflowHandler workflowHandler = WorkflowHandlerRegistryUtil.getWorkflowHandler(className);
+
+AssetRendererFactory assetRendererFactory = workflowHandler.getAssetRendererFactory();
+
+logger.info("1. Starting script to create a CP");
+
+long classPK = GetterUtil.getLong((String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_PK));
+
+logger.info("2. ClassPK - " + classPK);
+
+resourcePrimKey = recFormArticleLocalServiceUtil.createCProposal(classPK);
+
+logger.info("resourcePrimKey..." + resourcePrimKey);
+
+formArticle = recFormArticleLocalServiceUtil.createrecFormArticle(classPK);
+
+formArticle.setArticleId(resourcePrimKey);
+recFormArticleLocalServiceUtil.addrecFormArticle(formArticle);]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onEntry</execution-type>
+			</action>
+		</actions>
+		<transitions>
+			<transition>
+				<name>Tr02</name>
+				<target>Approve</target>
+				<default>true</default>
+			</transition>
+			<transition>
+				<name>Tr01</name>
+				<target>Withdraw</target>
+				<default>false</default>
+			</transition>
+		</transitions>
+	</fork>
+	<join-xor>
+		<name>Join01</name>
+		<metadata>
+			<![CDATA[
+				{
+					"xy": [
+						622.5,
+						249
+					]
+				}
+			]]>
+		</metadata>
+		<transitions>
+			<transition>
+				<name>Tr03</name>
+				<target>Implement</target>
+				<default>true</default>
+			</transition>
+		</transitions>
+	</join-xor>
+	<state>
+		<name>StartNode</name>
+		<metadata>
+			<![CDATA[
+				{
+					"xy": [
+						9,
+						26
+					]
+				}
+			]]>
+		</metadata>
+		<actions>
+			<action>
+				<name>break_workflow</name>
+				<script>
+					<![CDATA[import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+Log logger = LogFactoryUtil.getLog("Log........");
+logger.info("AAAAAAAAA");]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onEntry</execution-type>
+			</action>
+		</actions>
+		<initial>true</initial>
+		<transitions>
+			<transition>
+				<name>Check Alternative</name>
+				<target>isSubmit</target>
+				<default>true</default>
+			</transition>
+		</transitions>
+	</state>
+	<state>
+		<name>Rejected</name>
+		<description>Change Proposal Rejected</description>
+		<metadata>
+			<![CDATA[
+				{
+					"terminal": true,
+					"xy": [
+						165.93753051757812,
+						216
+					]
+				}
+			]]>
+		</metadata>
+		<actions>
+			<action>
+				<name>Script notification-06 rejected</name>
+				<script>
+					<![CDATA[import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.util.GetterUtil;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
+import com.everis.messages.service.builder.service.MessagesLocalServiceUtil;
+import com.liferay.dynamic.data.mapping.service.DDMFormInstanceRecordLocalServiceUtil;
+import com.liferay.dynamic.data.mapping.model.DDMFormInstanceRecord;
+import com.liferay.dynamic.data.mapping.model.DDMFormInstanceRecordVersion;
+import com.liferay.dynamic.data.mapping.service.DDMFormInstanceRecordVersionLocalServiceUtil;
+import com.liferay.portal.kernel.service.UserLocalServiceUtil;
+
+Log logger = LogFactoryUtil.getLog("Log........");
+String className = (String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_NAME);
+logger.info("className " + className);
+//formInstanceRecordId
+long classPK = GetterUtil.getLong((String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_PK));
+logger.info("classPK " + classPK);
+
+DDMFormInstanceRecordVersion ddm= DDMFormInstanceRecordVersionLocalServiceUtil.getFormInstanceRecordVersion(classPK)
+logger.info("ddm " + ddm);
+
+user = UserLocalServiceUtil.getUser(ddm.getUserId())
+
+logger.info("User " + user);
+
+String comments = (String)workflowContext.get(WorkflowConstants.CONTEXT_TASK_COMMENTS);
+
+logger.info("1. comments - " + comments);
+
+MessagesLocalServiceUtil.sendNotification061ByUserByUrl(user, comments, "/group/guest/service-management", "/group/guest/raise-a-ticket", classPK);]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onEntry</execution-type>
+			</action>
+		</actions>
+	</state>
+	<state>
+		<name>Implemented</name>
+		<description>Change Proposal Implemented</description>
+		<metadata>
+			<![CDATA[
+				{
+					"terminal": true,
+					"xy": [
+						773,
+						0
+					]
+				}
+			]]>
+		</metadata>
+	</state>
+	<state>
+		<name>Skip</name>
+		<metadata>
+			<![CDATA[
+				{
+					"terminal": true,
+					"xy": [
+						90.97500610351562,
+						145.00000190734863
+					]
+				}
+			]]>
+		</metadata>
+	</state>
+	<task>
+		<name>Review</name>
+		<metadata>
+			<![CDATA[
+				{
+					"xy": [
+						364.0000305175781,
+						5
+					]
+				}
+			]]>
+		</metadata>
+		<actions>
+			<notification>
+				<name>1. Send to change management team</name>
+				<description>
+					<![CDATA[]]>
+				</description>
+				<template>
+					<![CDATA[A new Change Proposal Form has been submitted for your review]]>
+				</template>
+				<template-language>freemarker</template-language>
+				<notification-type>user-notification</notification-type>
+				<recipients receptionType="to">
+					<roles>
+						<role>
+							<role-type>regular</role-type>
+							<name>Change_Management_Team</name>
+							<auto-create>false</auto-create>
+						</role>
+					</roles>
+				</recipients>
+				<execution-type>onAssignment</execution-type>
+			</notification>
+			<notification>
+				<name>2. Submit confirmation to asset creator</name>
+				<description>
+					<![CDATA[]]>
+				</description>
+				<template>
+					<![CDATA[Your Change Proposal Form has been successfully submitted. You will be advised to the outcome of the Change Proposal within 24 hours]]>
+				</template>
+				<template-language>freemarker</template-language>
+				<notification-type>user-notification</notification-type>
+				<recipients receptionType="to">
+					<user />
+				</recipients>
+				<execution-type>onEntry</execution-type>
+			</notification>
+		</actions>
+		<assignments>
+			<roles>
+				<role>
+					<role-type>regular</role-type>
+					<name>Change_Management_Team</name>
+					<auto-create>false</auto-create>
+				</role>
+			</roles>
+		</assignments>
+		<transitions>
+			<transition>
+				<name>Reject Change Proposal</name>
+				<target>Rejected</target>
+				<default>true</default>
+			</transition>
+			<transition>
+				<name>Accept Change Proposal</name>
+				<target>In Progress</target>
+				<default>false</default>
+			</transition>
+		</transitions>
+	</task>
+	<task>
+		<name>Implement</name>
+		<metadata>
+			<![CDATA[
+				{
+					"xy": [
+						771.5,
+						157
+					]
+				}
+			]]>
+		</metadata>
+		<actions>
+			<action>
+				<name>Script - notitication-04 to REC_Stakeholder successfully</name>
+				<script>
+					<![CDATA[import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.util.GetterUtil;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
+import com.liferay.portal.kernel.workflow.WorkflowHandler;
+import com.liferay.portal.kernel.workflow.WorkflowHandlerRegistryUtil;
+
+import com.everis.messages.service.builder.service.MessagesLocalServiceUtil
+import com.liferay.portal.kernel.service.UserLocalServiceUtil
+
+Log logger = LogFactoryUtil.getLog("Log........");
+
+String userId = (String)workflowContext.get(WorkflowConstants.CONTEXT_USER_ID);
+
+logger.info("userId.... " + userId);
+
+user = UserLocalServiceUtil.getUser(Long.parseLong(userId))
+
+long classPK = GetterUtil.getLong((String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_PK));
+logger.info("classPK " + classPK);
+
+MessagesLocalServiceUtil.sendNotification04ByUserByRole(user, "REC_Stakeholder", classPK)]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onExit</execution-type>
+			</action>
+		</actions>
+		<assignments>
+			<roles>
+				<role>
+					<role-type>regular</role-type>
+					<name>Change_Management_Team</name>
+					<auto-create>false</auto-create>
+				</role>
+			</roles>
+		</assignments>
+		<transitions>
+			<transition>
+				<name>Implemented</name>
+				<target>Implemented</target>
+				<default>true</default>
+			</transition>
+		</transitions>
+	</task>
+	<task>
+		<name>Approve</name>
+		<metadata>
+			<![CDATA[
+				{
+					"xy": [
+						552.5,
+						21
+					]
+				}
+			]]>
+		</metadata>
+		<actions>
+			<action>
+				<name>Script notification-17- REC-Stakeholder</name>
+				<script>
+					<![CDATA[import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.util.GetterUtil;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
+import com.liferay.portal.kernel.workflow.WorkflowHandler;
+import com.liferay.portal.kernel.workflow.WorkflowHandlerRegistryUtil;
+
+import com.everis.messages.service.builder.service.MessagesLocalServiceUtil
+import com.liferay.portal.kernel.service.UserLocalServiceUtil
+
+Log logger = LogFactoryUtil.getLog("Log........");
+
+String userId = (String)workflowContext.get(WorkflowConstants.CONTEXT_USER_ID);
+
+logger.info("userId.... " + userId);
+
+user = UserLocalServiceUtil.getUser(Long.parseLong(userId))
+
+long classPK = GetterUtil.getLong((String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_PK));
+
+logger.info("classPK.... " + classPK );
+MessagesLocalServiceUtil.sendNotification17ByUserByRole(user, "REC_Stakeholder", classPK )]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onExit</execution-type>
+			</action>
+			<action>
+				<name>Send notification 051 accepted</name>
+				<description>Script to create a new change proposal Web Content</description>
+				<script>
+					<![CDATA[import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
+import com.liferay.portal.kernel.workflow.WorkflowHandler;
+import com.liferay.portal.kernel.workflow.WorkflowHandlerRegistryUtil;
+import com.liferay.asset.kernel.model.AssetRendererFactory;
+import com.liferay.portal.kernel.util.GetterUtil;
+import com.everis.cproposal.service.recFormArticleLocalServiceUtil;
+import com.everis.messages.service.builder.service.MessagesLocalServiceUtil;
+import com.liferay.dynamic.data.mapping.service.DDMFormInstanceRecordLocalServiceUtil;
+import com.liferay.dynamic.data.mapping.model.DDMFormInstanceRecord;
+import com.liferay.dynamic.data.mapping.model.DDMFormInstanceRecordVersion;
+import com.liferay.dynamic.data.mapping.service.DDMFormInstanceRecordVersionLocalServiceUtil;
+import com.liferay.portal.kernel.service.UserLocalServiceUtil;
+
+Log logger = LogFactoryUtil.getLog("Log........");
+
+String className = (String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_NAME);
+
+logger.info("0. Classname" + className);
+
+
+WorkflowHandler workflowHandler = WorkflowHandlerRegistryUtil.getWorkflowHandler(className);
+
+AssetRendererFactory assetRendererFactory = workflowHandler.getAssetRendererFactory();
+
+logger.info("1. Starting script to create a CP");
+
+long classPK = GetterUtil.getLong((String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_PK));
+
+logger.info("2. ClassPK - " + classPK);
+
+DDMFormInstanceRecordVersion ddm= DDMFormInstanceRecordVersionLocalServiceUtil.getFormInstanceRecordVersion(classPK)
+
+user = UserLocalServiceUtil.getUser(ddm.getUserId())
+MessagesLocalServiceUtil.sendNotification051ByUserByUrl(user, classPK)]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onEntry</execution-type>
+			</action>
+			<action>
+				<name>Script log DB</name>
+				<script>
+					<![CDATA[import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.util.GetterUtil;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
+import com.liferay.portal.kernel.workflow.WorkflowHandler;
+import com.liferay.portal.kernel.workflow.WorkflowHandlerRegistryUtil;
+import com.everis.cproposal.service.recFormArticleLocalServiceUtil;
+import com.everis.rec.service.activity.logs.service.RecLogLocalServiceUtil;
+
+Log logger = LogFactoryUtil.getLog("Log........");
+
+String workflowGroupId = (String)workflowContext.get(WorkflowConstants.CONTEXT_GROUP_ID);
+
+long groupId = Long.parseLong(workflowGroupId);
+logger.info("groupId:  " + groupId);
+
+long formId = GetterUtil.getLong((String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_PK));
+logger.info("formId :  " + formId);
+
+journalArticle =  recFormArticleLocalServiceUtil.getrecFormArticle(formId);
+
+long resoursePrimaryKey = journalArticle.getArticleId();
+
+RecLogLocalServiceUtil.registerActivityLog(groupId, resoursePrimaryKey, "change proposal was approved","Change Proposal approved");
+
+logger.info("Log stored in the DB - Approved");]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onExit</execution-type>
+			</action>
+		</actions>
+		<assignments>
+			<roles>
+				<role>
+					<role-type>regular</role-type>
+					<name>Change_Management_Team</name>
+					<auto-create>false</auto-create>
+				</role>
+			</roles>
+		</assignments>
+		<transitions>
+			<transition>
+				<name>Change Proposal Approved</name>
+				<target>Join01</target>
+				<default>true</default>
+			</transition>
+		</transitions>
+	</task>
+	<task>
+		<name>Withdraw</name>
+		<metadata>
+			<![CDATA[
+				{
+					"xy": [
+						48.5,
+						472
+					]
+				}
+			]]>
+		</metadata>
+		<actions>
+			<action>
+				<name>Script log DB</name>
+				<description>Store a log in the DB ACTIVITY_RecLog</description>
+				<script>
+					<![CDATA[import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.util.GetterUtil;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
+import com.liferay.portal.kernel.workflow.WorkflowHandler;
+import com.liferay.portal.kernel.workflow.WorkflowHandlerRegistryUtil;
+import com.everis.cproposal.service.recFormArticleLocalServiceUtil;
+import com.everis.rec.service.activity.logs.service.RecLogLocalServiceUtil;
+
+Log logger = LogFactoryUtil.getLog("Log........");
+
+String workflowGroupId = (String)workflowContext.get(WorkflowConstants.CONTEXT_GROUP_ID);
+
+long groupId = Long.parseLong(workflowGroupId);
+logger.info("groupId:  " + groupId);
+
+long formId = GetterUtil.getLong((String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_PK));
+logger.info("formId :  " + formId);
+
+journalArticle =  recFormArticleLocalServiceUtil.getrecFormArticle(formId);
+
+long resoursePrimaryKey = journalArticle.getArticleId();
+
+RecLogLocalServiceUtil.registerActivityLog(groupId, resoursePrimaryKey, "change proposal was withdrawed","Change Proposal withdrawed");
+
+logger.info("Log stored in the DB - Withdrawn");]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onExit</execution-type>
+			</action>
+		</actions>
+		<assignments>
+			<user />
+		</assignments>
+		<transitions>
+			<transition>
+				<name>Withdraw Change Proposal</name>
+				<target>Assign Adopter</target>
+				<default>true</default>
+			</transition>
+		</transitions>
+	</task>
+	<task>
+		<name>Assign Adopter</name>
+		<metadata>
+			<![CDATA[
+				{
+					"xy": [
+						667.5,
+						491
+					]
+				}
+			]]>
+		</metadata>
+		<actions>
+			<action>
+				<name>Remove Proposer</name>
+				<description>Script to remove proposer from Web Content</description>
+				<script>
+					<![CDATA[import com.liferay.portal.kernel.util.GetterUtil;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
+import com.liferay.portal.kernel.workflow.WorkflowHandler;
+import com.liferay.portal.kernel.workflow.WorkflowHandlerRegistryUtil;
+import com.liferay.asset.kernel.model.AssetCategory;
+import com.liferay.asset.kernel.model.AssetEntry;
+import com.liferay.asset.kernel.model.AssetRenderer;
+import com.liferay.asset.kernel.model.AssetRendererFactory;
+import com.liferay.asset.kernel.service.AssetEntryLocalServiceUtil;
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import java.util.List;
+
+import com.everis.cproposal.service.recFormArticleLocalServiceUtil;
+
+
+Log logger = LogFactoryUtil.getLog("Log........");
+
+String className = (String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_NAME);
+
+WorkflowHandler workflowHandler = WorkflowHandlerRegistryUtil.getWorkflowHandler(className);
+
+AssetRendererFactory assetRendererFactory = workflowHandler.getAssetRendererFactory();
+
+// formId
+long classPK = GetterUtil.getLong((String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_PK));
+
+logger.info("--------Testing service classPK--------" + classPK);
+
+article = recFormArticleLocalServiceUtil.getrecFormArticle(classPK);
+
+logger.info("--------Testing service articleId--------" + article.getArticleId());
+
+recFormArticleLocalServiceUtil.removeJournalArticleUser(article.getArticleId());]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onEntry</execution-type>
+			</action>
+			<action>
+				<name>Notify Withdraw to Change Management and Rec Stakeholders</name>
+				<script>
+					<![CDATA[import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.util.GetterUtil;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
+import com.liferay.dynamic.data.mapping.service.DDMFormInstanceRecordLocalServiceUtil;
+import com.liferay.dynamic.data.mapping.model.DDMFormInstanceRecord;
+import com.liferay.dynamic.data.mapping.model.DDMFormInstanceRecordVersion;
+import com.liferay.dynamic.data.mapping.service.DDMFormInstanceRecordVersionLocalServiceUtil;
+import com.liferay.portal.kernel.service.UserLocalServiceUtil;
+
+import com.everis.messages.service.builder.service.MessagesLocalServiceUtil;
+
+Log logger = LogFactoryUtil.getLog("Log........");
+String className = (String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_NAME);
+logger.info("className " + className);
+
+long classPK = GetterUtil.getLong((String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_PK));
+logger.info("classPK " + classPK);
+
+DDMFormInstanceRecordVersion ddm = DDMFormInstanceRecordVersionLocalServiceUtil.getFormInstanceRecordVersion(classPK);
+logger.info("ddm " + ddm);
+
+user = UserLocalServiceUtil.getUser(ddm.getUserId());
+
+logger.info("User " + user);
+MessagesLocalServiceUtil.sendNotification08(user, String.valueOf(classPK));]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onEntry</execution-type>
+			</action>
+			<action>
+				<name>Script log DB</name>
+				<description>Store a log in the DB ACTIVITY_RecLog</description>
+				<script>
+					<![CDATA[import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.util.GetterUtil;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
+import com.liferay.portal.kernel.workflow.WorkflowHandler;
+import com.liferay.portal.kernel.workflow.WorkflowHandlerRegistryUtil;
+import com.everis.cproposal.service.recFormArticleLocalServiceUtil;
+import com.everis.rec.service.activity.logs.service.RecLogLocalServiceUtil;
+
+Log logger = LogFactoryUtil.getLog("Log........");
+
+String workflowGroupId = (String)workflowContext.get(WorkflowConstants.CONTEXT_GROUP_ID);
+
+long groupId = Long.parseLong(workflowGroupId);
+logger.info("groupId:  " + groupId);
+
+long formId = GetterUtil.getLong((String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_PK));
+logger.info("formId :  " + formId);
+
+journalArticle =  recFormArticleLocalServiceUtil.getrecFormArticle(formId);
+
+long resoursePrimaryKey = journalArticle.getArticleId();
+
+RecLogLocalServiceUtil.registerActivityLog(groupId, resoursePrimaryKey, "change proposal adopted","Change Proposal adopted");
+
+logger.info("Log stored in the DB - Assigned ");]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onExit</execution-type>
+			</action>
+		</actions>
+		<assignments>
+			<roles>
+				<role>
+					<role-type>regular</role-type>
+					<name>Change_Management_Team</name>
+					<auto-create>false</auto-create>
+				</role>
+			</roles>
+		</assignments>
+		<transitions>
+			<transition>
+				<name>Change Proposal Approved</name>
+				<target>Join01</target>
+				<default>true</default>
+			</transition>
+			<transition>
+				<name>Assign new Change Adopter</name>
+				<target>Withdraw</target>
+				<default>false</default>
+			</transition>
+		</transitions>
+	</task>
+</workflow-definition>

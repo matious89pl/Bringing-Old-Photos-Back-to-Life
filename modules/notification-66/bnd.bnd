@@ -1,0 +1,4 @@
+Bundle-Name: notification-66
+Bundle-SymbolicName: com.everis.notification66
+Bundle-Version: 1.0.0
+Export-Package: com.everis.notification66.constants

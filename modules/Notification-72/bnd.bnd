@@ -1,0 +1,4 @@
+Bundle-Name: Notification-72
+Bundle-SymbolicName: com.everis.Notification72
+Bundle-Version: 1.0.0
+Export-Package: com.everis.Notification72.constants

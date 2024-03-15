@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>423BADD0-1839-483C-8482-386575DD746A@3x</title>
+    <defs>
+        <path d="M16.0000332,0 L16.0000332,2.28573798 L2.28573798,2.28573798 L2.28573798,29.714262 L29.714262,29.714262 L29.714262,16.0000332 L32,16.0000332 L32,30.857131 C32,31.488851 31.488851,32 30.857131,32 L30.857131,32 L1.14286899,32 C0.511149036,32 0,31.488851 0,30.857131 L0,30.857131 L0,1.14286899 C0,0.511149036 0.511149036,0 1.14286899,0 L1.14286899,0 L16.0000332,0 Z M32,0 L32,11.4285572 L29.714262,11.4285572 L29.714262,3.90179973 L16.8080641,16.8079977 L15.1920023,15.1919359 L28.0982003,2.28573798 L20.5714428,2.28573798 L20.5714428,0 L32,0 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Atom/Icon/Expand">
+            <rect id="Frame" x="0" y="0" width="32" height="32"></rect>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Icon" fill="#70ada3" fill-rule="nonzero" xlink:href="#path-1"></use>
+            <g id="Group" mask="url(#mask-2)">
+                <g transform="translate(-34.000000, -33.840376)">
+                    <rect id="Colour/General/Black" fill="#70ada3" x="0" y="0" width="100" height="100"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,6 @@
+Bundle-Name: rec-support-resources-portlet
+Bundle-SymbolicName: rec.support.resources.portlet
+Bundle-Version: 1.0.0
+Export-Package: rec.support.resources.portlet.constants
+Import-Package: \
+    *;resolution:=optional

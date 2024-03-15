@@ -1,0 +1,28 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+	
+	compile project(":modules:rec-cproposal:rec-cproposal-api")
+	compile project(":modules:file-validation-api")
+	
+	compileOnly group: "org.json", name: "json"
+	
+	compileOnly group: "commons-io", name: "commons-io"
+
+	compileInclude group: "org.apache.poi", name: "poi", version: "4.1.2"
+	compileInclude group: "org.apache.poi", name: "poi-ooxml", version: "4.1.2"
+	compileInclude group: "org.apache.poi", name: "poi-ooxml-schemas", version: "4.1.2"
+}
+
+buildService {
+	apiDir = "../rec-cproposal-api/src/main/java"
+}
+
+group = "com.everis.cproposal"
+
+tasks.withType(JavaCompile) {
+
+	// Generated classes using Jodd library are unable to be read when compiled against JDK 11
+
+	sourceCompatibility = JavaVersion.VERSION_1_8
+	targetCompatibility = JavaVersion.VERSION_1_8
+}

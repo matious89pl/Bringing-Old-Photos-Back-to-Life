@@ -1,0 +1,10 @@
+Bundle-Name: rec-rfilogs-service-api
+Bundle-SymbolicName: com.everis.rec.rfilogs.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.everis.rec.rfilogs.exception,\
+	com.everis.rec.rfilogs.model,\
+	com.everis.rec.rfilogs.service,\
+	com.everis.rec.rfilogs.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../rec-rfilogs-service-service/service.xml

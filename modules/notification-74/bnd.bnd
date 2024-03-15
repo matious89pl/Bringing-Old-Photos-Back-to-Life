@@ -1,0 +1,4 @@
+Bundle-Name: notification-74
+Bundle-SymbolicName: com.everis.notification74
+Bundle-Version: 1.0.0
+Export-Package: com.everis.notification74.constants

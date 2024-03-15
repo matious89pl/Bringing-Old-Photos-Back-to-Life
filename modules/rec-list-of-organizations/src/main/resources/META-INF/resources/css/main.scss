@@ -1,0 +1,90 @@
+.rec-list-of-organizations button{
+  
+	font-size: 12px;
+}
+
+.rec-list-of-organizations th {
+	color: #9b9b9b;
+	font-size: 14px;
+	font-weight: normal;
+	letter-spacing: .25px;
+	line-height: 18px;
+	border: none
+}
+
+.rec-list-of-organizations td {
+	padding: 10px;
+	border: none;
+    color: black !important;
+	background: white !important;
+}
+
+.rec-list-of-organizations a{
+    color: black !important;
+}
+
+.rec-list-of-organizations a:hover {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.rec-list-of-organizations table {
+	border-collapse: collapse;
+	width: 100%;
+    border: none !important;
+}
+
+.rec-list-of-organizations tr {
+	border-bottom: solid 3px #ececec;
+	background: none !important;
+}
+
+
+.rec-list-of-organizations input[type="button"] {
+	padding: 10px;
+	border-radius: 6px;
+	width: fit-content;
+	margin-bottom: 0;
+	font-size: 12px;
+	border: 0;
+	margin-left: 15px;
+}
+
+.rec-list-of-organizations .importMainDiv {
+    float: right;
+    margin-bottom: 15px;
+}
+
+.rec-list-of-organizations .importCSVdiv {
+    float: left;
+    margin-right: 15px;
+}
+
+.rec-list-of-organizations .exportButton {
+    background: #b1c568 !important;
+    margin-bottom: 15px;
+	padding: 11px;
+	border-radius: 6px !important;
+	color: white !important;
+	font-size: 13px !important;
+	float: right;
+    border:none;  
+	font-weight: normal;
+	margin-left: 10px;
+}
+
+.rec-list-of-organizations .lfr-search-container {
+    overflow: initial;
+}
+
+.rec-list-of-organizations .noContent{
+	font-style: italic;
+}
+
+.order-arrow-up-active{
+	display: none !important;
+}
+
+.subnav-tbar-primary .component-link {
+    display: none !important;
+}

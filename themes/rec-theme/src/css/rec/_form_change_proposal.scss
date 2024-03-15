@@ -1,0 +1,282 @@
+#rec-theme {
+
+	form.form .container-fluid.container-fluid-max-xl {
+		padding: 0;
+		margin-left: 0;
+	}
+
+	.ddm-form-builder-app.ddm-form-builder-app-not-ready {
+		opacity: 1 !important;
+		pointer-events: all !important;
+	}
+	
+	
+	div.portlet-forms form.form   {
+		padding-bottom: 50px;
+	}
+
+	form div.container-fluid.container-fluid-max-xl.ddm-form-builder-app {
+		background-color: white;
+		padding: 10px 6% 0 6%;
+		box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.3);
+		border-radius: 4px;
+	}
+	
+
+	form .ddm-user-view-content .multi-step-item .multi-step-divider {
+		background-color: #dddddd;
+		top: 1.3rem;
+		z-index: 1;
+	}
+	
+	form .ddm-user-view-content .multi-step-item.active .multi-step-divider {
+		background-color: rgb(112, 173, 163);
+	}
+
+	form .ddm-user-view-content .multi-step-item.complete .multi-step-divider {
+		background-color: #888888;
+	}
+
+	
+	form .multi-step-item .multi-step-icon {
+		background-color: #dddddd;
+		color: white;
+		height: 40px;
+		width: 40px;
+	}
+	
+	form .multi-step-item.active .multi-step-icon {
+		background-color: rgb(112, 173, 163);
+	}
+
+	form .multi-step-item.complete .multi-step-icon {
+		background-color: #888888;
+	}
+	
+	.multi-step-icon[data-multi-step-icon]:before {
+		font-family: "RobotoSlab-semibold" !important;
+		font-weight: 600;
+		font-size: 16px;
+	}
+
+	form .multi-step-indicator-label {
+		font-size: 12px;
+		font-weight: bold;
+		max-width: none !important;
+		letter-spacing: 0.5px;
+		line-height: 24px;
+		margin-bottom: 5px;
+		left: 2em;
+	}
+
+	form .multi-step-item:nth-child(1) .multi-step-indicator-label {
+		left: 4.5em;
+	}
+	form .multi-step-item:nth-last-child(1) .multi-step-indicator-label {
+		left: 0.5em;
+	}
+	
+	form .multi-step-item .multi-step-indicator-label {
+		color: rgba(0,0,0,0.25);
+	}
+	
+	form .multi-step-item.active .multi-step-indicator-label {
+		color: rgb(112, 173, 163);
+	}
+
+	form .multi-step-item.complete .multi-step-indicator-label {
+		color: rgba(0,0,0,0.6);
+	}
+	
+	h2.lfr-ddm-form-page-title {
+		display: none !important;
+	}
+	
+	.multi-step-nav {
+		padding: 35px 15px 0px 0px !important;
+	}
+
+	.col-ddm.col-md-6 {
+		padding-left: 0;
+	}
+
+	div[data-ddm-field-row="4"].col-md-4 .ddm-label, div[data-ddm-field-row="2"].col-md-4 .ddm-label{
+		padding-top: 24px;
+	}
+	
+	button.lfr-ddm-form-pagination-next, button.lfr-ddm-form-submit {
+		float: left !important;
+		background-color: rgb(112, 173, 163) !important;
+		border: none ;
+		letter-spacing: 0.75px;
+		line-height: 30px;
+		font-weight: normal !important;
+		font-size: 20px;
+		height: 48px;
+		padding: 9px 17px 9px 16px;
+	}
+	
+	input.ddm-field-text, div.form-group div.form-builder-select-field div.form-control {
+		box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3) !important;
+		background-color: white !important;
+	}
+	
+	button.lfr-ddm-form-pagination-next:hover, button.lfr-ddm-form-submit:hover, button.lfr-ddm-form-pagination-next:active, button.lfr-ddm-form-submit:active, button.lfr-ddm-form-pagination-next:focus, button.lfr-ddm-form-submit:focus {
+		background-color: rgb(112, 173, 163) !important;
+		border: none !important;
+		box-shadow: none !important;
+	}
+	
+	
+	button.lfr-ddm-form-pagination-next svg.lexicon-icon-angle-right {
+		margin-left: 17px !important;
+	}
+	
+	label.ddm-label {
+		font-weight: normal;
+		font-size: 16px;
+		letter-spacing: 0.5px;
+    	line-height: 24px;
+	}
+	
+	p.ddm-form-description {
+		margin-left: 75px;
+		margin-bottom: 32px;
+		padding: 0;
+		color: rgb(0, 0, 0);
+		font-size: 24px;
+		font-weight: normal;
+		letter-spacing: 1px;
+		line-height: 36px;
+	}
+
+	h1.ddm-form-name:before {
+		content: " " url("../images/forms/log.svg");
+		padding-right: 28px !important;
+		vertical-align: middle !important;
+	}
+	
+	h1.ddm-form-name {
+		color: black;
+		font-size: 32px;
+		font-weight: 500;
+		letter-spacing: 1.5px;
+		line-height: 48px;
+		font-family: "Roboto-medium" !important;
+	}
+	
+	
+	button.lfr-ddm-form-pagination-prev {
+		color: black;
+		text-decoration: underline;
+		font-size: 20px;
+		letter-spacing: 0.75px;
+		line-height: 30px;
+		font-weight: normal;
+		border: 0;
+		margin-left: 24px;
+		padding-left: 0;
+		background: none;
+	  }
+
+	  button.lfr-ddm-form-pagination-prev:focus {
+		box-shadow: none;
+	  }
+
+	  button.lfr-ddm-form-pagination-prev svg {
+		  display: none;
+	  }
+	
+	button.ddm-form-field-repeatable-add-button, button.ddm-form-field-repeatable-delete-button{
+		background-color: #70ada3 !important;
+	    border: 0px;
+	}
+
+	.btn:focus, .btn:focus {
+		box-shadow: 0 0 0 0.125rem #fff, 0 0 0 0.25rem rgba(112, 173, 163, 0.2);
+    	outline: 0;
+	}
+
+@media (max-width: 1132px) and (min-width: 950px) {
+      form .multi-step-item .multi-step-indicator-label  {
+		transform: rotate(-20deg);
+		margin-bottom: 30px;
+		margin-right: 100px;
+		font-size: 12px;
+		position: absolute;
+		left: -30px;
+		max-width: 150px!important;
+      }
+
+	  form .multi-step-item:nth-child(1) .multi-step-indicator-label {
+		left: 0.5em;
+	  }
+
+	  form .multi-step-item:nth-last-child(1) .multi-step-indicator-label {
+		left: -2em;
+	  }
+    }
+
+	@media (max-width: 950px) and (min-width: 767px) {
+      form .multi-step-item .multi-step-indicator-label  {
+		transform: rotate(-20deg);
+		margin-bottom: 30px;
+		margin-right: 100px;
+		font-size: 10px;
+		position: absolute;
+		left: -30px;
+		max-width: 150px!important;
+      }
+	
+	  form .multi-step-item:nth-child(1) .multi-step-indicator-label {
+		left: 0.5em;
+	  }
+	  
+	  form .multi-step-item:nth-last-child(1) .multi-step-indicator-label {
+	  	left: -2em;
+	  }
+    }
+
+	@media (min-width: 767px) {
+		.multi-step-nav  {
+			text-overflow: ellipsis;
+			white-space: nowrap;
+ 			overflow: hidden;
+		}
+	  }
+
+	  @media (max-width: 766px) {
+		form .multi-step-item .multi-step-indicator-label  {
+			font-size: 16px;
+		}
+	  }
+}
+
+	/*
+	  LOOK AND FEEL CUSTOM RULES FOR WITHDRAWAL FORM:
+
+	form .multi-step-item:nth-last-child(1) .multi-step-indicator-label {
+		left: -4.5em;
+		top: -0.5em;
+		white-space: pre-line;
+		width: 17em;
+		line-break: normal;
+		margin-bottom: 0px;
+		line-height: 1.2;
+		text-align: right;
+	}
+
+	@media (max-width: 1132px) and (min-width: 767px) {
+		form .multi-step-item:nth-last-child(1) .multi-step-indicator-label {
+		left: -7em;
+		top: -2em;
+		text-align: left;
+	  }
+	}
+
+	  */
+
+
+
+
+

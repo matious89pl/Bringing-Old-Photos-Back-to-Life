@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+
+<workflow-definition
+	xmlns="urn:liferay.com:liferay-workflow_7.3.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="urn:liferay.com:liferay-workflow_7.3.0 http://www.liferay.com/dtd/liferay-workflow-definition_7_3_0.xsd"
+>
+	<name>Dynamic Change Proposal</name>
+	<description>Dynamic Data List.</description>
+	<version>1</version>
+	<state>
+		<name>Submit</name>
+		<metadata>
+			<![CDATA[
+				{
+					"xy": [
+						12,
+						10
+					]
+				}
+			]]>
+		</metadata>
+		<initial>true</initial>
+		<transitions>
+			<transition>
+				<name>Authority required Determination</name>
+				<target>Provides Final Change Report (Doc) to Authority</target>
+				<default>true</default>
+			</transition>
+		</transitions>
+	</state>
+	<state>
+		<name>Accepted</name>
+		<metadata>
+			<![CDATA[
+				{
+					"terminal": true,
+					"xy": [
+						669.9875183105469,
+						87.00000762939453
+					]
+				}
+			]]>
+		</metadata>
+		<actions>
+			<action>
+				<name>approve</name>
+				<script>
+					<![CDATA[
+						import com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil;
+						import com.liferay.portal.kernel.workflow.WorkflowConstants;
+
+						WorkflowStatusManagerUtil.updateStatus(WorkflowConstants.getLabelStatus("approved"), workflowContext);
+					]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onEntry</execution-type>
+			</action>
+			<notification>
+				<name>Notification to Change Management Team</name>
+				<description>
+					<![CDATA[The Change Proposal Timetable was approved.]]>
+				</description>
+				<template>
+					<![CDATA[The Change Proposal Timetable was approved.]]>
+				</template>
+				<template-language>freemarker</template-language>
+				<notification-type>user-notification</notification-type>
+				<recipients receptionType="to">
+					<roles>
+						<role>
+							<role-type>regular</role-type>
+							<name>Change_Management_Team</name>
+							<auto-create>false</auto-create>
+						</role>
+					</roles>
+				</recipients>
+				<execution-type>onEntry</execution-type>
+			</notification>
+			<notification>
+				<name>Notification to RecStakeHolder</name>
+				<description>
+					<![CDATA[The Change Proposal Timetable was approved.]]>
+				</description>
+				<template>
+					<![CDATA[The Change Proposal Timetable was approved.]]>
+				</template>
+				<template-language>freemarker</template-language>
+				<notification-type>user-notification</notification-type>
+				<recipients receptionType="to">
+					<roles>
+						<role>
+							<role-type>regular</role-type>
+							<name>REC_Stakeholder</name>
+							<auto-create>false</auto-create>
+						</role>
+					</roles>
+				</recipients>
+				<execution-type>onEntry</execution-type>
+			</notification>
+		</actions>
+	</state>
+	<state>
+		<name>Rejected</name>
+		<metadata>
+			<![CDATA[
+				{
+					"terminal": true,
+					"xy": [
+						660.3749694824219,
+						212.18750286102295
+					]
+				}
+			]]>
+		</metadata>
+		<actions>
+			<action>
+				<name>reject</name>
+				<script>
+					<![CDATA[
+						import com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil;
+						import com.liferay.portal.kernel.workflow.WorkflowConstants;
+
+						WorkflowStatusManagerUtil.updateStatus(WorkflowConstants.getLabelStatus("denied"), workflowContext);]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onEntry</execution-type>
+			</action>
+			<notification>
+				<name>Notification to Change Management Team</name>
+				<description>
+					<![CDATA[]]>
+				</description>
+				<template>
+					<![CDATA[The Change Proposal Timetable was rejected]]>
+				</template>
+				<template-language>freemarker</template-language>
+				<notification-type>user-notification</notification-type>
+				<recipients receptionType="to">
+					<roles>
+						<role>
+							<role-type>regular</role-type>
+							<name>Change_Management_Team</name>
+							<auto-create>false</auto-create>
+						</role>
+					</roles>
+				</recipients>
+				<execution-type>onEntry</execution-type>
+			</notification>
+			<notification>
+				<name>Notification to RecStakeHolder</name>
+				<description>
+					<![CDATA[]]>
+				</description>
+				<template>
+					<![CDATA[Your Change Proposal Timetable was rejected]]>
+				</template>
+				<template-language>freemarker</template-language>
+				<notification-type>user-notification</notification-type>
+				<recipients receptionType="to">
+					<roles>
+						<role>
+							<role-type>regular</role-type>
+							<name>REC_Stakeholder</name>
+							<auto-create>false</auto-create>
+						</role>
+					</roles>
+				</recipients>
+				<execution-type>onEntry</execution-type>
+			</notification>
+		</actions>
+	</state>
+	<task>
+		<name>Authority determination</name>
+		<metadata>
+			<![CDATA[
+				{
+					"xy": [
+						449.9875183105469,
+						110.98750305175781
+					]
+				}
+			]]>
+		</metadata>
+		<actions>
+			<notification>
+				<name>Review Notification User</name>
+				<description>
+					<![CDATA[]]>
+				</description>
+				<template>
+					<![CDATA[A Change Management Team sent you a Final Change Report(Doc) for review in the workflow.]]>
+				</template>
+				<template-language>freemarker</template-language>
+				<notification-type>user-notification</notification-type>
+				<recipients receptionType="to">
+					<user />
+				</recipients>
+				<execution-type>onAssignment</execution-type>
+			</notification>
+		</actions>
+		<assignments>
+			<roles>
+				<role>
+					<role-type>regular</role-type>
+					<name>Change_Management_Team</name>
+					<auto-create>false</auto-create>
+				</role>
+			</roles>
+		</assignments>
+		<transitions>
+			<transition>
+				<name>Accepted</name>
+				<target>Accepted</target>
+				<default>true</default>
+			</transition>
+			<transition>
+				<name>Rejected</name>
+				<target>Rejected</target>
+				<default>true</default>
+			</transition>
+		</transitions>
+	</task>
+	<task>
+		<name>Provides Final Change Report (Doc) to Authority</name>
+		<metadata>
+			<![CDATA[
+				{
+					"xy": [
+						171.00003051757812,
+						140.96250915527344
+					]
+				}
+			]]>
+		</metadata>
+		<actions>
+			<notification>
+				<name>Notification to Role Authority-Ofgem</name>
+				<description>
+					<![CDATA[ ]]>
+				</description>
+				<template>
+					<![CDATA[A new Change Proposal Timetable has been submitted ]]>
+				</template>
+				<template-language>freemarker</template-language>
+				<notification-type>user-notification</notification-type>
+				<recipients receptionType="to">
+					<roles>
+						<role>
+							<role-type>regular</role-type>
+							<name>Authority_Ofgem</name>
+							<auto-create>false</auto-create>
+						</role>
+					</roles>
+				</recipients>
+				<execution-type>onEntry</execution-type>
+			</notification>
+			<notification>
+				<name>Notification to Change Management Team</name>
+				<description>
+					<![CDATA[]]>
+				</description>
+				<template>
+					<![CDATA[A new Change Proposal Timetable has been submitted for your review]]>
+				</template>
+				<template-language>freemarker</template-language>
+				<notification-type>user-notification</notification-type>
+				<recipients receptionType="to">
+					<roles>
+						<role>
+							<role-type>regular</role-type>
+							<name>Change_Management_Team</name>
+							<auto-create>false</auto-create>
+						</role>
+					</roles>
+				</recipients>
+				<execution-type>onAssignment</execution-type>
+			</notification>
+		</actions>
+		<assignments>
+			<roles>
+				<role>
+					<role-type>regular</role-type>
+					<name>Change_Management_Team</name>
+					<auto-create>false</auto-create>
+				</role>
+			</roles>
+		</assignments>
+		<transitions>
+			<transition>
+				<name>FCR provided</name>
+				<target>Authority determination</target>
+				<default>true</default>
+			</transition>
+		</transitions>
+	</task>
+</workflow-definition>

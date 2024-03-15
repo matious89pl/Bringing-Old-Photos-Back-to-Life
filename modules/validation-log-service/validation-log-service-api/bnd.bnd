@@ -1,0 +1,10 @@
+Bundle-Name: validation-log-service-api
+Bundle-SymbolicName: com.everis.rec.validation.log.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.everis.rec.validation.log.exception,\
+	com.everis.rec.validation.log.model,\
+	com.everis.rec.validation.log.service,\
+	com.everis.rec.validation.log.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../validation-log-service-service/service.xml

@@ -1,0 +1,1841 @@
+{
+    "availableLanguageIds": [
+        "en_GB"
+    ],
+    "defaultLanguageId": "en_GB",
+    "fields": [
+        {
+            "label": {
+                "en_GB": "Change Proposal"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "",
+            "fieldNamespace": "ddm",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "ChangeProposalSeparator",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-separator",
+            "nestedFields": [
+                {
+                    "label": {
+                        "en_GB": "Change Proposal Reference"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "string",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "ChangeProposalReference",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": true,
+                    "showLabel": true,
+                    "type": "text"
+                },
+                {
+                    "label": {
+                        "en_GB": "Change Proposal Status"
+                    },
+                    "options": [
+                        {
+                            "value": "Initial Assessment",
+                            "label": {
+                                "en_GB": "Initial Assessment"
+                            }
+                        },
+                        {
+                            "value": "Solution Development",
+                            "label": {
+                                "en_GB": "Solution Development"
+                            }
+                        },
+                        {
+                            "value": "Service Provider Impact Assessment",
+                            "label": {
+                                "en_GB": "Service Provider Impact Assessment"
+                            }
+                        },
+                        {
+                            "value": "Party Impact Assessment",
+                            "label": {
+                                "en_GB": "Party Impact Assessment"
+                            }
+                        },
+                        {
+                            "value": "Preliminary Assessment",
+                            "label": {
+                                "en_GB": "Preliminary Assessment"
+                            }
+                        },
+                        {
+                            "value": "Consultation",
+                            "label": {
+                                "en_GB": "Consultation"
+                            }
+                        },
+                        {
+                            "value": "Final Assessment",
+                            "label": {
+                                "en_GB": "Final Assessment"
+                            }
+                        },
+                        {
+                            "value": "Approved - awaiting implementation ",
+                            "label": {
+                                "en_GB": "Approved - awaiting implementation "
+                            }
+                        },
+                        {
+                            "value": "Rejected",
+                            "label": {
+                                "en_GB": "Rejected"
+                            }
+                        },
+                        {
+                            "value": "Awaiting Authority Decision",
+                            "label": {
+                                "en_GB": "Awaiting Authority Decision"
+                            }
+                        },
+                        {
+                            "value": "Withdrawn",
+                            "label": {
+                                "en_GB": "Withdrawn"
+                            }
+                        },
+                        {
+                            "value": "Appeal in progress",
+                            "label": {
+                                "en_GB": "Appeal in progress"
+                            }
+                        },
+                        {
+                            "value": "Implemented",
+                            "label": {
+                                "en_GB": "Implemented"
+                            }
+                        },
+                        {
+                            "value": "New",
+                            "label": {
+                                "en_GB": "New"
+                            }
+                        }
+                    ],
+                    "predefinedValue": {
+                        "en_GB": [
+                            ""
+                        ]
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "string",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "multiple": false,
+                    "name": "ChangeProposalStatus",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": true,
+                    "showLabel": true,
+                    "type": "select"
+                },
+                {
+                    "label": {
+                        "en_GB": "Change Proposer Email"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "string",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "ChangeProposerEmail",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "label": {
+                "en_GB": "Link To Change Proposal Page"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "LinkToCPPage",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Link To Consultation Page"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "LinkToConsultationPage",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Related Change Proporsals"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "",
+            "fieldNamespace": "ddm",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "RelatedChangeProposals",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-separator"
+        },
+        {
+            "label": {
+                "en_GB": "Title"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "relatedTitleLinkCP",
+            "readOnly": false,
+            "repeatable": true,
+            "required": false,
+            "showLabel": true,
+            "type": "text",
+            "nestedFields": [
+                {
+                    "label": {
+                        "en_GB": "URL Link"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "string",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "relatedUrlLinkCP",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "label": {
+                "en_GB": "Progress Bar"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "",
+            "fieldNamespace": "ddm",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "progressBarCP",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-separator",
+            "nestedFields": [
+                {
+                    "label": {
+                        "en_GB": "Initial Assessment"
+                    },
+                    "predefinedValue": {
+                        "en_GB": true
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "boolean",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "initialAssessmentPB",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "checkbox"
+                },
+                {
+                    "label": {
+                        "en_GB": "Solution Development"
+                    },
+                    "predefinedValue": {
+                        "en_GB": true
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "boolean",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "solutionDevelopmentPB",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "checkbox"
+                },
+                {
+                    "label": {
+                        "en_GB": "Service Provider Impact Assessment"
+                    },
+                    "predefinedValue": {
+                        "en_GB": true
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "boolean",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "ServiceProviderImpactAssessmentPB",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "checkbox"
+                },
+                {
+                    "label": {
+                        "en_GB": "Impact Assessment"
+                    },
+                    "predefinedValue": {
+                        "en_GB": true
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "boolean",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "PartyImpactAssessmentPB",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "checkbox"
+                },
+                {
+                    "label": {
+                        "en_GB": "Preliminary Assessment"
+                    },
+                    "predefinedValue": {
+                        "en_GB": true
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "boolean",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "PreliminaryAssessmentPB",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "checkbox"
+                },
+                {
+                    "label": {
+                        "en_GB": "Consultation"
+                    },
+                    "predefinedValue": {
+                        "en_GB": true
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "boolean",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "ConsultationPB",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "checkbox"
+                },
+                {
+                    "label": {
+                        "en_GB": "Final Assessment"
+                    },
+                    "predefinedValue": {
+                        "en_GB": true
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "boolean",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "FinalAssessmentPB",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "checkbox"
+                },
+                {
+                    "label": {
+                        "en_GB": "Awaiting Implementation "
+                    },
+                    "predefinedValue": {
+                        "en_GB": true
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "boolean",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "ApprovedWaitingImplementationPB",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "checkbox"
+                },
+                {
+                    "label": {
+                        "en_GB": "Rejected"
+                    },
+                    "predefinedValue": {
+                        "en_GB": true
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "boolean",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "rejectedPB",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "checkbox"
+                },
+                {
+                    "label": {
+                        "en_GB": "Awaiting Authority Decision "
+                    },
+                    "predefinedValue": {
+                        "en_GB": true
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "boolean",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "AwaitingAuthorityDecisionPB",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "checkbox"
+                },
+                {
+                    "label": {
+                        "en_GB": "Withdrawn"
+                    },
+                    "predefinedValue": {
+                        "en_GB": true
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "boolean",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "WithdrawnPB",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "checkbox"
+                },
+                {
+                    "label": {
+                        "en_GB": "Appeal In Progress"
+                    },
+                    "predefinedValue": {
+                        "en_GB": true
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "boolean",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "AppealInProgressPB",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "checkbox"
+                },
+                {
+                    "label": {
+                        "en_GB": "Implemented"
+                    },
+                    "predefinedValue": {
+                        "en_GB": true
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "boolean",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "ImplementedPB",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "checkbox"
+                },
+                {
+                    "label": {
+                        "en_GB": "New"
+                    },
+                    "predefinedValue": {
+                        "en_GB": true
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "boolean",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "NewPB",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "checkbox"
+                }
+            ]
+        },
+        {
+            "label": {
+                "en_GB": "Link To Alternative Change Proposal Page"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "linkToAlternativeCP",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Link To Original CP"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "LinkToOriginalCP",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Impacted Segments of Industry Stakeholders"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "impactedSegmentsISCP",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Priority Score"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": "The value of this field must be a number between 1 and 100"
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "priorityScoreCP",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Fuel"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "fuelCP",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Consumer Types"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "consumerTypesCP",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Latest Update"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": "1000 characters maximum"
+            },
+            "dataType": "string",
+            "indexType": "text",
+            "localizable": true,
+            "name": "LatestUpdate",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "textarea"
+        },
+        {
+            "label": {
+                "en_GB": "Change Summary"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": "1000 characters maximum"
+            },
+            "dataType": "string",
+            "indexType": "text",
+            "localizable": true,
+            "name": "ChangeSummary",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "textarea"
+        },
+        {
+            "label": {
+                "en_GB": "Initial Assessment"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "",
+            "fieldNamespace": "ddm",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "InitialAssessment",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-separator",
+            "nestedFields": [
+                {
+                    "label": {
+                        "en_GB": "Change Requirements"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "",
+                    "fieldNamespace": "ddm",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "ChangeRequirements",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "ddm-separator",
+                    "nestedFields": [
+                        {
+                            "label": {
+                                "en_GB": "Problem Statement"
+                            },
+                            "predefinedValue": {
+                                "en_GB": ""
+                            },
+                            "style": {
+                                "en_GB": ""
+                            },
+                            "tip": {
+                                "en_GB": "1000 characters maximum"
+                            },
+                            "dataType": "string",
+                            "indexType": "text",
+                            "localizable": true,
+                            "name": "ProblemStatement",
+                            "readOnly": false,
+                            "repeatable": false,
+                            "required": false,
+                            "showLabel": true,
+                            "type": "textarea"
+                        },
+                        {
+                            "label": {
+                                "en_GB": "Solution Requirements"
+                            },
+                            "predefinedValue": {
+                                "en_GB": ""
+                            },
+                            "style": {
+                                "en_GB": ""
+                            },
+                            "tip": {
+                                "en_GB": "1000 characters maximum"
+                            },
+                            "dataType": "string",
+                            "indexType": "text",
+                            "localizable": true,
+                            "name": "SolutionRequirements",
+                            "readOnly": false,
+                            "repeatable": false,
+                            "required": false,
+                            "showLabel": true,
+                            "type": "textarea"
+                        },
+                        {
+                            "label": {
+                                "en_GB": "Solution Requirements"
+                            },
+                            "predefinedValue": {
+                                "en_GB": ""
+                            },
+                            "style": {
+                                "en_GB": ""
+                            },
+                            "tip": {
+                                "en_GB": "1000 characters maximum"
+                            },
+                            "dataType": "string",
+                            "indexType": "text",
+                            "localizable": true,
+                            "name": "SolutionRequirements2",
+                            "readOnly": false,
+                            "repeatable": false,
+                            "required": false,
+                            "showLabel": true,
+                            "type": "textarea"
+                        },
+                        {
+                            "label": {
+                                "en_GB": "Solution Requirements"
+                            },
+                            "predefinedValue": {
+                                "en_GB": ""
+                            },
+                            "style": {
+                                "en_GB": ""
+                            },
+                            "tip": {
+                                "en_GB": "1000 characters maximum"
+                            },
+                            "dataType": "string",
+                            "indexType": "text",
+                            "localizable": true,
+                            "name": "SolutionRequirements3",
+                            "readOnly": false,
+                            "repeatable": false,
+                            "required": false,
+                            "showLabel": true,
+                            "type": "textarea"
+                        },
+                        {
+                            "label": {
+                                "en_GB": "Solution Requirements"
+                            },
+                            "predefinedValue": {
+                                "en_GB": ""
+                            },
+                            "style": {
+                                "en_GB": ""
+                            },
+                            "tip": {
+                                "en_GB": "1000 characters maximum"
+                            },
+                            "dataType": "string",
+                            "indexType": "text",
+                            "localizable": true,
+                            "name": "SolutionRequirements4",
+                            "readOnly": false,
+                            "repeatable": false,
+                            "required": false,
+                            "showLabel": true,
+                            "type": "textarea"
+                        },
+                        {
+                            "label": {
+                                "en_GB": "Solution Requirements"
+                            },
+                            "predefinedValue": {
+                                "en_GB": ""
+                            },
+                            "style": {
+                                "en_GB": ""
+                            },
+                            "tip": {
+                                "en_GB": "1000 characters maximum"
+                            },
+                            "dataType": "string",
+                            "indexType": "text",
+                            "localizable": true,
+                            "name": "SolutionRequirements5",
+                            "readOnly": false,
+                            "repeatable": false,
+                            "required": false,
+                            "showLabel": true,
+                            "type": "textarea"
+                        }
+                    ]
+                },
+                {
+                    "label": {
+                        "en_GB": "Change Progression"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "",
+                    "fieldNamespace": "ddm",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "ChangeProgresion",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "ddm-separator",
+                    "nestedFields": [
+                        {
+                            "label": {
+                                "en_GB": "Change Category"
+                            },
+                            "options": [
+                                {
+                                    "value": "Category 1",
+                                    "label": {
+                                        "en_GB": "Category 1"
+                                    }
+                                },
+                                {
+                                    "value": "Category 2",
+                                    "label": {
+                                        "en_GB": "Category 2"
+                                    }
+                                },
+                                {
+                                    "value": "Category 3",
+                                    "label": {
+                                        "en_GB": "Category 3"
+                                    }
+                                }
+                            ],
+                            "predefinedValue": {
+                                "en_GB": [
+                                    ""
+                                ]
+                            },
+                            "style": {
+                                "en_GB": ""
+                            },
+                            "tip": {
+                                "en_GB": ""
+                            },
+                            "dataType": "string",
+                            "indexType": "keyword",
+                            "localizable": true,
+                            "multiple": false,
+                            "name": "ChangeCategory",
+                            "readOnly": false,
+                            "repeatable": false,
+                            "required": false,
+                            "showLabel": true,
+                            "type": "select"
+                        },
+                        {
+                            "label": {
+                                "en_GB": "Change Path"
+                            },
+                            "options": [
+                                {
+                                    "value": "Self-Governance Led",
+                                    "label": {
+                                        "en_GB": "Self-Governance Led"
+                                    }
+                                },
+                                {
+                                    "value": "Authority Led",
+                                    "label": {
+                                        "en_GB": "Authority Led"
+                                    }
+                                },
+                                {
+                                    "value": "",
+                                    "label": {
+                                        "en_GB": ""
+                                    }
+                                }
+                            ],
+                            "predefinedValue": {
+                                "en_GB": [
+                                    ""
+                                ]
+                            },
+                            "style": {
+                                "en_GB": ""
+                            },
+                            "tip": {
+                                "en_GB": ""
+                            },
+                            "dataType": "string",
+                            "indexType": "keyword",
+                            "localizable": true,
+                            "multiple": false,
+                            "name": "ChangePath",
+                            "readOnly": false,
+                            "repeatable": false,
+                            "required": false,
+                            "showLabel": true,
+                            "type": "select"
+                        },
+                        {
+                            "label": {
+                                "en_GB": "Responsible Committee"
+                            },
+                            "predefinedValue": {
+                                "en_GB": ""
+                            },
+                            "style": {
+                                "en_GB": ""
+                            },
+                            "tip": {
+                                "en_GB": ""
+                            },
+                            "dataType": "string",
+                            "indexType": "keyword",
+                            "localizable": true,
+                            "name": "ResponsibleCommittee",
+                            "readOnly": false,
+                            "repeatable": false,
+                            "required": false,
+                            "showLabel": true,
+                            "type": "text"
+                        },
+                        {
+                            "label": {
+                                "en_GB": "Priority Status"
+                            },
+                            "options": [
+                                {
+                                    "value": "Low",
+                                    "label": {
+                                        "en_GB": "Low"
+                                    }
+                                },
+                                {
+                                    "value": "Medium",
+                                    "label": {
+                                        "en_GB": "Medium"
+                                    }
+                                },
+                                {
+                                    "value": "High",
+                                    "label": {
+                                        "en_GB": "High"
+                                    }
+                                },
+                                {
+                                    "value": "Critical",
+                                    "label": {
+                                        "en_GB": "Critical"
+                                    }
+                                }
+                            ],
+                            "predefinedValue": {
+                                "en_GB": [
+                                    ""
+                                ]
+                            },
+                            "style": {
+                                "en_GB": ""
+                            },
+                            "tip": {
+                                "en_GB": ""
+                            },
+                            "dataType": "string",
+                            "indexType": "keyword",
+                            "localizable": true,
+                            "multiple": false,
+                            "name": "PriorityStatus",
+                            "readOnly": false,
+                            "repeatable": false,
+                            "required": false,
+                            "showLabel": true,
+                            "type": "select"
+                        },
+                        {
+                            "label": {
+                                "en_GB": "Urgent Change"
+                            },
+                            "options": [
+                                {
+                                    "value": "Yes",
+                                    "label": {
+                                        "en_GB": "Yes"
+                                    }
+                                },
+                                {
+                                    "value": "No",
+                                    "label": {
+                                        "en_GB": "No"
+                                    }
+                                }
+                            ],
+                            "predefinedValue": {
+                                "en_GB": [
+                                    ""
+                                ]
+                            },
+                            "style": {
+                                "en_GB": ""
+                            },
+                            "tip": {
+                                "en_GB": ""
+                            },
+                            "dataType": "string",
+                            "indexType": "keyword",
+                            "localizable": true,
+                            "multiple": false,
+                            "name": "UrgentChange",
+                            "readOnly": false,
+                            "repeatable": false,
+                            "required": false,
+                            "showLabel": true,
+                            "type": "select"
+                        }
+                    ]
+                },
+                {
+                    "label": {
+                        "en_GB": "Attach Documents"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "document-library",
+                    "fieldNamespace": "ddm",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "AttachDocuments",
+                    "readOnly": false,
+                    "repeatable": true,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "ddm-documentlibrary",
+                    "nestedFields": [
+                        {
+                            "label": {
+                                "en_GB": "Document Title"
+                            },
+                            "predefinedValue": {
+                                "en_GB": ""
+                            },
+                            "style": {
+                                "en_GB": ""
+                            },
+                            "tip": {
+                                "en_GB": ""
+                            },
+                            "dataType": "string",
+                            "indexType": "keyword",
+                            "localizable": true,
+                            "name": "DocumentTitle",
+                            "readOnly": false,
+                            "repeatable": false,
+                            "required": false,
+                            "showLabel": true,
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "label": {
+                        "en_GB": "Initial Assessment Report"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "document-library",
+                    "fieldNamespace": "ddm",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "CP_InitialAssessmentReport",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "ddm-documentlibrary",
+                    "nestedFields": [
+                        {
+                            "label": {
+                                "en_GB": "Comments Deadline"
+                            },
+                            "predefinedValue": {
+                                "en_GB": ""
+                            },
+                            "style": {
+                                "en_GB": ""
+                            },
+                            "tip": {
+                                "en_GB": ""
+                            },
+                            "dataType": "date",
+                            "fieldNamespace": "ddm",
+                            "indexType": "keyword",
+                            "localizable": true,
+                            "name": "IARCommentsDeadline",
+                            "readOnly": false,
+                            "repeatable": false,
+                            "required": false,
+                            "showLabel": true,
+                            "type": "ddm-date"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "label": {
+                "en_GB": "Preliminary Change Report"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "document-library",
+            "fieldNamespace": "ddm",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "PreliminaryChangeReport",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-documentlibrary",
+            "nestedFields": [
+                {
+                    "label": {
+                        "en_GB": "Comments Deadline"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "date",
+                    "fieldNamespace": "ddm",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "PCRCommentsDeadline",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "ddm-date"
+                }
+            ]
+        },
+        {
+            "label": {
+                "en_GB": "Final Change Report"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "document-library",
+            "fieldNamespace": "ddm",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "FinalChangeReport",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-documentlibrary",
+            "nestedFields": [
+                {
+                    "label": {
+                        "en_GB": "Comments Deadline"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "date",
+                    "fieldNamespace": "ddm",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "FCRCommentsDeadline",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "ddm-date"
+                }
+            ]
+        },
+        {
+            "label": {
+                "en_GB": "Lead Change Analyst"
+            },
+            "options": [
+                {
+                    "value": "ann.perry",
+                    "label": {
+                        "en_GB": "Ann Perry"
+                    }
+                },
+                {
+                    "value": "anindita.basumatary",
+                    "label": {
+                        "en_GB": "Anindita Basumatary"
+                    }
+                },
+                {
+                    "value": "bpt-change-management-team01",
+                    "label": {
+                        "en_GB": "bpt-change-management-team"
+                    }
+                },
+                {
+                    "value": "jonathan.hawkins",
+                    "label": {
+                        "en_GB": "Jonathan Hawkins"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_GB": [
+                    ""
+                ]
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "multiple": false,
+            "name": "LeadChangeAnalyst",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "select"
+        },
+        {
+            "label": {
+                "en_GB": "Lead Assurance Analyst"
+            },
+            "options": [
+                {
+                    "value": "ann.perry",
+                    "label": {
+                        "en_GB": "Ann Perry"
+                    }
+                },
+                {
+                    "value": "anindita.basumatary",
+                    "label": {
+                        "en_GB": "Anindita Basumatary"
+                    }
+                },
+                {
+                    "value": "bpt-change-management-team01",
+                    "label": {
+                        "en_GB": "bpt-change-management-team"
+                    }
+                },
+                {
+                    "value": " jonathan.hawkins",
+                    "label": {
+                        "en_GB": "Jonathan Hawkins"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_GB": [
+                    ""
+                ]
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "multiple": false,
+            "name": "LeadAssuranceAnalyst",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "select"
+        },
+        {
+            "label": {
+                "en_GB": "Lead Technical Analyst"
+            },
+            "options": [
+                {
+                    "value": "ann.perry",
+                    "label": {
+                        "en_GB": "Ann Perry"
+                    }
+                },
+                {
+                    "value": "anindita.basumatary",
+                    "label": {
+                        "en_GB": "Anindita Basumatary"
+                    }
+                },
+                {
+                    "value": "bpt-change-management-team01",
+                    "label": {
+                        "en_GB": "bpt-change-management-team"
+                    }
+                },
+                {
+                    "value": " jonathan.hawkins",
+                    "label": {
+                        "en_GB": "Jonathan Hawkins"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_GB": [
+                    ""
+                ]
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "multiple": false,
+            "name": "LeadTechnicalAnalyst",
+            "readOnly": false,
+            "repeatable": true,
+            "required": false,
+            "showLabel": true,
+            "type": "select"
+        },
+        {
+            "label": {
+                "en_GB": "Title Solution Options"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "TitleSolutionOptions",
+            "readOnly": false,
+            "repeatable": true,
+            "required": false,
+            "showLabel": true,
+            "type": "text",
+            "nestedFields": [
+                {
+                    "label": {
+                        "en_GB": "Solution Options"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": "1000 characters"
+                    },
+                    "dataType": "string",
+                    "indexType": "text",
+                    "localizable": true,
+                    "name": "SolutionOptions",
+                    "readOnly": false,
+                    "repeatable": true,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "textarea"
+                },
+                {
+                    "label": {
+                        "en_GB": "Document"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "document-library",
+                    "fieldNamespace": "ddm",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "DocAndMedSoluction_option_doc_med",
+                    "readOnly": false,
+                    "repeatable": true,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "ddm-documentlibrary",
+                    "nestedFields": [
+                        {
+                            "label": {
+                                "en_GB": "Document Title"
+                            },
+                            "predefinedValue": {
+                                "en_GB": ""
+                            },
+                            "style": {
+                                "en_GB": ""
+                            },
+                            "tip": {
+                                "en_GB": ""
+                            },
+                            "dataType": "string",
+                            "indexType": "keyword",
+                            "localizable": true,
+                            "name": "CP_SolutionOption_DocumentTitle",
+                            "readOnly": false,
+                            "repeatable": false,
+                            "required": false,
+                            "showLabel": true,
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "label": {
+                        "en_GB": "Link"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "string",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "Solution_option_link",
+                    "readOnly": false,
+                    "repeatable": true,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "text",
+                    "nestedFields": [
+                        {
+                            "label": {
+                                "en_GB": "Link Title"
+                            },
+                            "predefinedValue": {
+                                "en_GB": ""
+                            },
+                            "style": {
+                                "en_GB": ""
+                            },
+                            "tip": {
+                                "en_GB": ""
+                            },
+                            "dataType": "string",
+                            "indexType": "keyword",
+                            "localizable": true,
+                            "name": "CP_SolutionOption_LinkTitle",
+                            "readOnly": false,
+                            "repeatable": false,
+                            "required": false,
+                            "showLabel": true,
+                            "type": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "label": {
+                "en_GB": "Release Schedule"
+            },
+            "options": [
+                {
+                    "value": "26th April 2021",
+                    "label": {
+                        "en_GB": "26th April 2021"
+                    }
+                },
+                {
+                    "value": "10th May 2021",
+                    "label": {
+                        "en_GB": "10th May 2021"
+                    }
+                },
+                {
+                    "value": "1st June 2021",
+                    "label": {
+                        "en_GB": "1st June 2021"
+                    }
+                },
+                {
+                    "value": "12th September 2021",
+                    "label": {
+                        "en_GB": "12th September 2021"
+                    }
+                },
+                {
+                    "value": "17th January 2022",
+                    "label": {
+                        "en_GB": "17th January 2022"
+                    }
+                },
+                {
+                    "value": "28th June 2022",
+                    "label": {
+                        "en_GB": "28th June 2022"
+                    }
+                },
+                {
+                    "value": "4th November 2022",
+                    "label": {
+                        "en_GB": "4th November 2022"
+                    }
+                },
+                {
+                    "value": "28th February 2023",
+                    "label": {
+                        "en_GB": "28th February 2023"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_GB": [
+                    ""
+                ]
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "multiple": false,
+            "name": "CP_RELEASE_SCHEDULE",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "select"
+        }
+    ]
+}

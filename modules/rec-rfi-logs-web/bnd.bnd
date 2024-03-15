@@ -1,0 +1,7 @@
+Bundle-Name: rec-rfi-logs-web
+Bundle-SymbolicName: com.everis.rec.rfi.logs
+Bundle-Version: 1.0.0
+Export-Package: com.everis.rec.rfi.logs.constants
+Import-Package: \
+    *;resolution:=optional
+

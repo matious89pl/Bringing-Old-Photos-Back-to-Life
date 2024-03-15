@@ -1,0 +1,10 @@
+Bundle-Name: messages-api
+Bundle-SymbolicName: com.everis.messages.service.builder.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.everis.messages.service.builder.exception,\
+	com.everis.messages.service.builder.model,\
+	com.everis.messages.service.builder.service,\
+	com.everis.messages.service.builder.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../messages-service/service.xml

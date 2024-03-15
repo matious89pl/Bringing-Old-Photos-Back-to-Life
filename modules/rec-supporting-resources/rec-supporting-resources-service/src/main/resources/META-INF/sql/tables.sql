@@ -1,0 +1,20 @@
+create table RECsr_supportR (
+	uuid_ VARCHAR(75) null,
+	supportRId LONG not null primary key,
+	groupId LONG,
+	companyId LONG,
+	userId LONG,
+	userName VARCHAR(75) null,
+	createDate DATE null,
+	modifiedDate DATE null,
+	specificParty VARCHAR(75) null,
+	orgSiteId LONG,
+	type_ VARCHAR(75) null,
+	title VARCHAR(250) null,
+	description VARCHAR(500) null,
+	dueDate DATE null,
+	status VARCHAR(75) null,
+	link VARCHAR(1000) null,
+	displayLink VARCHAR(75) null,
+	calendarBookingId LONG
+);

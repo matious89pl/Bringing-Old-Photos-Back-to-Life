@@ -1,0 +1,156 @@
+
+<%@ page import="com.liferay.portal.kernel.util.Validator"%>
+<%@ page import="com.liferay.portal.kernel.json.JSONFactoryUtil" %>
+<%@ page import="com.liferay.portal.kernel.json.JSONObject" %>
+
+<aui:form action="<%= portletURL.toString() %>" method="post" name="fm">
+	<aui:input name="recordIds" type="hidden" />
+	
+	<liferay-ui:search-container
+				id="<%= ddlViewRecordsDisplayContext.getSearchContainerId() %>"
+				rowChecker="<%= new EmptyOnClickRowChecker(renderResponse) %>"
+				searchContainer="<%= finalSearch %>"
+			>
+			<liferay-ui:search-container-row
+			className="com.liferay.dynamic.data.lists.model.DDLRecord"
+			keyProperty="recordId"
+			modelVar="record"
+		>
+			
+		<%
+			DDLRecordVersion recordVersion = record.getRecordVersion();
+
+			if (ddlViewRecordsDisplayContext.isEditable()) {
+				recordVersion = record.getLatestRecordVersion();
+			}
+
+			row.setParameter("editable", String.valueOf(ddlViewRecordsDisplayContext.isEditable()));
+			row.setParameter("formDDMTemplateId", String.valueOf(formDDMTemplateId));
+			row.setParameter("hasDeletePermission", String.valueOf(ddlViewRecordsDisplayContext.hasDeletePermission()));
+			row.setParameter("hasUpdatePermission", String.valueOf(ddlViewRecordsDisplayContext.hasUpdatePermission()));
+
+			String href = StringPool.BLANK;
+
+			if (ddlViewRecordsDisplayContext.isEditable()) {
+				PortletURL rowURL = renderResponse.createRenderURL();
+
+				rowURL.setParameter("mvcPath", "/view_record.jsp");
+				rowURL.setParameter("redirect", currentURL);
+				rowURL.setParameter("recordId", String.valueOf(record.getRecordId()));
+				rowURL.setParameter("version", recordVersion.getVersion());
+				rowURL.setParameter("editable", String.valueOf(ddlViewRecordsDisplayContext.isEditable()));
+				rowURL.setParameter("formDDMTemplateId", String.valueOf(formDDMTemplateId));
+
+				href = rowURL.toString();
+			}
+			
+			DDMFormValues ddmFormValues = record.getDDMFormValues();
+			List<DDMFormFieldValue> ddmFormFieldValues = ddmFormValues.getDDMFormFieldValues();
+			
+			for (DDMFormFieldValue ddmFormFieldValue : ddmFormFieldValues) {
+				DDMFormField ddmf = ddmFormFieldValue.getDDMFormField();
+				LocalizedValue label = ddmf.getLabel();
+				
+				String stringLabel = label.getString(themeDisplay.getLocale());
+				
+				String value = StringPool.BLANK;
+				boolean printCloumn = false;
+				
+				switch (stringLabel) {
+				case "Activity Ref":
+					try {
+						value = ddmFormFieldValue.getValue().getString(themeDisplay.getLocale());
+			        } catch (Exception e) {
+			        	value = "-";
+			        }
+					printCloumn = true;
+					break;
+				case "Activity Type": //a
+					try {
+						value = ddmFormFieldValue.getValue().getString(themeDisplay.getLocale()).replaceAll("\\[\"","").replaceAll("\"\\]","");
+			        } catch (Exception e) {
+			        	value = "-";
+			        }
+					printCloumn = true;
+					break;
+				case "Due Date":
+					try {
+						value = ddmFormFieldValue.getValue().getString(themeDisplay.getLocale());
+			        } catch (Exception e) {
+			        	value = "-";
+			        }
+					printCloumn = true;
+					break;
+				case "Status": //a
+					try {
+						value = ddmFormFieldValue.getValue().getString(themeDisplay.getLocale()).replaceAll("\\[\"","").replaceAll("\"\\]","");
+			        } catch (Exception e) {
+			        	value = "-";
+			        }
+					printCloumn = true;
+					break;
+				case "Linked Document":
+					try {
+						JSONObject JSONobj = JSONFactoryUtil.createJSONObject(ddmFormFieldValue.getValue().getString(themeDisplay.getLocale()));
+						value = JSONobj.get("title").toString();
+			        } catch (Exception e) {
+			        	value = "-";
+			        }
+					printCloumn = true;
+					break;
+
+				default:
+					printCloumn = false;
+					break;
+				}
+				
+		
+				if (printCloumn) {
+					%>
+					
+					<liferay-ui:search-container-column-text
+						cssClass="table-cell-content activity-cell"
+						href="<%= href %>"
+						name="<%= stringLabel %>"
+						value="<%= value %>"
+					/>
+					
+					<%
+				}
+			}
+			
+			%>
+
+			<c:if test="<%= ddlViewRecordsDisplayContext.hasUpdatePermission() %>">
+				<liferay-ui:search-container-column-status
+					href="<%= href %>"
+					name="status"
+					status="<%= recordVersion.getStatus() %>"
+					statusByUserId="<%= recordVersion.getStatusByUserId() %>"
+					statusDate="<%= recordVersion.getStatusDate() %>"
+				/>
+
+				<liferay-ui:search-container-column-date
+					href="<%= href %>"
+					name="modified-date"
+					value="<%= record.getModifiedDate() %>"
+				/>
+
+				<liferay-ui:search-container-column-text
+					href="<%= href %>"
+					name="author"
+					value="<%= HtmlUtil.escape(PortalUtil.getUserName(recordVersion)) %>"
+				/>
+			</c:if>
+
+			<liferay-ui:search-container-column-jsp
+				path="/record_action.jsp"
+			/>
+		</liferay-ui:search-container-row>
+
+		<liferay-ui:search-iterator
+			displayStyle="<%= ddlViewRecordsDisplayContext.getDisplayStyle() %>"
+			markupView="lexicon"
+		/>
+	</liferay-ui:search-container>
+</aui:form>

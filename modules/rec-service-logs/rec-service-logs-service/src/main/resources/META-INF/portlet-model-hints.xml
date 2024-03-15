@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.everis.rec.service.activity.logs.model.RecLog">
+		<field name="uuid" type="String" />
+		<field name="activityLogId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="logMessage" type="String" />
+		<field name="className" type="String" />
+		<field name="classPK" type="Long" />
+		<field name="comments" type="String" />
+		<field name="type" type="String" />
+	</model>
+</model-hints>

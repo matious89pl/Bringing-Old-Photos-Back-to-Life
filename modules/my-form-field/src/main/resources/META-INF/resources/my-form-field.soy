@@ -1,0 +1,74 @@
+{namespace MyFormField}
+
+/**
+ * Prints the form field.
+ */
+ {template .render}
+    {@param label: string}
+    {@param name: string}
+    {@param showLabel: bool}
+    {@param tip: string}
+    {@param value: ?}
+    {@param? _handleFieldChanged: any}
+    {@param? predefinedValue: any}
+    {@param? required: bool}
+    {@param? spritemap: string}
+    {@param userEmail: ?}
+    {@param userFullname: ?}
+    {@param userPhone: ?}
+
+    {call FieldBase.render}
+        {param contentRenderer kind="html"}
+            {call .content}
+                {param _handleFieldChanged: $_handleFieldChanged /}
+                {param name: $name /}
+                {param predefinedValue: $predefinedValue /}
+                {param value: $value /}
+                {param userEmail: $userEmail /}
+                {param userFullname: $userFullname /}
+                {param userPhone: $userPhone /}
+                {param label: $label /}
+            {/call}
+        {/param}
+        {param label: $label /}
+        {param name: $name /}
+        {param required: $required /}
+        {param showLabel: $showLabel /}
+        {param spritemap: $spritemap /}
+        {param tip: $tip /}
+    {/call}
+{/template}
+
+{template .content}
+    {@param name: string}
+    {@param value: ?}
+    {@param? _handleFieldChanged: any}
+    {@param userEmail: ?}
+    {@param userFullname: ?}
+    {@param userPhone: ?}
+    {@param label: string}
+    {let $attributes kind="attributes"}
+        class="ddm-field-my-form-field form-control my-form-field"
+
+        data-oninput="{$_handleFieldChanged}"
+
+        name="{$name}"
+
+        type="text"
+        
+        {if $value}
+        	value="{$value}"
+        {elseif $label == 'Email Address'}
+			value="{$userEmail}"
+		{elseif $label == 'Proposer Name'}
+			value="{$userFullname}"
+		{elseif $label == 'Telephone Number'}
+			value="{$userPhone}"
+		{else}
+			value="{$value}"
+		{/if}
+        
+    {/let}
+
+    <input {$attributes}>
+{/template}

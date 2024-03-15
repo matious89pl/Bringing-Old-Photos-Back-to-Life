@@ -1,0 +1,102 @@
+#change-calendar-page, #operational-contacts-register, #qualified-parties, #party-and-mem {
+
+    #header {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #header .left {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+
+    .right {
+        position: absolute;
+        right: 1%;
+    }
+
+    #add_new {
+        background: #b1c568;
+        border-radius: 5px;
+        color: white;
+        font-size: 12px;
+        font-weight: normal;
+        letter-spacing: 0.25px;
+        line-height: 18px;
+        height: 36px;
+        border: none;
+        padding: 9px 16px 9px 17px;
+        text-decoration: none;
+    }
+    
+    #add_new:hover {
+        text-decoration: none;
+    }
+
+    h1 {
+        color: rgb(0, 0, 0);
+        font-size: 32px;
+        font-family: "Roboto-Medium" !important;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        line-height: 48px;
+    }
+
+    h1:before {
+        content: "" url("../images/forms/calendar-green.svg");
+        vertical-align: middle;
+        margin-right: 20px;
+    }
+
+    #table-info {
+        background-color: white;
+        border-radius: 4px;
+        box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.3);
+        margin-top: 1%;
+        //padding-top: 3%;
+    }
+
+    .filters {
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        font-weight: normal;
+        margin-bottom: 30px;
+        letter-spacing: 0.5px;
+        line-height: 30px;
+        margin-top: -15px;
+    }
+
+    .filterList {
+        padding-left: 3%;
+        font-weight: bold;
+    }
+
+    .filterOpt {
+        float: right;
+        padding-right: 3%;
+    }
+
+    .filterList a {
+        color: black;
+    }
+
+    img#filterImg {
+        width: 20px;
+        height: 18px;
+    }
+
+    th, td {
+        font-size: 12px;
+        letter-spacing: .25px;
+        line-height: 18px;
+        color: black;
+    }
+
+    .container-fluid {
+        margin-left: 0 !important;
+        max-width: 100% !important;
+    }
+
+
+    
+}

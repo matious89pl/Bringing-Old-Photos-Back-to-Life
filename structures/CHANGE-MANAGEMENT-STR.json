@@ -1,0 +1,762 @@
+{
+    "availableLanguageIds": [
+        "en_GB"
+    ],
+    "defaultLanguageId": "en_GB",
+    "fields": [
+        {
+            "label": {
+                "en_GB": "View Change Register"
+            },
+            "predefinedValue": {
+                "en_GB": "View Change Register"
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "CHM_VIEW_CHANGE_REGISTER",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text",
+            "nestedFields": [
+                {
+                    "label": {
+                        "en_GB": "Link to Change Register"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "link-to-page",
+                    "fieldNamespace": "ddm",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "CHM_LINK_TO_CHREGISTER",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "ddm-link-to-page"
+                }
+            ]
+        },
+        {
+            "label": {
+                "en_GB": "Consultation"
+            },
+            "predefinedValue": {
+                "en_GB": "Consultation"
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "CHM_Consultation",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text",
+            "nestedFields": [
+                {
+                    "label": {
+                        "en_GB": "Link to Consultation"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "link-to-page",
+                    "fieldNamespace": "ddm",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "CHM_LINK_TO_CONSULTATION",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "ddm-link-to-page"
+                }
+            ]
+        },
+        {
+            "label": {
+                "en_GB": "Horizon Scanner"
+            },
+            "predefinedValue": {
+                "en_GB": "Horizon Scanner"
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "CHM_HORIZON_SCANNER",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text",
+            "nestedFields": [
+                {
+                    "label": {
+                        "en_GB": "Documents and Media"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "document-library",
+                    "fieldNamespace": "ddm",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "CHM_HORIZON_SCANNER_DOCUMENT",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "ddm-documentlibrary"
+                }
+            ]
+        },
+        {
+            "label": {
+                "en_GB": "Code RoadMap"
+            },
+            "predefinedValue": {
+                "en_GB": "Code Roadmap"
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "CHM_CODE_ROADMAP",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text",
+            "nestedFields": [
+                {
+                    "label": {
+                        "en_GB": "Link to RoadMap"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "string",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "CHM_LINK_TO_ROADMAP",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "label": {
+                "en_GB": "Change Calendar"
+            },
+            "predefinedValue": {
+                "en_GB": "Change Calendar"
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "CHM_CHANGE_CALENDAR",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text",
+            "nestedFields": [
+                {
+                    "label": {
+                        "en_GB": "Link to Change Calendar"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "link-to-page",
+                    "fieldNamespace": "ddm",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "CHM_LINK_TO_CHANGE_CALENDAR",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "ddm-link-to-page"
+                }
+            ]
+        },
+        {
+            "label": {
+                "en_GB": "Release"
+            },
+            "predefinedValue": {
+                "en_GB": "Release"
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "CHM_RELEASE",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text",
+            "nestedFields": [
+                {
+                    "label": {
+                        "en_GB": "LogoDown"
+                    },
+                    "options": [
+                        {
+                            "value": "None",
+                            "label": {
+                                "en_GB": "None"
+                            }
+                        },
+                        {
+                            "value": "add_document",
+                            "label": {
+                                "en_GB": "Document plus"
+                            }
+                        },
+                        {
+                            "value": "bell-white",
+                            "label": {
+                                "en_GB": "Bell"
+                            }
+                        },
+                        {
+                            "value": "book_open",
+                            "label": {
+                                "en_GB": "Book open"
+                            }
+                        },
+                        {
+                            "value": "user_friend_party",
+                            "label": {
+                                "en_GB": "User friend"
+                            }
+                        },
+                        {
+                            "value": "user-white",
+                            "label": {
+                                "en_GB": "User"
+                            }
+                        },
+                        {
+                            "value": "user-cog-white",
+                            "label": {
+                                "en_GB": "User cog"
+                            }
+                        },
+                        {
+                            "value": "calendar",
+                            "label": {
+                                "en_GB": "Calendar"
+                            }
+                        },
+                        {
+                            "value": "category",
+                            "label": {
+                                "en_GB": "Category"
+                            }
+                        },
+                        {
+                            "value": "code-branch-big",
+                            "label": {
+                                "en_GB": "Code branch"
+                            }
+                        },
+                        {
+                            "value": "cog-white",
+                            "label": {
+                                "en_GB": "Cog"
+                            }
+                        },
+                        {
+                            "value": "document",
+                            "label": {
+                                "en_GB": "Document"
+                            }
+                        },
+                        {
+                            "value": "download-white",
+                            "label": {
+                                "en_GB": "Download"
+                            }
+                        },
+                        {
+                            "value": "envelope-white",
+                            "label": {
+                                "en_GB": "Envelope"
+                            }
+                        },
+                        {
+                            "value": "exclamation-white",
+                            "label": {
+                                "en_GB": "Exclamation"
+                            }
+                        },
+                        {
+                            "value": "expand",
+                            "label": {
+                                "en_GB": "Expand"
+                            }
+                        },
+                        {
+                            "value": "file-white",
+                            "label": {
+                                "en_GB": "File"
+                            }
+                        },
+                        {
+                            "value": "filter-white",
+                            "label": {
+                                "en_GB": "Filter"
+                            }
+                        },
+                        {
+                            "value": "grid-white",
+                            "label": {
+                                "en_GB": "Grid"
+                            }
+                        },
+                        {
+                            "value": "home-white",
+                            "label": {
+                                "en_GB": "Home"
+                            }
+                        },
+                        {
+                            "value": "lamp-white",
+                            "label": {
+                                "en_GB": "Lamp"
+                            }
+                        },
+                        {
+                            "value": "link-white",
+                            "label": {
+                                "en_GB": "Link"
+                            }
+                        },
+                        {
+                            "value": "log-white",
+                            "label": {
+                                "en_GB": "Log"
+                            }
+                        },
+                        {
+                            "value": "network",
+                            "label": {
+                                "en_GB": "Network"
+                            }
+                        },
+                        {
+                            "value": "pencil-white",
+                            "label": {
+                                "en_GB": "Pencil"
+                            }
+                        },
+                        {
+                            "value": "phone-white",
+                            "label": {
+                                "en_GB": "Phone"
+                            }
+                        },
+                        {
+                            "value": "question-white",
+                            "label": {
+                                "en_GB": "Question"
+                            }
+                        },
+                        {
+                            "value": "tools-white",
+                            "label": {
+                                "en_GB": "Tools"
+                            }
+                        }
+                    ],
+                    "predefinedValue": {
+                        "en_GB": [
+                            ""
+                        ]
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "string",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "multiple": false,
+                    "name": "CHM_RELEASE_LogoDown",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": true,
+                    "showLabel": true,
+                    "type": "select"
+                },
+                {
+                    "label": {
+                        "en_GB": "Background Color"
+                    },
+                    "options": [
+                        {
+                            "value": "part-view",
+                            "label": {
+                                "en_GB": "Green"
+                            }
+                        },
+                        {
+                            "value": "gold",
+                            "label": {
+                                "en_GB": "Gold"
+                            }
+                        },
+                        {
+                            "value": "faded-green",
+                            "label": {
+                                "en_GB": "Faded Green"
+                            }
+                        }
+                    ],
+                    "predefinedValue": {
+                        "en_GB": [
+                            ""
+                        ]
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "string",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "multiple": false,
+                    "name": "CHM_RELEASE_BackgroundColor",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": true,
+                    "showLabel": true,
+                    "type": "select"
+                },
+                {
+                    "label": {
+                        "en_GB": "Link to Release"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "string",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "CHM_LINK_TO_RELEASE",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "label": {
+                "en_GB": "Impact Assessment"
+            },
+            "predefinedValue": {
+                "en_GB": "Impact Assessment"
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "CHM_IMPACT_ASSESSMENT",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text",
+            "nestedFields": [
+                {
+                    "label": {
+                        "en_GB": "Link to Impact Assessment"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "link-to-page",
+                    "fieldNamespace": "ddm",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "CHM_LINT_TO_IMPACT_ASSESSMENT",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "ddm-link-to-page"
+                }
+            ]
+        },
+        {
+            "label": {
+                "en_GB": "Prioritisation Matrix"
+            },
+            "predefinedValue": {
+                "en_GB": "Prioritisation Matrix"
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "CHM_PRIORITISATION_MATRIX",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text",
+            "nestedFields": [
+                {
+                    "label": {
+                        "en_GB": "Documents and Media"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "document-library",
+                    "fieldNamespace": "ddm",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "CHM_PRIORITISATION_MATRIX_DOCUMENT",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "ddm-documentlibrary"
+                }
+            ]
+        },
+        {
+            "label": {
+                "en_GB": "New Change Proposal"
+            },
+            "predefinedValue": {
+                "en_GB": "New Change Proposal"
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "CHM_NEW_CHANGE_PROPOSAL",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text",
+            "nestedFields": [
+                {
+                    "label": {
+                        "en_GB": "Link to New Change Proposal"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "link-to-page",
+                    "fieldNamespace": "ddm",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "CHM_LINK_TO_NEW_CHANGE_PROPOSAL",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "ddm-link-to-page"
+                }
+            ]
+        },
+        {
+            "label": {
+                "en_GB": "Issues Log"
+            },
+            "predefinedValue": {
+                "en_GB": "Issues Log"
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "IssuesLog",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text",
+            "nestedFields": [
+                {
+                    "label": {
+                        "en_GB": "Link to Issues Log"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "link-to-page",
+                    "fieldNamespace": "ddm",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "LinkToIssuesLog",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "ddm-link-to-page"
+                }
+            ]
+        },
+        {
+            "label": {
+                "en_GB": "Forward Work Plan"
+            },
+            "predefinedValue": {
+                "en_GB": "{\"groupId\":\"37244\",\"title\":\"Forward_work_plan.pdf\",\"uuid\":\"262f68a6-c247-698e-be8f-32bd60683d60\"}"
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "document-library",
+            "fieldNamespace": "ddm",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "ForwardWorkPlan",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-documentlibrary"
+        }
+    ]
+}

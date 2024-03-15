@@ -1,0 +1,182 @@
+<?xml version='1.0'?>
+<root available-locales='en_GB' default-locale='en_GB'>
+	<dynamic-element name='ChangeProposalSeparator' type='selection_break' index-type='keyword'>
+		<dynamic-element name='ChangeProposalReference' type='text' index-type='keyword'>
+			<dynamic-content language-id='en_GB'>
+				<![CDATA[@CHANGE_PROPOSAL_REFERENCE]]>
+			</dynamic-content>
+		</dynamic-element>
+		<dynamic-element name='ChangeProposalTitle' type='text' index-type='keyword'>
+			<dynamic-content language-id='en_GB'>
+				<![CDATA[@CHANGE_PROPOSAL_TITLE]]>
+			</dynamic-content>
+		</dynamic-element>
+		<dynamic-element name='ChangeProposalStatus' type='list' index-type='keyword'>
+			<dynamic-content language-id='en_GB'>
+				<![CDATA[@CHANGE_PROPOSAL_STATUS]]>
+			</dynamic-content>
+		</dynamic-element>
+		<dynamic-element name='ChangeProposerEmail' type='text' index-type='keyword'>
+			<dynamic-content language-id='en_GB'>
+				<![CDATA[@CHANGE_PROPOSAL_EMAIL]]>
+			</dynamic-content>
+		</dynamic-element>
+	</dynamic-element>
+	<dynamic-element name='LinkToCPPage' type='text' index-type='keyword'>
+		<dynamic-content language-id='en_GB'>
+			<![CDATA[@CHANGE_PROPOSAL_LINK_TO_CP_PAGE]]>
+		</dynamic-content>
+	</dynamic-element>
+	<dynamic-element name='LinkToConsultationPage' type='text' index-type='keyword'>
+		<dynamic-content language-id='en_GB'>
+			<![CDATA[@CHANGE_PROPOSAL_LINK_TO_CONSULTATION_PAGE]]>
+		</dynamic-content>
+	</dynamic-element>
+	<dynamic-element name='LinkToAlternativeCP' type='text' index-type='keyword'>
+		<dynamic-content language-id='en_GB'>
+			<![CDATA[@CHANGE_PROPOSAL_LINK_TO_ALTERNATIVE_CP]]>
+		</dynamic-content>
+	</dynamic-element>
+	<dynamic-element name='LinkToOriginalCP' type='text' index-type='keyword'>
+		<dynamic-content language-id='en_GB'>
+			<![CDATA[@CHANGE_PROPOSAL_LINK_TO_ORIGINAL_CP]]>
+		</dynamic-content>
+	</dynamic-element>
+	<dynamic-element name='CPCommentsDeadline' type='ddm-date' index-type='keyword'>
+		<dynamic-content language-id='en_GB'>
+			<![CDATA[@CHANGE_PROPOSAL_DEADLINE]]>
+		</dynamic-content>
+	</dynamic-element>
+	<dynamic-element name='InitialAssessment' type='selection_break' index-type='keyword'>
+		<dynamic-element name='ChangeRequirements' type='selection_break' index-type='keyword'>
+			<dynamic-element name='ProblemStatement' type='text_box' index-type='text'>
+				<dynamic-content language-id='en_GB'>
+					<![CDATA[@CHANGE_PROPOSAL_PROBLEM_STATEMENT]]>
+				</dynamic-content>
+			</dynamic-element>
+			<dynamic-element name='SolutionRequirements' type='text_box' index-type='text'>
+				<dynamic-content language-id='en_GB'>
+					<![CDATA[@CHANGE_PROPOSAL_SOLUTION_REQUIREMENTS]]>
+				</dynamic-content>
+			</dynamic-element>
+			<dynamic-element name='SolutionRequirements2' type='text_box' index-type='text'>
+				<dynamic-content language-id='en_GB'>
+					<![CDATA[@CHANGE_PROPOSAL_SOLUTION_REQUIREMENTS]]>
+				</dynamic-content>
+			</dynamic-element>
+			<dynamic-element name='SolutionRequirements3' type='text_box' index-type='text'>
+				<dynamic-content language-id='en_GB'>
+					<![CDATA[@CHANGE_PROPOSAL_SOLUTION_REQUIREMENTS]]>
+				</dynamic-content>
+			</dynamic-element>
+			<dynamic-element name='SolutionRequirements4' type='text_box' index-type='text'>
+				<dynamic-content language-id='en_GB'>
+					<![CDATA[@CHANGE_PROPOSAL_SOLUTION_REQUIREMENTS]]>
+				</dynamic-content>
+			</dynamic-element>
+			<dynamic-element name='SolutionRequirements5' type='text_box' index-type='text'>
+				<dynamic-content language-id='en_GB'>
+					<![CDATA[@CHANGE_PROPOSAL_SOLUTION_REQUIREMENTS]]>
+				</dynamic-content>
+			</dynamic-element>
+		</dynamic-element>
+		<dynamic-element name='ChangeProgresion' type='selection_break' index-type='keyword'>
+			<dynamic-element name='ChangeCategory' type='list' index-type='keyword'>
+				<dynamic-content language-id='en_GB'>
+					<![CDATA[@CHANGE_PROPOSAL_CHANGE_CATEGORY]]>
+				</dynamic-content>
+			</dynamic-element>
+			<dynamic-element name='ChangePath' type='list' index-type='keyword'>
+				<dynamic-content language-id='en_GB'>
+					<![CDATA[@CHANGE_PROPOSAL_CHANGE_PATH]]>
+				</dynamic-content>
+			</dynamic-element>
+			<dynamic-element name='ResponsibleCommittee' type='text' index-type='keyword'>
+				<dynamic-content language-id='en_GB'>
+					<![CDATA[@CHANGE_PROPOSAL_RESPONSIBLE_COMMITTEE]]>
+				</dynamic-content>
+			</dynamic-element>
+			<dynamic-element name='PriorityStatus' type='text' index-type='keyword'>
+				<dynamic-content language-id='en_GB'>
+					<![CDATA[@CHANGE_PROPOSAL_PRIORITY_STATUS]]>
+				</dynamic-content>
+			</dynamic-element>
+			<dynamic-element name='UrgentChange' type='list' index-type='keyword'>
+				<dynamic-content language-id='en_GB'>
+					<![CDATA[@CHANGE_PROPOSAL_URGENT_CHANGE]]>
+				</dynamic-content>
+			</dynamic-element>
+		</dynamic-element>
+		@DOCUMENTS_DYNAMIC_ELEMENT
+		<dynamic-element name='CP_InitialAssessmentReport' type='document_library' index-type='keyword'> 
+			<dynamic-element name='IARCommentsDeadline' type='ddm-date' index-type='keyword'> 
+				<dynamic-content language-id='en_GB'>
+					<![CDATA[@CHANGE_PROPOSAL_IARDEADLINE]]>
+				</dynamic-content>
+			</dynamic-element> 
+			<dynamic-content language-id='en_GB'>
+				<![CDATA[@CHANGE_PROPOSAL_IAR]]>
+			</dynamic-content>
+		</dynamic-element>
+	</dynamic-element>
+	<dynamic-element name='LeadChangeAnalyst' type='list' index-type='keyword'>
+		<dynamic-content language-id='en_GB'>
+			<![CDATA[@CHANGE_PROPOSAL_LEAD_CHANGE_ANALYST]]>
+		</dynamic-content>
+	</dynamic-element>
+	<dynamic-element name='LeadAssuranceAnalyst' type='list' index-type='keyword'>
+		<dynamic-content language-id='en_GB'>
+			<![CDATA[@CHANGE_PROPOSAL_LEAD_ASSURANCE_ANALYST]]>
+		</dynamic-content>
+	</dynamic-element>
+	<dynamic-element name='LeadTechnicalAnalyst' type='list' index-type='keyword'>
+		<dynamic-content language-id='en_GB'>
+			<![CDATA[@CHANGE_PROPOSAL_LEAD_TECHNICAL_ANALYST]]>
+		</dynamic-content>
+	</dynamic-element>
+	<dynamic-element name='PreliminaryChangeReport' type='document_library' index-type='keyword'>
+		<dynamic-element name='PCRCommentsDeadline' type='ddm-date' index-type='keyword'>
+			<dynamic-content language-id='en_GB'>
+				<![CDATA[@CHANGE_PROPOSAL_PCR_DEADLINE]]>
+			</dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id='en_GB'>
+			<![CDATA[@CHANGE_PROPOSAL_PCR]]>
+		</dynamic-content>
+	</dynamic-element>
+	<dynamic-element name='FinalChangeReport' type='document_library' index-type='keyword'>
+		<dynamic-element name='FCRCommentsDeadline' type='ddm-date' index-type='keyword'>
+			<dynamic-content language-id='en_GB'>
+				<![CDATA[@CHANGE_PROPOSAL_FCR_DEADLINE]]>
+			</dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id='en_GB'>
+			<![CDATA[@CHANGE_PROPOSAL_FCR]]>
+		</dynamic-content>
+	</dynamic-element>
+	<dynamic-element name='TitleSolutionOptions' type='text' index-type='keyword'>
+		<dynamic-element name='SolutionOptions' type='text_box' index-type='text'>
+			<dynamic-content language-id='en_GB'>
+				<![CDATA[@CHANGE_PROPOSAL_SOLUTION_OPTION]]>
+			</dynamic-content>
+		</dynamic-element>
+		<dynamic-element name='DocAndMedSoluction_option_doc_med' type='document_library' index-type='keyword'>
+			<dynamic-content language-id='en_GB'>
+				<![CDATA[]]>
+			</dynamic-content>
+		</dynamic-element>
+		<dynamic-element name='Solution_option_link' type='text' index-type='keyword'>
+			<dynamic-content language-id='en_GB'>
+				<![CDATA[]]>
+			</dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id='en_GB'>
+			<![CDATA[]]>
+		</dynamic-content>
+	</dynamic-element>
+	<dynamic-element name='CP_RELEASE_SCHEDULE' type='list' index-type='keyword'>
+		<dynamic-content language-id='en_GB'>
+			<![CDATA[@CHANGE_PROPOSAL_RELEASE_SCHEDULE]]>
+		</dynamic-content>
+	</dynamic-element>
+</root>

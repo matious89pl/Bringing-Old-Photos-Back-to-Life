@@ -1,0 +1,353 @@
+{
+    "availableLanguageIds": [
+        "en_GB"
+    ],
+    "defaultLanguageId": "en_GB",
+    "fields": [
+        {
+            "label": {
+                "en_GB": "Raised by:"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "raised_By",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Action Owner:"
+            },
+            "options": [
+                {
+                    "value": "Change_Management_Team",
+                    "label": {
+                        "en_GB": "Change Management Team"
+                    }
+                },
+                {
+                    "value": "REC Technical Services",
+                    "label": {
+                        "en_GB": "REC Technical Services"
+                    }
+                },
+                {
+                    "value": "Technical Design Authority",
+                    "label": {
+                        "en_GB": "Technical Design Authority"
+                    }
+                },
+                {
+                    "value": "REC Performance Assurance",
+                    "label": {
+                        "en_GB": "REC Performance Assurance"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_GB": [
+                    ""
+                ]
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "multiple": false,
+            "name": "cmsp_action_owner",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "select"
+        },
+        {
+            "label": {
+                "en_GB": "Action Category:"
+            },
+            "options": [
+                {
+                    "value": "Complete_Initial_Assessment",
+                    "label": {
+                        "en_GB": "Complete Initial Assessment"
+                    }
+                },
+                {
+                    "value": "Review_draft_Initial_Assessment_Report",
+                    "label": {
+                        "en_GB": "Review draft Initial Assessment Report"
+                    }
+                },
+                {
+                    "value": "Review_draft_Change_Proposal_Plan",
+                    "label": {
+                        "en_GB": "Review draft Change Proposal Plan"
+                    }
+                },
+                {
+                    "value": "Review_proposed_Solution",
+                    "label": {
+                        "en_GB": "Review proposed Solution"
+                    }
+                },
+                {
+                    "value": "Review_Consolidated_IA_Responses",
+                    "label": {
+                        "en_GB": "Review consolidated IA responses"
+                    }
+                },
+                {
+                    "value": "Review_Consultation_Response_Document",
+                    "label": {
+                        "en_GB": "Review Consultation Response document"
+                    }
+                },
+                {
+                    "value": "Review_Draft_Preliminary_Change_Report",
+                    "label": {
+                        "en_GB": "Review draft Preliminary Change Report"
+                    }
+                },
+                {
+                    "value": "Review_Draft_Final_Change_Report",
+                    "label": {
+                        "en_GB": "Review draft Final Change Report"
+                    }
+                },
+                {
+                    "value": "Request_Information_Action",
+                    "label": {
+                        "en_GB": "Request information/Action"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_GB": [
+                    ""
+                ]
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "multiple": false,
+            "name": "ActionCategory1",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "select"
+        },
+        {
+            "label": {
+                "en_GB": "Action description:"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "action_Description",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Attachment(s):"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "document-library",
+            "fieldNamespace": "ddm",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "atachments",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-documentlibrary"
+        },
+        {
+            "label": {
+                "en_GB": "Link(s):"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "link-to-page",
+            "fieldNamespace": "ddm",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "links",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-link-to-page"
+        },
+        {
+            "label": {
+                "en_GB": "Due Date:"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "date",
+            "fieldNamespace": "ddm",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "due_date",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "ddm-date"
+        },
+        {
+            "label": {
+                "en_GB": "Status:"
+            },
+            "options": [
+                {
+                    "value": "open",
+                    "label": {
+                        "en_GB": "Open"
+                    }
+                },
+                {
+                    "value": "completed",
+                    "label": {
+                        "en_GB": "Completed"
+                    }
+                },
+                {
+                    "value": "closed",
+                    "label": {
+                        "en_GB": "Closed"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_GB": [
+                    ""
+                ]
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "multiple": false,
+            "name": "Status",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "select"
+        },
+        {
+            "label": {
+                "en_GB": "Comments/Notes:"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "CommentsNotes",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Date completed:"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "date",
+            "fieldNamespace": "ddm",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "date_Completed",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-date"
+        }
+    ]
+}

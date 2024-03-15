@@ -1,0 +1,299 @@
+#rec-theme {
+
+  #popup-notifications {
+    visibility: hidden;
+    position: fixed;
+    left: 65%;
+    z-index: 5;
+    padding: 0;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+    width: 428px;
+  }
+
+  .popup {
+    padding: 20px 20px 0 20px;
+  }
+
+  .content ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  #popup-notifications .content ul li {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-family: "Roboto-medium" !important;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+  }
+
+  #popup-notifications .content ul li:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+
+  #popup-notifications .content ul li small {
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 0.25px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  #popup-notifications a {
+    display: block;
+    height: 46px;
+    background: rgba(144, 192, 184, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    color: black;
+    font-family: "Roboto-bold" !important;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.25px;
+    line-height: 18px;
+    text-decoration: underline;
+    text-align: center;
+    padding-top: 12px;
+  }
+
+  /* Popup View Solutions Options*/
+
+
+
+  .edit-link a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 0.25px;
+    line-height: 18px;
+  }
+
+  .overlaySolutions {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+    opacity: 0;
+    padding: 50px;
+  }
+
+  .overlaySolutions:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .popupSolutions {
+    width: 944px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    margin: 70px auto;
+    padding: 20px 20px 70px 20px;
+    position: relative;
+  }
+
+  .popupSolutions h2 {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 0.75px;
+    line-height: 30px;
+  }
+
+  .popupSolutions .close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 25px;
+    text-decoration: none;
+    font-family: none !important;
+  }
+
+  .popupSolutions .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+
+  .content-label {
+    padding-top: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+  }
+
+  .content-placeholder {
+    padding: 5px;
+    background: rgb(255, 255, 255);
+    border-radius: 4px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+  }
+
+  .overlaySolutions hr {
+    background: rgba(0, 0, 0, 0.1);
+    border-color: #ff000000;
+  }
+
+
+
+  .popupSolutions hr {
+    margin-bottom: 0px;
+  }
+
+  #updateButton{
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    margin-top: 10px;
+    height: 42px !important;
+    width: 88px;
+    margin-right: 20px;
+  }
+
+
+
+  #problemId, .block_requirement textarea{
+      width: 895px;
+      resize: none;
+      border: none;
+      display: inline-table;
+      outline: none;
+  }
+
+
+
+  #viewSolutions .float-right.lfr-ddm-form-pagination-next.btn.btn-primary{
+      margin-right: 10px;
+      height: 42px !important;
+      margin-top: 20px;
+  }
+
+  .more-less.float-right.lfr-ddm-form-pagination-next.btn.btn-primary {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        line-height: 24px;
+        margin-top: 10px;
+        height: 42px !important;
+        margin-right: 10px;
+  }
+
+  .popupp {
+    background: rgb(255, 255, 255);
+    border-radius: 4px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+    height: auto;
+    width: 590px;
+
+    margin: 70px auto;
+    position: relative;
+  }
+
+  .popupp img {
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+  }
+
+  .userInfo {
+    height: 50%;
+    padding-top: 2%;
+    display: flex;
+  }
+
+  .userDescription {
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: normal;
+    height: 100%;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    max-height: 50%;
+    padding: 5px 5px 15px 0px;
+  }
+
+  .popupp h1 {
+    color: rgb(0, 0, 0);
+    font-family: 'Roboto-medium' !important;
+    font-size: 24px;
+    font-weight: 500;
+    height: 36px;
+    letter-spacing: 1px;
+    line-height: 36px;
+    padding-top: 2.5%;
+  }
+
+  .popupp .close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: 0px;
+    height: 53.13px;
+    width: 53.13px;
+  }
+
+  img.userImg {
+    margin-top: 4%;
+    margin-left: 5%;
+    border-radius: 61.5px;
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+  }
+
+  .userDetails {
+    float: right;
+    width: 75%;
+    line-height: 35px;
+  }
+
+  .userEmail {
+    font-weight: normal;
+    letter-spacing: 0.75px;
+  }
+
+  .userPhone {
+    padding-top: 8px;
+  }
+
+  .email {
+    display: -webkit-inline-box;
+    width: 100%;
+  }
+
+  .phone {
+    display: -webkit-inline-box;
+    width: 100%;
+  }
+
+
+
+  @media screen and (max-width: 700px) {
+    .box {
+      width: 70%;
+    }
+
+    .popupp {
+      width: 70%;
+    }
+  }
+
+}

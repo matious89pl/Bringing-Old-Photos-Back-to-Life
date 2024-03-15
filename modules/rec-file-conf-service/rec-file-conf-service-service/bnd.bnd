@@ -1,0 +1,7 @@
+Bundle-Name: rec-file-conf-service-service
+Bundle-SymbolicName: rec.file.conf.service.service
+Bundle-Version: 1.0.0
+Liferay-Require-SchemaVersion: 1.0.0
+Liferay-Service: true
+-dsannotations-options: inherit
+Import-Package: *; version="0";resolution:=optional

@@ -1,0 +1,6 @@
+Bundle-Name: rec-remediation-tracker-service-service
+Bundle-SymbolicName: com.everis.rec.remediation.tracker.service
+Bundle-Version: 1.0.0
+Liferay-Require-SchemaVersion: 1.0.0
+Liferay-Service: true
+-dsannotations-options: inherit

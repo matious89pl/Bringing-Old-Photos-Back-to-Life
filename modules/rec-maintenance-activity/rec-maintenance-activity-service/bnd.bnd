@@ -1,0 +1,8 @@
+Bundle-Name: rec-maintenance-activity-service
+Bundle-SymbolicName: com.everis.rec.maintenanceactivity.service
+Bundle-Version: 1.0.0
+Liferay-Require-SchemaVersion: 1.0.0
+Liferay-Service: true
+-dsannotations-options: inherit
+Import-Package: \
+    *;resolution:=optional

@@ -1,0 +1,88 @@
+<state>
+		<name>StartNode</name>
+		<metadata>
+			<![CDATA[
+				{
+					"xy": [
+						100,
+						40
+					]
+				}
+			]]>
+		</metadata>
+		<initial>true</initial>
+		<transitions>
+			<transition>
+				<name>connector2993</name>
+				<target>EndNode</target>
+				<default>true</default>
+			</transition>
+		</transitions>
+	</state>
+	<state>
+		<name>EndNode</name>
+		<metadata>
+			<![CDATA[
+				{
+					"terminal": true,
+					"xy": [
+						100,
+						500
+					]
+				}
+			]]>
+		</metadata>
+		<actions>
+			<action>
+				<name>Approve</name>
+				<description>Approve</description>
+				<script>
+					<![CDATA[com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil.updateStatus(com.liferay.portal.kernel.workflow.WorkflowConstants.getLabelStatus("approved"), workflowContext);]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onEntry</execution-type>
+			</action>
+			<action>
+				<name>Send notification</name>
+				<script>
+					<![CDATA[import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
+import com.liferay.portal.kernel.workflow.WorkflowHandler;
+import com.liferay.portal.kernel.workflow.WorkflowHandlerRegistryUtil;
+import com.liferay.asset.kernel.model.AssetRendererFactory;
+import com.liferay.portal.kernel.util.GetterUtil;
+import com.everis.cproposal.service.recFormArticleLocalServiceUtil;
+import com.everis.messages.service.builder.service.MessagesLocalServiceUtil;
+import com.liferay.portal.kernel.service.UserLocalServiceUtil
+
+
+Log logger = LogFactoryUtil.getLog("Log........");
+
+String className = (String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_NAME);
+
+logger.info("0. Classname" + className);
+
+WorkflowHandler workflowHandler = WorkflowHandlerRegistryUtil.getWorkflowHandler(className);
+
+AssetRendererFactory assetRendererFactory = workflowHandler.getAssetRendererFactory();
+
+logger.info("1. Starting script to create a CP");
+
+long classPK = GetterUtil.getLong((String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_PK));
+
+logger.info("2. ClassPK - " + classPK);
+
+String userId = (String)workflowContext.get(WorkflowConstants.CONTEXT_USER_ID);
+
+logger.info("userId.... " + userId);
+
+user = UserLocalServiceUtil.getUser(Long.parseLong(userId));
+
+MessagesLocalServiceUtil.sendNotification28(user, classPK);]]>
+				</script>
+				<script-language>groovy</script-language>
+				<execution-type>onEntry</execution-type>
+			</action>
+		</actions>
+	</state>

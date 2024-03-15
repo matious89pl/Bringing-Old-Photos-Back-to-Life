@@ -1,0 +1,158 @@
+.rec-custom-notification button{
+	font-size: 12px;
+}
+
+.rec-custom-notification th {
+	color: #9b9b9b;
+	font-size: 14px;
+	font-weight: normal;
+	letter-spacing: .25px;
+	line-height: 18px;
+	border: none
+}
+
+.rec-custom-notification td {
+	padding: 10px;
+	border: none;
+    color: black !important;
+	background: white !important;
+}
+
+.rec-custom-notification a{
+    color: black !important;
+}
+
+.rec-custom-notification a:hover {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.rec-custom-notification table {
+	border-collapse: collapse;
+	width: 100%;
+    border: none !important;
+}
+
+.rec-custom-notification tr {
+	border-bottom: solid 3px #ececec;
+	background: none !important;
+}
+
+
+.rec-custom-notification .lfr-search-container {
+    overflow: initial;
+}
+
+.buttonNotificationCustom{
+	width: fit-content;
+	background: #b1c568 !important;
+	margin-top: 15px;
+	padding: 11px;
+	border-radius: 6px !important;
+	color: white !important;
+	font-size: 13px !important;
+	border:none;  
+	font-weight: normal;
+	margin-left: 10px;
+}
+
+#notificationLogDeliveryMethodValue {
+	width: 46%;
+	float: left;
+}
+
+#rec-custom-notification_details h1{
+    font-weight: 600;
+    font-size: 25px !important; 
+	margin-bottom: 2%;
+	font-family: 'Roboto-regular' !important;
+}
+
+#rec-custom-notification_details h2{
+    font-weight: 600;
+    font-size: 19px !important; 
+	margin-bottom: 3%;
+	font-family: 'Roboto-regular' !important;
+}
+
+#rec-custom-notification_details h3{
+	font-weight: normal;
+	font-size: 17px;
+	font-family: 'Roboto-regular' !important;
+	font-style: italic;
+	color: gray;
+}
+
+#notificationLogTitleValue, #notificationLogBodyValue, #notificationLogTargetAudienceValue, #notificationLogDeliveryMethodValue{
+	border-radius: 10px;
+    background: white;
+    padding: 10px;
+    margin: 15px; 
+}
+
+#notificationLogTitleValue, #notificationLogBodyValue {
+	width: fit-content;
+}
+
+#notificationLogTargetAudienceValue {
+    width: 46%;
+    float: right;
+}
+
+#cutomNotificationDetails{
+	margin-bottom: 12%;
+}
+
+#buttonNotificationCustomCancel{
+	background-color: #ececec !important;
+}
+
+#titleOfLink, .NotificationInput{
+    width: 100%;
+	border: none;
+}
+
+.content-label {
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+
+.col-md-12 {
+    padding-left: 0px! important;
+}
+
+.content-placeholder {
+	width: 100% !important;
+    border: none !important;
+	
+}
+
+#notificationIdInput {
+    display: none;
+}
+
+#targetRemoved {
+    font-style: italic;
+	margin-top: 30px;
+    margin-left: 10px;
+}
+
+#notificationDetailsButtons {
+    display: -webkit-box;
+}
+
+label.control-label, #deliveryMethod {
+    font-size: 13px !important;
+}
+
+.reference-mark {
+    color: black !important;
+}
+
+.viewMembers {
+    background: white !important;
+    width: fit-content !important;
+	margin-top: 25px !important;
+	border: solid 3px #ececec !important;
+	box-shadow: 0 1px 4px 0 rgba(0,0,0,0.3);
+}

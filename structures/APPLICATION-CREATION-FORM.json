@@ -1,0 +1,426 @@
+{
+    "availableLanguageIds": [
+        "en_GB"
+    ],
+    "defaultLanguageId": "en_GB",
+    "fields": [
+        {
+            "label": {
+                "en_GB": "Please detail your authorising officer"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "",
+            "fieldNamespace": "ddm",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "PM_AuthorisingOfficerSeparator",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-separator",
+            "nestedFields": [
+                {
+                    "label": {
+                        "en_GB": "Any additional Authorising Officer?"
+                    },
+                    "options": [
+                        {
+                            "value": "Yes",
+                            "label": {
+                                "en_GB": "Yes"
+                            }
+                        },
+                        {
+                            "value": "No",
+                            "label": {
+                                "en_GB": "No"
+                            }
+                        }
+                    ],
+                    "predefinedValue": {
+                        "en_GB": [
+                            ""
+                        ]
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "string",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "multiple": false,
+                    "name": "PM_AnyadditionalAuthorisingOfficer",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "select"
+                }
+            ]
+        },
+        {
+            "label": {
+                "en_GB": "Please detail your company information"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "",
+            "fieldNamespace": "ddm",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "PM_CompanyKeyInformationSeparator",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-separator",
+            "nestedFields": [
+                {
+                    "label": {
+                        "en_GB": "Any additional key contacts?"
+                    },
+                    "options": [
+                        {
+                            "value": "Yes",
+                            "label": {
+                                "en_GB": "Yes"
+                            }
+                        },
+                        {
+                            "value": "No",
+                            "label": {
+                                "en_GB": "No"
+                            }
+                        }
+                    ],
+                    "predefinedValue": {
+                        "en_GB": [
+                            ""
+                        ]
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "string",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "multiple": false,
+                    "name": "PM_Anyadditionalkeycontacts",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": false,
+                    "showLabel": true,
+                    "type": "select"
+                }
+            ]
+        },
+        {
+            "label": {
+                "en_GB": "What role are you applying for?"
+            },
+            "options": [
+                {
+                    "value": "Electricity Supplier Domestic Non - Domestic",
+                    "label": {
+                        "en_GB": "Electricity Supplier Domestic Non - Domestic"
+                    }
+                },
+                {
+                    "value": "Electricity Supplier Domestic",
+                    "label": {
+                        "en_GB": "Electricity Supplier Domestic"
+                    }
+                },
+                {
+                    "value": "Gas Supplier Domestic",
+                    "label": {
+                        "en_GB": "Gas Supplier Domestic"
+                    }
+                },
+                {
+                    "value": "Gas Supplier Non - Domestic",
+                    "label": {
+                        "en_GB": "Gas Supplier Non - Domestic"
+                    }
+                },
+                {
+                    "value": "DNO",
+                    "label": {
+                        "en_GB": "DNO"
+                    }
+                },
+                {
+                    "value": "Gas Transporter",
+                    "label": {
+                        "en_GB": "Gas Transporter"
+                    }
+                },
+                {
+                    "value": "MEM",
+                    "label": {
+                        "en_GB": "MEM"
+                    }
+                },
+                {
+                    "value": "Other REC User",
+                    "label": {
+                        "en_GB": "Other REC User"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_GB": [
+                    ""
+                ]
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": "Please select all applicable Party roles you are applying for"
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "multiple": true,
+            "name": "PM_Whatroleareyouapplyingfor",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "select"
+        },
+        {
+            "label": {
+                "en_GB": "What systems are you applying to access?"
+            },
+            "options": [
+                {
+                    "value": "Central Switching Service",
+                    "label": {
+                        "en_GB": "Central Switching Service"
+                    }
+                },
+                {
+                    "value": "Gas Enquiry Service - GES",
+                    "label": {
+                        "en_GB": "Gas Enquiry Service - GES"
+                    }
+                },
+                {
+                    "value": "Secure Communications Service",
+                    "label": {
+                        "en_GB": "Secure Communications Service"
+                    }
+                },
+                {
+                    "value": "Switching Operator Service",
+                    "label": {
+                        "en_GB": "Switching Operator Service"
+                    }
+                },
+                {
+                    "value": "REC Portal",
+                    "label": {
+                        "en_GB": "REC Portal"
+                    }
+                },
+                {
+                    "value": "Green Deal Central Charge Database",
+                    "label": {
+                        "en_GB": "Green Deal Central Charge Database"
+                    }
+                },
+                {
+                    "value": "Energy Theft Tip Off Service",
+                    "label": {
+                        "en_GB": "Energy Theft Tip Off Service"
+                    }
+                },
+                {
+                    "value": "Electricity Enquiry Service - EES",
+                    "label": {
+                        "en_GB": "Electricity Enquiry Service - EES"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_GB": [
+                    ""
+                ]
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": "Please select all applicable systems your are requesting access too"
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "multiple": true,
+            "name": "PM_Whatsystemsareyouapplyingtoaccess",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "select"
+        },
+        {
+            "label": {
+                "en_GB": "Please provide details around where you organisation is in terms of certifying against current recognised industry standards, agreements and obligations where applicable"
+            },
+            "options": [
+                {
+                    "value": "Obtain Licence from OFGEM",
+                    "label": {
+                        "en_GB": "Obtain Licence from OFGEM"
+                    }
+                },
+                {
+                    "value": "Accession to the DTSA (ElectraLink)",
+                    "label": {
+                        "en_GB": "Accession to the DTSA (ElectraLink)"
+                    }
+                },
+                {
+                    "value": "Accession to the DCUSA (Electralink)",
+                    "label": {
+                        "en_GB": "Accession to the DCUSA (Electralink)"
+                    }
+                },
+                {
+                    "value": "Become a full Elexon/BSC Member",
+                    "label": {
+                        "en_GB": "Become a full Elexon/BSC Member"
+                    }
+                },
+                {
+                    "value": "Sign up to the BSC",
+                    "label": {
+                        "en_GB": "Sign up to the BSC"
+                    }
+                },
+                {
+                    "value": "Accession to the CUSC (National Grid)",
+                    "label": {
+                        "en_GB": "Accession to the CUSC (National Grid)"
+                    }
+                },
+                {
+                    "value": "Obtain MPRS Validation Rules",
+                    "label": {
+                        "en_GB": "Obtain MPRS Validation Rules"
+                    }
+                },
+                {
+                    "value": "Publish MPAS Validation Rules (if not MPRS)",
+                    "label": {
+                        "en_GB": "Publish MPAS Validation Rules (if not MPRS)"
+                    }
+                },
+                {
+                    "value": "Obtain MPAS Validation Rules from Distribution Businesses that are not MPRS based",
+                    "label": {
+                        "en_GB": "Obtain MPAS Validation Rules from Distribution Businesses that are not MPRS based"
+                    }
+                },
+                {
+                    "value": "Bi-lateral agreements for use of manual flows as primary means of transferring dataflows (as applicable)",
+                    "label": {
+                        "en_GB": "Bi-lateral agreements for use of manual flows as primary means of transferring dataflows (as applicable)"
+                    }
+                },
+                {
+                    "value": "Accession to the terms and conditions of the service set out in the SDEP Access Agreement",
+                    "label": {
+                        "en_GB": "Accession to the terms and conditions of the service set out in the SDEP Access Agreement"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_GB": [
+                    ""
+                ]
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": "Please mark where you are in the process around obtaining all relevant industry standards, agreements and obligations"
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "multiple": false,
+            "name": "PM_ProvideDetailsOrganisation",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "select"
+        },
+        {
+            "label": {
+                "en_GB": "Status (to fill in by Administrator)"
+            },
+            "options": [
+                {
+                    "value": "In Progress",
+                    "label": {
+                        "en_GB": "In Progress"
+                    }
+                },
+                {
+                    "value": "Complete",
+                    "label": {
+                        "en_GB": "Complete"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_GB": [
+                    "In Progress"
+                ]
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "multiple": false,
+            "name": "PM_Status",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "select"
+        }
+    ]
+}

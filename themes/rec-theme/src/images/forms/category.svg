@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>4BA995D6-038D-46C4-AC4B-E480E2470E9D@3x</title>
+    <defs>
+        <path d="M15.1842105,-1.84741111e-13 L6.21052632,14.4 L24.1578947,14.4 L15.1842105,-1.84741111e-13 Z M15.1842105,6.144 L18.3331579,11.2 L12.0189474,11.2 L15.1842105,6.144 Z M24.1578947,17.6 C20.0952632,17.6 16.8157895,20.816 16.8157895,24.8 C16.8157895,28.784 20.0952632,32 24.1578947,32 C28.2205263,32 31.5,28.784 31.5,24.8 C31.5,20.816 28.2205263,17.6 24.1578947,17.6 Z M24.1578947,28.8 C21.9063158,28.8 20.0789474,27.008 20.0789474,24.8 C20.0789474,22.592 21.9063158,20.8 24.1578947,20.8 C26.4094737,20.8 28.2368421,22.592 28.2368421,24.8 C28.2368421,27.008 26.4094737,28.8 24.1578947,28.8 Z M0.5,31.2 L13.5526316,31.2 L13.5526316,18.4 L0.5,18.4 L0.5,31.2 Z M3.76315789,21.6 L10.2894737,21.6 L10.2894737,28 L3.76315789,28 L3.76315789,21.6 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Atom/Icon/Category">
+            <rect id="Frame" x="0" y="0" width="56" height="56"></rect>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Icon" fill="#FFFFFF" fill-rule="nonzero" xlink:href="#path-1"></use>
+            <g id="Group" mask="url(#mask-2)">
+                <g transform="translate(-34.000000, -33.840376)">
+                    <rect id="Colour/General/White" fill="#FFFFFF" x="0" y="0" width="100" height="100"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

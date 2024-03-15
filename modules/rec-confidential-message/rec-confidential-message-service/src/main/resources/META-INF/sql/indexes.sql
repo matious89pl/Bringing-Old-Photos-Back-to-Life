@@ -1,0 +1,1 @@
+create index IX_87EAA2DD on confidential_messages (uuid_[$COLUMN_LENGTH:75$], companyId);

@@ -1,0 +1,5 @@
+Bundle-Name: fragment-notifications
+Bundle-SymbolicName: fragment.notifications
+Bundle-Version: 1.0.0
+Fragment-Host: com.liferay.notifications.web;bundle-version="4.0.28"
+Portal-Bundle-Version: 7.3.10

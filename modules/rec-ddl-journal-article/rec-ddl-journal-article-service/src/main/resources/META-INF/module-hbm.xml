@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="com.everis.rec.ddl.journal.article.model.DDL_JournalArticle" />
+	<class name="com.everis.rec.ddl.journal.article.model.impl.DDL_JournalArticleImpl" table="rec_ddl_journal_article">
+		<id access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="ddlRecordSetId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="journalResourcePrimKey" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+</hibernate-mapping>

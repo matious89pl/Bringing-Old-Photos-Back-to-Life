@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.everis.service.management.model.helpdesk">
+		<field name="helpdeskId" type="long" />
+	</model>
+</model-hints>

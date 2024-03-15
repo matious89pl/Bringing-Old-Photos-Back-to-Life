@@ -1,0 +1,519 @@
+{
+    "availableLanguageIds": [
+        "en_GB"
+    ],
+    "defaultLanguageId": "en_GB",
+    "fields": [
+        {
+            "label": {
+                "en_GB": "Main Title"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "MainTitle1",
+            "readOnly": false,
+            "repeatable": false,
+            "required": true,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "NameUp"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "NameUp",
+            "readOnly": false,
+            "repeatable": true,
+            "required": true,
+            "showLabel": true,
+            "type": "text",
+            "nestedFields": [
+                {
+                    "label": {
+                        "en_GB": "LinkUp"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "string",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "LinkUp",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": true,
+                    "showLabel": true,
+                    "type": "text"
+                },
+                {
+                    "label": {
+                        "en_GB": "LogoUp"
+                    },
+                    "options": [
+                        {
+                            "value": "None",
+                            "label": {
+                                "en_GB": "None"
+                            }
+                        },
+                        {
+                            "value": "add_document",
+                            "label": {
+                                "en_GB": "Document plus"
+                            }
+                        },
+                        {
+                            "value": "bell-white",
+                            "label": {
+                                "en_GB": "Bell"
+                            }
+                        },
+                        {
+                            "value": "book_open",
+                            "label": {
+                                "en_GB": "Book open"
+                            }
+                        },
+                        {
+                            "value": "user_friend_party",
+                            "label": {
+                                "en_GB": "User friend"
+                            }
+                        },
+                        {
+                            "value": "user-white",
+                            "label": {
+                                "en_GB": "User"
+                            }
+                        },
+                        {
+                            "value": "user-cog-white",
+                            "label": {
+                                "en_GB": "User cog"
+                            }
+                        },
+                        {
+                            "value": "calendar",
+                            "label": {
+                                "en_GB": "Calendar"
+                            }
+                        },
+                        {
+                            "value": "category",
+                            "label": {
+                                "en_GB": "Category"
+                            }
+                        },
+                        {
+                            "value": "code-branch-big",
+                            "label": {
+                                "en_GB": "Code branch"
+                            }
+                        },
+                        {
+                            "value": "cog-white",
+                            "label": {
+                                "en_GB": "Cog"
+                            }
+                        },
+                        {
+                            "value": "document",
+                            "label": {
+                                "en_GB": "Document"
+                            }
+                        },
+                        {
+                            "value": "download-white",
+                            "label": {
+                                "en_GB": "Download"
+                            }
+                        },
+                        {
+                            "value": "envelope-white",
+                            "label": {
+                                "en_GB": "Envelope"
+                            }
+                        },
+                        {
+                            "value": "exclamation-white",
+                            "label": {
+                                "en_GB": "Exclamation"
+                            }
+                        },
+                        {
+                            "value": "expand",
+                            "label": {
+                                "en_GB": "Expand"
+                            }
+                        },
+                        {
+                            "value": "file-white",
+                            "label": {
+                                "en_GB": "File"
+                            }
+                        },
+                        {
+                            "value": "filter-white",
+                            "label": {
+                                "en_GB": "Filter"
+                            }
+                        },
+                        {
+                            "value": "grid-white",
+                            "label": {
+                                "en_GB": "Grid"
+                            }
+                        },
+                        {
+                            "value": "home-white",
+                            "label": {
+                                "en_GB": "Home"
+                            }
+                        },
+                        {
+                            "value": "lamp-white",
+                            "label": {
+                                "en_GB": "Lamp"
+                            }
+                        },
+                        {
+                            "value": "link-white",
+                            "label": {
+                                "en_GB": "Link"
+                            }
+                        },
+                        {
+                            "value": "log-white",
+                            "label": {
+                                "en_GB": "Log"
+                            }
+                        },
+                        {
+                            "value": "network",
+                            "label": {
+                                "en_GB": "Network"
+                            }
+                        },
+                        {
+                            "value": "pencil-white",
+                            "label": {
+                                "en_GB": "Pencil"
+                            }
+                        },
+                        {
+                            "value": "phone-white",
+                            "label": {
+                                "en_GB": "Phone"
+                            }
+                        },
+                        {
+                            "value": "question-white",
+                            "label": {
+                                "en_GB": "Question"
+                            }
+                        },
+                        {
+                            "value": "tools-white",
+                            "label": {
+                                "en_GB": "Tools"
+                            }
+                        }
+                    ],
+                    "predefinedValue": {
+                        "en_GB": [
+                            ""
+                        ]
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "string",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "multiple": false,
+                    "name": "LogoUp",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": true,
+                    "showLabel": true,
+                    "type": "select"
+                }
+            ]
+        },
+        {
+            "label": {
+                "en_GB": "NameDown"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "NameDown",
+            "readOnly": false,
+            "repeatable": true,
+            "required": true,
+            "showLabel": true,
+            "type": "text",
+            "nestedFields": [
+                {
+                    "label": {
+                        "en_GB": "LinkDown"
+                    },
+                    "predefinedValue": {
+                        "en_GB": ""
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "string",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "name": "LinkDown",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": true,
+                    "showLabel": true,
+                    "type": "text"
+                },
+                {
+                    "label": {
+                        "en_GB": "LogoDown"
+                    },
+                    "options": [
+                        {
+                            "value": "None",
+                            "label": {
+                                "en_GB": "None"
+                            }
+                        },
+                        {
+                            "value": "add_document",
+                            "label": {
+                                "en_GB": "Document plus"
+                            }
+                        },
+                        {
+                            "value": "bell-white",
+                            "label": {
+                                "en_GB": "Bell"
+                            }
+                        },
+                        {
+                            "value": "book_open",
+                            "label": {
+                                "en_GB": "Book open"
+                            }
+                        },
+                        {
+                            "value": "user_friend_party",
+                            "label": {
+                                "en_GB": "User friend"
+                            }
+                        },
+                        {
+                            "value": "user-white",
+                            "label": {
+                                "en_GB": "User"
+                            }
+                        },
+                        {
+                            "value": "user-cog-white",
+                            "label": {
+                                "en_GB": "User cog"
+                            }
+                        },
+                        {
+                            "value": "calendar",
+                            "label": {
+                                "en_GB": "Calendar"
+                            }
+                        },
+                        {
+                            "value": "category",
+                            "label": {
+                                "en_GB": "Category"
+                            }
+                        },
+                        {
+                            "value": "code-branch-big",
+                            "label": {
+                                "en_GB": "Code branch"
+                            }
+                        },
+                        {
+                            "value": "cog-white",
+                            "label": {
+                                "en_GB": "Cog"
+                            }
+                        },
+                        {
+                            "value": "document",
+                            "label": {
+                                "en_GB": "Document"
+                            }
+                        },
+                        {
+                            "value": "download-white",
+                            "label": {
+                                "en_GB": "Download"
+                            }
+                        },
+                        {
+                            "value": "envelope-white",
+                            "label": {
+                                "en_GB": "Envelope"
+                            }
+                        },
+                        {
+                            "value": "exclamation-white",
+                            "label": {
+                                "en_GB": "Exclamation"
+                            }
+                        },
+                        {
+                            "value": "expand",
+                            "label": {
+                                "en_GB": "Expand"
+                            }
+                        },
+                        {
+                            "value": "file-white",
+                            "label": {
+                                "en_GB": "File"
+                            }
+                        },
+                        {
+                            "value": "filter-white",
+                            "label": {
+                                "en_GB": "Filter"
+                            }
+                        },
+                        {
+                            "value": "grid-white",
+                            "label": {
+                                "en_GB": "Grid"
+                            }
+                        },
+                        {
+                            "value": "home-white",
+                            "label": {
+                                "en_GB": "Home"
+                            }
+                        },
+                        {
+                            "value": "lamp-white",
+                            "label": {
+                                "en_GB": "Lamp"
+                            }
+                        },
+                        {
+                            "value": "link-white",
+                            "label": {
+                                "en_GB": "Link"
+                            }
+                        },
+                        {
+                            "value": "log-white",
+                            "label": {
+                                "en_GB": "Log"
+                            }
+                        },
+                        {
+                            "value": "network",
+                            "label": {
+                                "en_GB": "Network"
+                            }
+                        },
+                        {
+                            "value": "pencil-white",
+                            "label": {
+                                "en_GB": "Pencil"
+                            }
+                        },
+                        {
+                            "value": "phone-white",
+                            "label": {
+                                "en_GB": "Phone"
+                            }
+                        },
+                        {
+                            "value": "question-white",
+                            "label": {
+                                "en_GB": "Question"
+                            }
+                        },
+                        {
+                            "value": "tools-white",
+                            "label": {
+                                "en_GB": "Tools"
+                            }
+                        }
+                    ],
+                    "predefinedValue": {
+                        "en_GB": [
+                            ""
+                        ]
+                    },
+                    "style": {
+                        "en_GB": ""
+                    },
+                    "tip": {
+                        "en_GB": ""
+                    },
+                    "dataType": "string",
+                    "indexType": "keyword",
+                    "localizable": true,
+                    "multiple": false,
+                    "name": "LogoDown",
+                    "readOnly": false,
+                    "repeatable": false,
+                    "required": true,
+                    "showLabel": true,
+                    "type": "select"
+                }
+            ]
+        }
+    ]
+}

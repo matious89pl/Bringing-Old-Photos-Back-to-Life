@@ -1,0 +1,833 @@
+#rec-theme {
+
+    #committee-menu {
+        .active .text-truncate span {
+            font-weight: 700;
+            border-bottom: solid;
+            border-bottom-color: #4d8934;
+        }
+        
+        span.text-truncate {
+            color: black;
+            padding: 10px;
+            background: white;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        .text-truncate {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: block;
+        }
+        
+        .navbar-nav .nav-link {
+            padding-left: 6.5px;
+            padding-right: 0;
+        }
+            
+    }
+
+    h1#title_committee{
+        color: rgb(0, 0, 0);
+        font-size: 32px;
+        font-family: "Roboto-medium" !important;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        line-height: 48px;
+    }
+
+    h1#title_committee::before {
+        content: " " url("../images/forms/user_big.svg");
+        vertical-align: top;
+        margin-right: 20px;
+    }
+
+    #tabs-calendar {
+        display: none;
+    }
+    // Calendar
+    #committee-calendar {
+        background: rgb(255, 255, 255);
+        box-shadow: 0 1px 4px 0 rgba(0,0,0,0.3);
+        border-radius: 4px;
+        padding: 20px;
+
+
+
+        
+        #scheduler_calendar_right {
+            display: none;
+        }
+
+        .calendar-portlet-list {
+            display: none;
+        }
+
+        h1 {
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            font-family: 'Roboto-bold' !important;
+        }
+
+        .tab {
+            margin-bottom: 19px;
+        }
+
+
+
+        div.yui3-calendar-header-label {
+            color: rgb(44, 49, 53);
+            font-size: 16px;
+            font-family: 'Roboto-bold' !important;
+        }
+
+        div.yui3-calendar-header {
+            padding-bottom: 21px;
+        }
+
+        .yui3-calendarnav-prevmonth {
+            border-right-color: rgb(186, 194, 199) !important;
+        }
+
+        .yui3-calendarnav-nextmonth {
+            border-left-color: rgb(186, 194, 199) !important;
+        }
+
+        table th {
+            color: rgb(127, 143, 164);
+            font-size: 12px;
+            font-family: 'Roboto-Bold' !important;
+            font-weight: bold;
+            text-align: center;
+            line-height: 10px;
+            text-transform: uppercase;
+            padding-bottom: 11px;
+        }
+
+        table td {
+            background: rgb(237, 242, 245);
+            border-right: 1px solid white;
+        }
+
+        table td:last-child {
+            border-right: none;
+        }
+
+        .lfr-busy-day:after {
+            margin-top: 0px !important;
+        }
+
+        table td.yui3-calendar-day {
+            background-color: white;
+            color: rgb(44, 49, 53);
+            font-size: 12px;
+            line-height: 10px;
+            font-family: "Roboto-Bold" !important;
+            font-weight: bold;
+            padding-top: 11px;
+            padding-bottom: 11px;
+        }
+
+        table td.yui3-calendar-day:hover, .lfr-current-day, .selected-day {
+            background: rgb(77, 137, 52) !important;
+            box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            color: rgb(255, 255, 255) !important;
+            font-family:'OpenSans-bold' !important;
+        }
+
+        #calendar-admin {
+            color: black;
+            font-family: 'Roboto-bold' !important;
+            text-decoration: none;
+            float: right;
+            text-transform: capitalize;
+        }
+
+        #listed-events {
+
+            margin-top: 20px;
+
+            tr {
+                height: 70px;
+            }
+
+            td:first-child {
+                width: 35%;
+            }
+            
+            td p {
+                display: inline-block;
+                width: 300px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin: 0;
+            }
+
+            button.tablinks {
+                color: rgb(0, 0, 0);
+                font-size: 16px;
+                letter-spacing: 0.5px;
+                line-height: 24px;
+                display: inline-block;
+                padding: 2px 5px 2px 5px;
+            }
+
+            button.tablinks:focus {
+                outline: none;
+            }
+
+            button.tablinks.active {
+                font-family: "Roboto-bold" !important;
+                border-bottom: 2px solid #4d8934;
+            }
+
+            table {
+                width: 100%;
+            }
+
+            th {
+                color: rgba(0, 0, 0,0.5);
+                font-size: 12px;
+                font-weight: normal;
+                letter-spacing: 0.38px;
+                line-height: 18px;
+                text-transform: none;
+                text-align: left;
+            }
+
+            td {
+                color: rgb(0, 0, 0);
+                font-size: 16px;
+                font-weight: normal;
+                letter-spacing: 0.5px;
+                line-height: 24px;
+                background-color: white;
+                /* These are technically the same, but use both */
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+
+                -ms-word-break: break-word;
+                word-break: break-word;
+
+                /* Adds a hyphen where the word breaks, if supported (No Blink) */
+                -ms-hyphens: auto;
+                -moz-hyphens: auto;
+                -webkit-hyphens: auto;
+                hyphens: auto;
+            }
+
+        }
+
+        a{
+            color: black;
+        }
+
+    }
+   
+
+	// Committee Register
+
+    #committee-register .navbar {
+        display: none;
+    }
+
+	
+	#committee-register {
+	h1 {
+	    color: rgb(0, 0, 0);
+	    font-size: 20px;
+	    font-weight: bold;
+		height: 30px;
+		letter-spacing: 0.75px;
+		line-height: 30px;
+	    }
+	
+	h5{
+		height: 24px;
+		color: rgb(0, 0, 0);
+		font-size: 16px;
+		font-weight: bold;
+		letter-spacing: 0.5px;
+		line-height: 24px;
+		padding-left:0px;
+	}
+	    
+	.nav-link.active:after{
+		background: rgb(77, 137, 52) !important;
+		border-radius: 0px;
+		height: 2px !important;
+
+	}
+	
+	.container-fluid-1280{
+		padding: 0px;
+	}
+	
+	.list-group-notification .list-group-item{
+		box-shadow: none;
+		align-items: center;
+	}
+	
+	.navigation-bar-light{
+		border-color: transparent;
+	}
+	
+	#list_title{
+		padding-left:0px;
+		padding-top: 10px;
+		margin-bottom: -10px;
+	}
+	
+	#list_title li {
+	    display: inline-block;
+	    padding-left:0px;
+	    padding-right:5px;	     
+		height: 18px;
+		color: rgb(0, 0, 0);
+		font-size: 12px;
+		font-weight: normal;
+		letter-spacing: 0.25px;
+		line-height: 18px;
+	}
+	
+	#list_title .left-committees{
+		width: 245px;
+	}
+	
+	#list_committee{
+		padding-left:0px;
+		display:-webkit-inline-box;
+	}
+	
+	#list_committee li {
+	    display: inline-block;
+	    padding-left:0px;
+	    padding-right:5px;	     
+	}
+	
+	#list_committee .left-committees{
+		width: 250px;
+	}
+	
+	#list_committee .right-committees{
+		color: rgb(0, 0, 0);
+	    font-size: 12px;
+	    font-weight: normal;
+	    letter-spacing: 0.25px;
+	    line-height: 18px;
+	    width: 325px;
+	    padding-top: 4px;
+	}	
+	
+	li.list-group-item.list-group-item-flex{
+		padding: 0px;
+	}
+	
+	.nav-link .link-unstyled{
+		height: auto;
+		color: rgb(0, 0, 0);
+		font-size: 16px;
+		font-weight: bold;
+		letter-spacing: 0.5px;
+		line-height: 24px;
+		padding-bottom: 0px;
+	}
+	
+	.autofit-col.autofit-col-expand{
+		padding-left: 0px !important;
+	}
+	
+	
+		background: white;
+    	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+	    border-radius: 4px;
+	    padding: 20px;
+	
+
+	}
+
+    #all-committees-register {
+
+            background: white;
+            box-shadow: 0 1px 4px 0 rgba(0,0,0,0.3);
+            border-radius: 4px;
+            padding: 20px;
+
+        h1 {
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            font-weight: bold;
+            height: 30px;
+            letter-spacing: 0.75px;
+            line-height: 30px;
+        }
+             
+        
+       .left-committees, td:first-child {
+            width: 245px;
+        }
+         .right-committees {
+            color: rgb(0, 0, 0);
+            font-size: 12px;
+            font-weight: normal;
+            letter-spacing: 0.25px;
+            line-height: 18px;
+            padding-top: 4px;
+        }
+        
+        #all_list_title{
+            padding-left:0px;
+            padding-top: 10px;
+        }
+        
+        #all_list_title li {
+            display: inline-block;
+            padding-left:0px;
+            padding-right:5px;	     
+            height: 18px;
+            color: rgb(0, 0, 0);
+            font-size: 12px;
+            font-weight: normal;
+            letter-spacing: 0.25px;
+            line-height: 18px;
+        }
+        
+        a {
+            color: #272833;
+            font-weight: bold;
+        }
+    }
+    
+      //Committee Details
+		.titleCommite h1 {
+		    color: #9b9b9b;
+		    display: inline-block;
+		    color: rgb(0, 0, 0);
+		    font-family: "Roboto-medium" !important;
+		    font-size: 32px;
+		    font-weight: 500;
+		    height: 48px;
+		    letter-spacing: 1.5px;
+		    line-height: 48px;
+		
+		}
+		.titleCommite img {
+		    width: 23px;
+		    border-radius: 5px;
+		}
+		
+		.titleCommite li {
+		    display: inline;
+		}
+		
+		.titleCommite ul {
+		    position: absolute;
+		    display: inline-block;
+		    padding-left: 21px;
+		    padding-top: 12px;
+		}
+		
+		.titleCommite h3 {
+		    color: rgb(0, 0, 0);
+		    font-size: 16px;
+		    font-weight: normal;
+		    letter-spacing: 0.5px;
+		    line-height: 24px;
+		}
+		
+	
+	    
+	    // Action Log
+	      
+          .actionLog {
+            .grid_item{
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        
+             .leftComittee{
+                float:left;
+                width: 47%;
+                height: 100%;
+                margin-left: 30px;
+            } 
+            .rigthComittee {
+                float:right;
+                width: 47%;
+                height: 100%;
+                margin-right: 50px;
+            }
+        
+             .box {
+                border: 1px solid transparent;
+                border-radius: 0.25rem;
+                box-shadow: none;
+                color: #272833;
+                display: inline-block;
+                line-height: 1.5;
+                transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                user-select: none;
+                background: rgb(255, 255, 255);
+                border-radius: 4px;
+                box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+            }
+        
+            .left{
+                width: 50%;
+                float: left;
+                margin-right: 10px;
+            }
+        
+            .right{
+                width: 45%;
+                float: right;
+            }
+        
+             h1 {
+                width: 386px;
+                height: 48px;
+                color: rgb(0, 0, 0);
+                font-size: 32px;
+                font-family: "Roboto-Medium" !important;
+                font-weight: 500;
+                letter-spacing: 1.5px;
+                line-height: 48px;
+            }
+            
+             h3 {
+                color: #9b9b9b;
+                font-size: 12px;
+                font-weight: normal;
+                height: 18px;
+                letter-spacing: 0.25px;
+                line-height: 18px;
+                padding-top: 5px;
+            }
+        
+             h2 {
+                font-weight: 700;
+                font-family: "Roboto-Bold" !important;
+                font-size: 18px;
+                letter-spacing: 0.2px;
+                line-height: 30px;
+                margin-left: 2%;
+                padding: 10px;
+            }
+        
+            .allComittees, .allComitteesRegister, .allComitteesActionLog{
+                visibility: hidden;
+            }
+        
+             .myComittes, .myComittesRegister, .myComitteesActionLog{
+                visibility: visible;
+            }
+    
+             .myComitteesTitle, .myComitteesTitleRegister , .myComitteesTitleActionLog{
+                font-weight: 700;
+                border-bottom: solid;
+                border-bottom-color: #4d8934;
+                text-align: center;
+            }
+    
+           	 .selectorComittees{
+                width: 30%;
+                margin-left: 2%;
+                text-align: center;
+            }  
+    
+             .grid-containerDates{
+                width: 10%;
+                font-size: 12px;
+                margin-left: -80px;
+                letter-spacing: 0.5px;
+                line-height: 24px;  
+            }
+    
+             .grid-containerInformation {
+                width: 70%;
+                padding-right: 20px;
+                padding-bottom: 20px;
+                font-size: 14px;
+                letter-spacing: 0.2px;
+                line-height: 24px;
+            }  
+    
+             .grid-containerName{
+                width: 20%;
+                color: rgb(0, 0, 0);
+                font-size: 14px;
+                font-family: Roboto-Bold;
+                font-weight: bold;
+                letter-spacing: 0.5px;
+                line-height: 24px;
+                padding-bottom: 20px;
+                margin-left: -100px;
+            }
+    
+             .grid-containerInformationRigth{
+                width: 60%;
+                color: rgb(0, 0, 0);
+                font-size: 12px;
+                font-weight: normal;
+                letter-spacing: 0.5px;
+                line-height: 24px;
+                padding-bottom: 20px;
+            }
+    
+            .grid_item.box.left {
+                height: 250px;
+            }
+    
+            .btnComittees{
+                background: #cdcdcd;
+                border-radius: 4px;
+                height: 20px;
+                width: 20px;
+                margin-left: 20px;
+                border-style: unset;
+            }
+    
+             .selectorComitteesActionLog .myComitteesTitleActionLog {
+                margin-left: 3px;
+                width: 45%;
+            }
+             .selectorComitteesActionLog p{ 
+                font-size: 13px;
+            }
+    
+             .selectorComitteesActionLog .allComitteesTitleActionLog {
+                margin-right: 3px;
+                text-align: center;
+                width: 45%;
+            }
+    
+             .selectorComittees, .selectorComitteesActionLog{
+                cursor: pointer;
+            }
+    
+            #comitteeRegister{
+                height: 386px;
+            }
+    
+             .leftComittee .grid_item.box {
+                min-height: 530px;
+            }
+    
+             #titleImg{
+                width: 50px; 
+                padding: 20px; 
+                margin-left: 1%;
+            }
+    
+             #title{
+                width: 50%;
+                float: right;
+                margin-right: 42%;
+            }
+        }
+        
+        .titleCommite h1 {
+            color: #9b9b9b;
+            display: inline-block;
+            color: rgb(0, 0, 0);
+            font-family: "Roboto-medium" !important;
+            font-size: 32px;
+            font-weight: 500;
+            height: 48px;
+            letter-spacing: 1.5px;
+            line-height: 48px;
+
+        }
+        .titleCommite img {
+            width: 23px;
+            border-radius: 5px;
+        }
+
+        .titleCommite li {
+            display: inline;
+        }
+
+        .titleCommite ul {
+            position: absolute;
+            display: inline-block;
+            padding-left: 21px;
+            padding-top: 12px;
+        }
+
+        .titleCommite h3 {
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            font-weight: normal;
+            letter-spacing: 0.5px;
+            line-height: 24px;
+        }
+        
+    #meetingDocs {
+            .meetingDocuments, .grid-containerName, .grid-containerNameDocument{
+                line-height: 33px;
+            }
+            
+            .meetingDocuments .grid-containerNameDocument{
+                font-weight: bold;
+                float: left;
+                margin-right: 8%;
+            
+            }
+            
+            
+            
+            .meetingDocuments .grid-containerName{
+                width: 20%;
+                color: rgb(0, 0, 0);
+                font-size: 14px;
+                font-family: "Roboto-Bold" !important;
+                letter-spacing: 0.5px;
+                padding-bottom: 20px;
+                margin-left: 20px;
+                float: left;
+            }
+                
+            .meetingDocuments h3 {
+                color: #9b9b9b;
+                font-size: 12px;
+                font-weight: normal;
+                height: 18px;
+                letter-spacing: 0.25px;
+                line-height: 18px;
+                padding-top: 5px;
+            }      
+            
+            button.btnComittees {
+                background: #cdcdcd;
+                border-radius: 4px;
+                height: 20px;
+                width: 20px;
+                margin-left: 27px;
+                border-style: unset;
+                line-height: 0px;
+            }
+        }
+
+    #nominations {
+        
+        div.col-md-3:nth-child(2){
+            margin-top: 10px;
+        }
+            
+        .userFullName {
+            margin-left: 20%;
+        }
+
+        .userDetails {
+            float: none !important;
+        }
+
+        #pop-up1 {
+            visibility: hidden !important;
+        }
+
+        #AddEntry {
+            background: #b1c568;
+            border-radius: 5px;
+            color: white;
+            font-size: 12px;
+            font-weight: normal;
+            letter-spacing: 0.25px;
+            line-height: 18px;
+            height: 36px;
+            border: none;
+            padding: 9px 16px 9px 17px;
+        }
+
+        div.col-md-3:nth-child(2){
+            margin-top: 10px;
+        }
+
+        #view_records_id .container-fluid {
+            max-width: 100%;
+        }
+
+        .lfr-nominator-full-name-column{
+            display: none;
+        }
+
+        #view_records_id .container-fluid {
+            max-width: 100%;
+        }
+    }
+    
+    #committee-actionLog{
+    
+    	tr{
+    		border-bottom: solid 3px #ececec;
+		}
+		
+		th{
+		    color: #9b9b9b;
+		    font-size: 12px;
+		    font-weight: normal;
+		    height: 18px;
+		    letter-spacing: .25px;
+		    line-height: 18px;
+		}
+		
+		#committeeTableList, #committeeTableListClosed{
+		    border-style: none;
+		    border-collapse: collapse;
+		    width: 98%;
+		    margin-left: 1%;
+		}
+		
+		#committeeContent, #committeeContentClosed{
+		    background-color: white;
+		    border-radius: 4px;
+		    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+		    margin-top: 1%;
+		    padding-top: 1%;
+		}
+		
+		#newAction, #newActionClosed{
+		    background: #b1c568;
+		    padding: 10px;
+		    border-radius: 3px;
+		    color: white;
+		    width: fit-content;
+		    margin-bottom: 0;
+		    font-size: 12px;
+		    border: 0;
+		    margin-right: 12px;
+		}
+		
+		#committeeTitleClosed{
+		    padding-top: 30px;
+		}
+    
+    	#actionStatus {
+	        display: none;
+	    }
+	    
+	    .popupSolutions {
+	        width: 204px !important;
+	    }
+    
+    }    
+
+    @media (max-width: 1000px) {
+
+        section.portlet-layout.row {
+            display: block;
+        }
+
+        section#column-1 {
+            max-width: 100%;
+        }
+
+        section#column-2 {
+            max-width: 100%;
+        }
+    }
+}

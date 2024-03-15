@@ -1,0 +1,10 @@
+Bundle-Name: rec-linkMenu-service-api
+Bundle-SymbolicName: rec.link.menu.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	rec.link.menu.exception,\
+	rec.link.menu.model,\
+	rec.link.menu.service,\
+	rec.link.menu.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../rec-linkMenu-service-service/service.xml

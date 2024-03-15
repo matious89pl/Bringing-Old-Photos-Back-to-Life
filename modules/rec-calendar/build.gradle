@@ -1,0 +1,5 @@
+
+dependencies {
+compileOnly project(":modules:rec-cproposal:rec-cproposal-api")
+compileOnly project(":modules:rec-cproposal:rec-cproposal-service")
+}

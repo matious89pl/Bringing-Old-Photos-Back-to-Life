@@ -1,0 +1,10 @@
+Bundle-Name: rec-file-conf-service-api
+Bundle-SymbolicName: rec.file.conf.service.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	rec.file.conf.service.exception,\
+	rec.file.conf.service.model,\
+	rec.file.conf.service.service,\
+	rec.file.conf.service.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../rec-file-conf-service-service/service.xml

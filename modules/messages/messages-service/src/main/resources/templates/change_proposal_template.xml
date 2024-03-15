@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_GB" default-locale="en_GB">
+	<dynamic-element name="Separator5gcf" type="selection_break" index-type="keyword">
+		<dynamic-element name="ChangeProposalReference" type="text" index-type="keyword">
+			<dynamic-content language-id="en_GB"><![CDATA[@CHANGE_PROPOSAL_REFERENCE]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element name="ChangeProposalTitle" type="text" index-type="keyword">
+			<dynamic-content language-id="en_GB"><![CDATA[@CHANGE_PROPOSAL_TITLE]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element name="ChangeProposalStatus" type="list" index-type="keyword">
+			<dynamic-content language-id="en_GB"><![CDATA[@CHANGE_PROPOSAL_STATUS]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element name="ChangeProposerId" type="ddm-number" index-type="keyword">
+			<dynamic-content language-id="en_GB"><![CDATA[@CHANGE_PROPOSAL_PROPOSER_ID]]></dynamic-content>
+		</dynamic-element>
+	</dynamic-element>
+	<dynamic-element name="LinkToCPPage" type="text" index-type="keyword">
+		<dynamic-content language-id="en_GB"><![CDATA[@CHANGE_PROPOSAL_LINK_TO_CP_PAGE]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="InitialAssessment" type="selection_break" index-type="keyword">
+		<dynamic-element name="ChangeRequirements" type="selection_break" index-type="keyword">
+			<dynamic-element name="ProblemStatement" type="text_box" index-type="text">
+				<dynamic-content language-id="en_GB"><![CDATA[@CHANGE_PROPOSAL_PROBLEM_STATEMENT]]></dynamic-content>
+			</dynamic-element>
+			<dynamic-element name="SolutionRequirements" type="text_box" index-type="text">
+				<dynamic-content language-id="en_GB"><![CDATA[@CHANGE_PROPOSAL_SOLUTION_REQUIREMENTS]]></dynamic-content>
+			</dynamic-element>
+		</dynamic-element>
+		<dynamic-element name="ChangeProgresion" type="selection_break" index-type="keyword">
+			<dynamic-element name="ChangePath" type="list" index-type="keyword">
+				<dynamic-content language-id="en_GB"><![CDATA[@CHANGE_PROPOSAL_CHANGE_PATH]]></dynamic-content>
+			</dynamic-element>
+			<dynamic-element name="ResponsibleCommittee" type="text" index-type="keyword">
+				<dynamic-content language-id="en_GB"><![CDATA[@CHANGE_PROPOSAL_RESPONSIBLE_COMMITTEE]]></dynamic-content>
+			</dynamic-element>
+			<dynamic-element name="PriorityStatus" type="text" index-type="keyword">
+				<dynamic-content language-id="en_GB"><![CDATA[@CHANGE_PROPOSAL_PRIORITY_STATUS]]></dynamic-content>
+			</dynamic-element>
+			<dynamic-element name="UrgentChange" type="list" index-type="keyword">
+				<dynamic-content language-id="en_GB"><![CDATA[@CHANGE_PROPOSAL_URGENT_CHANGE]]></dynamic-content>
+			</dynamic-element>
+		</dynamic-element>
+		<dynamic-element name="AttachDocuments" type="document_library" index-type="keyword">
+			<dynamic-element name="DocumentTitle" type="text" index-type="keyword">
+				<dynamic-content language-id="en_GB"><![CDATA[@CHANGE_PROPOSAL_DOCUMENT_TITLE]]></dynamic-content>
+			</dynamic-element>
+			<dynamic-content language-id="en_GB"><![CDATA[{"classPK":45908,"groupId":"20121","title":"constans.txt","type":"document","uuid":"ed59b165-518d-8e5c-e18f-ae9655afd1d8"}]]></dynamic-content>
+		</dynamic-element>
+	</dynamic-element>
+	<dynamic-element name="Comments" type="selection_break" index-type="keyword">
+		<dynamic-element name="Deadline" type="ddm-date" index-type="keyword">
+			<dynamic-content language-id="en_GB"><![CDATA[@CHANGE_PROPOSAL_DEADLINE]]></dynamic-content>
+		</dynamic-element>
+	</dynamic-element>
+</root>

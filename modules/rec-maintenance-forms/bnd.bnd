@@ -1,0 +1,4 @@
+Bundle-Name: rec-maintenance-forms
+Bundle-SymbolicName: com.everis.rec.maintenanceforms
+Bundle-Version: 1.0.0
+Export-Package: com.everis.rec.maintenanceforms.constants

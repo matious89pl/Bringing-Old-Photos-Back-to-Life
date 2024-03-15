@@ -1,0 +1,12 @@
+Bundle-Name: rec-forms-service-api
+Bundle-SymbolicName: rec.everis.forms.service.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	rec.everis.forms.service.exception,\
+	rec.everis.forms.service.model,\
+	rec.everis.forms.service.service,\
+	rec.everis.forms.service.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../rec-forms-service-service/service.xml
+Import-Package: \
+    *;resolution:=optional

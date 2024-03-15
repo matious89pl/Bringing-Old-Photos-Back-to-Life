@@ -1,0 +1,10 @@
+Bundle-Name: rec-confidential-message-api
+Bundle-SymbolicName: rec.confidential.message.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	rec.confidential.message.exception,\
+	rec.confidential.message.model,\
+	rec.confidential.message.service,\
+	rec.confidential.message.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../rec-confidential-message-service/service.xml

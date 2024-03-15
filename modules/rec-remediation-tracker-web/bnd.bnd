@@ -1,0 +1,6 @@
+Bundle-Name: rec-remediation-tracker-web
+Bundle-SymbolicName: com.everis.rec.remediation.tracker
+Bundle-Version: 1.0.0
+Export-Package: com.everis.rec.remediation.tracker.constants
+Import-Package: \
+    *;resolution:=optional

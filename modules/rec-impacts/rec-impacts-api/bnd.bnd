@@ -1,0 +1,10 @@
+Bundle-Name: rec-impacts-api
+Bundle-SymbolicName: com.everis.rec.impacts.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.everis.rec.impacts.exception,\
+	com.everis.rec.impacts.model,\
+	com.everis.rec.impacts.service,\
+	com.everis.rec.impacts.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../rec-impacts-service/service.xml

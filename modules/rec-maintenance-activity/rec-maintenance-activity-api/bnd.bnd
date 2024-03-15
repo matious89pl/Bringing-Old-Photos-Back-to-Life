@@ -1,0 +1,12 @@
+Bundle-Name: rec-maintenance-activity-api
+Bundle-SymbolicName: com.everis.rec.maintenanceactivity.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.everis.rec.maintenanceactivity.exception,\
+	com.everis.rec.maintenanceactivity.model,\
+	com.everis.rec.maintenanceactivity.service,\
+	com.everis.rec.maintenanceactivity.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../rec-maintenance-activity-service/service.xml
+Import-Package: \
+    *;resolution:=optional

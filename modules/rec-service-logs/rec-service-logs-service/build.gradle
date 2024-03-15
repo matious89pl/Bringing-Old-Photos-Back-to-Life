@@ -1,0 +1,18 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+	compileOnly project(":modules:rec-service-logs:rec-service-logs-api")
+}
+
+buildService {
+	apiDir = "../rec-service-logs-api/src/main/java"
+}
+
+group = "com.everis.rec.service.activity.logs"
+
+tasks.withType(JavaCompile) {
+
+	// Generated classes using Jodd library are unable to be read when compiled against JDK 11
+
+	sourceCompatibility = JavaVersion.VERSION_1_8
+	targetCompatibility = JavaVersion.VERSION_1_8
+}

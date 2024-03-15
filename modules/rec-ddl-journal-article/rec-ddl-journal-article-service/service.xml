@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.3.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_3_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.everis.rec.ddl.journal.article">
+	<namespace>REC_DDL_JOURNAL_ARTICLE</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="DDL_JournalArticle" remote-service="true" table="rec_ddl_journal_article">
+		<column name="ddlRecordSetId" primary="true" type="long" />
+		<column name="journalResourcePrimKey" type="long" />
+	</entity>
+</service-builder>

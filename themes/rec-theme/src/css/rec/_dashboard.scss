@@ -1,0 +1,391 @@
+#rec-theme {
+    h2#title-newsfeed-dashboard{
+        
+        padding-left: 10px;
+        color: rgb(0, 0, 0);
+        font-family: "Roboto-Medium" !important;
+        font-size: 32px;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        line-height: 48px;
+    }
+    
+    #dashboard {
+
+        // Hiperlinks 
+        #portalRECdev{
+                background: rgba(112, 173, 163,0.2);
+                border-radius: 4px;
+                height: auto;
+                padding-bottom: 1px;
+                margin-bottom: 10px;
+        }
+        
+        #portalRECdev h2{
+            padding: 10px;
+            font-size: 20px;
+            font-weight: 700;
+            background: rgba(112, 173, 163,0.3);
+        }
+        
+        .list{
+            display: block;
+        }
+        
+        .list a{
+            color:rgb(0, 0, 0);
+        }
+        
+    
+        // LINK SERVICES 
+        #accessRECservices{
+                background: rgba(112, 173, 163,0.2);
+                border-radius: 4px;
+                height: auto;
+                padding-bottom: 1px;
+                margin-bottom: 10px;
+        }
+        
+        #accessRECservices h2{
+            padding: 10px;
+            font-size: 20px;
+            font-weight: 700;
+            background: rgba(112, 173, 163,0.3);
+        }
+
+        #accessRECservices a{
+            font-size: 16px;
+            line-height: 36px;
+        }
+        
+         #hyperLinks {
+          column-count: 2;
+          padding: 10px;
+          line-height: 36px;
+        } 
+
+         #hyperLinks img{
+          width: 18px;
+          padding-bottom: 3px;
+          margin-right: 10px;
+        } 
+
+        #hyperLinks a{
+            font-size: 16px;
+        }      
+
+
+	.imageLinks{
+        text-decoration: none !important;
+    }
+    
+    .imageTitle{
+        padding-left: 10px;
+        color: rgb(0, 0, 0);
+        font-family: "Roboto-Medium" !important;
+        font-size: 32px;
+        font-weight: 500;
+        height: 48px;
+        letter-spacing: 1.5px;
+        line-height: 48px;
+    }
+    
+    #layout-column_column-6 .portlet .portlet-content .portlet-content-container .portlet-body{
+            
+        display: inline-flex;
+
+    }
+    
+    #layout-column_column-6 .h4{
+        display: none;
+    }
+    
+    #layout-column_column-6 .mb-4  {
+        display: none;
+    }
+    
+    
+    
+    .image{
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+    
+    .imageFoot{
+        padding: 16px;
+        color: rgb(0, 0, 0);
+        font-size: 12px;
+        font-family: Roboto-Regular !important;
+        font-weight: normal;
+        letter-spacing: 0.25px;
+        line-height: 18px;
+    }
+    
+    .imageDate{
+        padding-left: 16px;
+        padding-top: 16px;
+        height: 24px;
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        font-family: Roboto-Regular !important;
+        font-weight: normal;
+        letter-spacing: 0.5px;
+        line-height: 24px;
+    }
+
+    #portalRECdev{
+	        background: rgba(112, 173, 163,0.2);
+	        border-radius: 4px;
+	        height: auto;
+	        padding-bottom: 1px;
+            margin-bottom: 10px;
+    }
+    
+    #portalRECdev h2{
+        padding: 10px;
+        font-size: 20px;
+        font-weight: 700;
+        background: rgba(112, 173, 163,0.3);
+    }
+    
+    .list{
+        display: block;
+    }
+	
+    .list a{
+        color:rgb(0, 0, 0);
+    }
+    
+    #accessRECservices{
+	        background: rgba(112, 173, 163,0.2);
+	        border-radius: 4px;
+	        height: auto;
+	        padding-bottom: 1px;
+            margin-bottom: 10px;
+    }
+    
+    #accessRECservices h2{
+        padding: 10px;
+        font-size: 20px;
+        font-weight: 700;
+        background: rgba(112, 173, 163,0.3);
+    }
+
+    
+    }
+
+    @media screen and (max-width: 600px) {
+        #carouselExampleIndicators {
+                    .carousel-control-prev-icon,
+		         .carousel-control-next-icon {margin-bottom: 300px;}
+                 
+                 .inlineImageText {
+                    flex-direction: column-reverse;
+                }
+
+                button.lfr-ddm-form-pagination-next {
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: block;
+                    float: none !important;
+                }
+
+                .carousel-caption {
+                    padding: 0px;
+                    left: 10%;
+                }
+
+                ol.carousel-indicators {
+                    padding: 0 !important;
+                    right: 0;
+                }
+
+        }
+
+        #hyperLinks {
+            column-count: 1 !important;
+        }
+
+        #hyperLinks ul {
+            padding-left: 10px !important;
+        }
+
+        #main-content .asset-full-content.clearfix.mb-5.show-asset-title {
+            height: 100% !important;
+        }
+
+         
+    }
+    
+    #carouselExampleIndicators{
+    	.carousel-caption {
+			position: absolute;
+			top:100px;
+			max-width: 100%;
+			width:40%;
+			}
+			
+		.carousel-indicators {
+			text-align: left;
+			float: left;
+			left: 0% !important;
+			right: inherit;
+			bottom:100px;
+			
+			}
+		.carousel-control-prev-icon,
+		.carousel-control-next-icon {
+			height: 100px;
+			width: 100px;
+			background-size: 100%, 100%;
+			background-image: none;
+			}
+
+            
+			
+		.carousel-control-next-icon:after
+			{
+			content: '>';
+			font-size: 55px;
+			color: black;
+			}
+			
+		.carousel-control-prev-icon:after {
+			content: '<';
+			font-size: 55px;
+			color: black;
+			}
+			
+		.carousel-indicators li {
+			    background-color: rgb(144, 192, 184);  
+			}
+		.carousel-indicators .active {
+			    background-color: rgb(112, 173, 163);  
+			}
+			
+		.titleCarrousel{
+			  color: rgb(0, 0, 0);
+			  font-size: 24px;
+			  font-family: "Roboto-medium" !important;
+			  font-weight: 500;
+			  letter-spacing: 1px;
+			  line-height: 36px;
+			}
+			
+		.descriptionCarrousel{
+			  color: rgb(0, 0, 0);
+			  font-size: 16px;
+			  font-weight: normal;
+			  letter-spacing: 0.5px;
+			  line-height: 24px;
+			}
+    }
+
+
+    //NEWS FEED
+    #newsFeedDashboard{
+    
+        .imageLinks{
+            text-decoration: none !important;
+        }
+        
+        .portlet-body{
+            display: inline-flex;
+        }
+        
+        .autofit-row.mb-4.metadata-author {
+            display: none;
+        }
+
+        p.component-title.h4 {
+            display: none;
+        }
+        
+        #layout-column_column-7 .h4{
+            display: none;
+        }
+        
+        #layout-column_column-7 .mb-4  {
+            display: none;
+        }
+        
+        .imageSimple{
+            margin: 10px;
+            border-radius: 4px;
+            box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+            height: 300px;
+        }
+        
+        .image{
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+        
+        .imageFoot{
+            padding: 16px;
+            color: rgb(0, 0, 0);
+            font-size: 12px;
+            font-family: Roboto-Regular !important;
+            font-weight: normal;
+            letter-spacing: 0.25px;
+            line-height: 18px;
+            
+            max-width: 275px;
+            max-height: 70px;
+        }
+        
+        
+        
+        .imageDate{
+            padding-left: 16px;
+            padding-top: 16px;
+            height: 24px;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            font-family: Roboto-Regular !important;
+            font-weight: normal;
+            letter-spacing: 0.5px;
+            line-height: 24px;
+        }
+        
+        .descriptionFoot{
+            display: none !important;
+        }
+        
+         /*
+          Style specific NEWS
+          */
+          
+         .dateFootNews{
+            padding-left: 16px;
+            padding-top: 16px;
+            height: 24px;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            font-family: Roboto-Regular !important;
+            font-weight: normal;
+            letter-spacing: 0.5px;
+            line-height: 24px;
+        }
+        
+        .textFootNews {
+            padding: 16px;
+            color: rgb(0, 0, 0);
+            font-size: 14px;
+            font-family: Roboto-Regular !important;
+            font-weight: normal;
+            letter-spacing: 0.25px;
+            line-height: 18px;
+        }
+    
+        .descriptionFootNews {
+            padding: 16px;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            font-family: Roboto-Regular !important;
+            font-weight: normal;
+            letter-spacing: 0.25px;
+            line-height: 18px;
+        }
+    }
+}

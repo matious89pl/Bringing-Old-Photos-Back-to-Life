@@ -1,0 +1,8 @@
+Bundle-Name: my-form-field
+Bundle-SymbolicName: rec.auto.email.form.field
+Bundle-Version: 1.0.0
+Provide-Capability:\
+	soy;\
+		type:String="LiferayFormField"
+Web-ContextPath: /dynamic-data-my-form-field-form-field
+Import-Package: *; version="0";resolution:=optional

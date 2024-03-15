@@ -1,0 +1,22 @@
+create table AMAF_MaintenanceActivityForms (
+	uuid_ VARCHAR(75) null,
+	maintenanceactivityformId LONG not null primary key,
+	groupId LONG,
+	companyId LONG,
+	userId LONG,
+	userName VARCHAR(75) null,
+	createDate DATE null,
+	modifiedDate DATE null,
+	formType VARCHAR(500) null,
+	year INTEGER,
+	submitDate DATE null,
+	approvalDate DATE null,
+	submitDateFormatted VARCHAR(75) null,
+	approvalDateFormatted VARCHAR(75) null,
+	status VARCHAR(75) null,
+	formInstanceRecordVersionId LONG,
+	orgSiteId LONG,
+	viewUrl VARCHAR(2500) null,
+	formInstanceId LONG,
+	formInstanceRecordId LONG
+);

@@ -1,0 +1,10 @@
+Bundle-Name: rec-cpimpact-api
+Bundle-SymbolicName: com.everis.rec.cpimpact.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.everis.rec.cpimpact.exception,\
+	com.everis.rec.cpimpact.model,\
+	com.everis.rec.cpimpact.service,\
+	com.everis.rec.cpimpact.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../rec-cpimpact-service/service.xml

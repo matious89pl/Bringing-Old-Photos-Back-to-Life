@@ -1,0 +1,111 @@
+#rec-theme {
+    #p_p_id_com_liferay_notifications_web_portlet_NotificationsPortlet_ {
+
+        a.nav-link.active.link-unstyled::after{
+            background-color: rgb(77, 137, 52);
+            height: 2px;
+        }
+    
+        h2.portlet-title-text::before{
+            content: " " url("../images/forms/bell.svg");
+            padding-right: 30px ;
+            vertical-align: top;
+        }
+    
+        h2.portlet-title-text {
+            font-size: 32px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            line-height: 48px;
+            text-transform: capitalize;
+            color: black;
+        }
+    
+        #_com_liferay_notifications_web_portlet_NotificationsPortlet_fm {
+            box-shadow: none !important;
+        }
+        
+        li.list-group-item-flex div.autofit-col:nth-child(2) {
+            display: none;
+        }
+
+        input[name="_com_liferay_notifications_web_portlet_NotificationsPortlet_rowIds"] {
+            height: 24px;
+            width: 24px;
+            border-radius: 2px;
+            box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+        }
+        
+        li.list-group-item.list-group-item-flex {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        li.list-group-item.list-group-item-flex div.autofit-col:first-child {
+            padding-left: 0;
+        }
+
+        li.list-group-item.list-group-item-flex div.autofit-col:last-child {
+            padding-right: 0;
+        }
+        
+        .list-group-item {
+            box-shadow: none;
+        }
+        
+        h5.text-default {
+            font-size: 12px;
+            letter-spacing: 0.25px;
+            line-height: 18px;
+            font-weight: normal;
+            color: black;
+        }
+        
+        ul.navbar-nav li.nav-item a {
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            line-height: 24px;
+            font-weight: normal;
+        }
+
+        ul.navbar-nav li.nav-item a.active {
+            font-weight: bold;
+        }
+        
+        .lfr-icon-menu {
+            background-color: rgba(0, 0, 0, 0.15);
+            border-radius: 5px;
+        }
+
+        svg.lexicon-icon.lexicon-icon-ellipsis-v {
+            color: black;
+        }
+
+        .navbar-underline.navbar-expand-md .navbar-nav .nav-link.active:after {
+            background-color: #4d8934;
+            height: 2px;
+        }
+
+        .list-group-item-flex .autofit-col {
+            padding-left: 1.5rem;
+        }
+        
+        div#notificationsManagementToolbar {
+            display: none;
+        }
+        
+        li.list-group-item.list-group-item-flex {
+            border-bottom: 2px solid;
+        }
+        
+        .navigation-bar {
+            border-style: none;
+        }
+    }
+
+    .lfr-asset-column-details .task-content-author {
+        padding-top: 6em !important;
+    }
+    
+}
+

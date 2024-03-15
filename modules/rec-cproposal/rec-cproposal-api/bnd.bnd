@@ -1,0 +1,12 @@
+Bundle-Name: rec-cproposal-api
+Bundle-SymbolicName: com.everis.cproposal.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.everis.cproposal.exception,\
+	com.everis.cproposal.model,\
+	com.everis.cproposal.service,\
+	com.everis.cproposal.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../rec-cproposal-service/service.xml
+Import-Package: \
+    *;resolution:=optional

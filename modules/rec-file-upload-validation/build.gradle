@@ -1,0 +1,10 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+	compileOnly group: "commons-io", name: "commons-io"
+
+	compileInclude group: 'com.github.java-json-tools', name: 'json-schema-validator', version: '2.2.14'
+	
+	cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.0.2"
+	compileOnly project(":modules:rec-file-conf-service:rec-file-conf-service-api")
+	
+}

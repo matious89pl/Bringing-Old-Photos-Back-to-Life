@@ -1,0 +1,10 @@
+Bundle-Name: rec-remediation-tracker-service-api
+Bundle-SymbolicName: com.everis.rec.remediation.tracker.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.everis.rec.remediation.tracker.exception,\
+	com.everis.rec.remediation.tracker.model,\
+	com.everis.rec.remediation.tracker.service,\
+	com.everis.rec.remediation.tracker.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../rec-remediation-tracker-service-service/service.xml

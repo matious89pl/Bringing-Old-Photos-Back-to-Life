@@ -1,0 +1,138 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "conf_name": {
+      "type": "string"
+    },
+    "has_blocks": {
+      "type": "boolean"
+    },
+	"has_headers": {
+      "type": "boolean"
+    },
+    "enabled_extensions": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "extension": {
+              "type": "string"
+            },
+            "delimiter": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1
+            }
+          },
+          "required": [
+            "extension",
+            "delimiter"
+          ]
+        }
+      ],
+      "minItems": 1
+    },
+    "file_type": {
+      "type": "string",
+      "enum": [
+        "type1",
+        "type2",
+        "type3",
+        "type4"
+      ]
+    },
+    "columns": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "blockName": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "startPosition": {
+              "type": ["integer", "null"]
+            },
+            "maxLength": {
+              "type": ["integer", "null"]
+            },
+            "minLength": {
+              "type": ["integer", "null"]
+            },
+            "conditional": {
+              "type": "object",
+              "properties": {
+                "columnName": {
+                  "type": "string"
+                },
+                "operation": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "columnName",
+                "operation"
+              ]
+            },
+            "data": {
+              "type": "object",
+              "properties": {
+                "mandatory": {
+                  "type": "string",
+				  "enum": [
+					"M",
+					"C",
+					"P"
+				  ]
+                },
+                "type": {
+                  "type": "string",
+				  "enum": [
+					"text",
+					"numeric",
+					"date"
+				  ]
+                },
+                "format": {
+                  "type": ["string", "null"]
+                },
+                "values": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "mandatory",
+                "type"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "data"
+          ]
+        }
+      ],
+      "minItems": 1
+    }
+  },
+  "required": [
+    "conf_name",
+    "has_blocks",
+	"has_headers",
+    "enabled_extensions",
+    "file_type",
+    "columns"
+  ]
+}

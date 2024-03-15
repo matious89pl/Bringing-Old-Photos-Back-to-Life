@@ -1,0 +1,32 @@
+{
+    "availableLanguageIds": [
+        "en_GB"
+    ],
+    "defaultLanguageId": "en_GB",
+    "fields": [
+        {
+            "label": {
+                "en_GB": "HTML"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "html",
+            "fieldNamespace": "ddm",
+            "indexType": "text",
+            "localizable": true,
+            "name": "HTML1ldz",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": false,
+            "type": "ddm-text-html"
+        }
+    ]
+}

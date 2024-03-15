@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.3.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_3_0.dtd">
+<service-builder dependency-injector="ds" package-path="rec.link.menu">
+	<namespace>LinkMenu</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="LinkMenu" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="LinkMenu" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="linkId" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="linkName" type="String" />
+		<column name="link" type="String" />
+		<column name="linkPosition" type="int" />
+		<column name="iconName" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="linkPosition" />
+		</order>
+
+		<!-- References -->
+
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
+	</entity>
+</service-builder>

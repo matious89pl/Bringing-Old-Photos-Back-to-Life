@@ -1,0 +1,8 @@
+Bundle-Name: service-management-service
+Bundle-SymbolicName: com.everis.service.management.service
+Bundle-Version: 1.0.0
+Liferay-Require-SchemaVersion: 1.0.0
+Liferay-Service: true
+-dsannotations-options: inherit
+Import-Package: \
+    *;resolution:=optional

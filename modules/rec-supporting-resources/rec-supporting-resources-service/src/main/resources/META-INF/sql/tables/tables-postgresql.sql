@@ -1,0 +1,20 @@
+create table RECsr_supportR (
+	uuid_ varchar(75) null,
+	supportRId bigint not null primary key,
+	groupId bigint,
+	companyId bigint,
+	userId bigint,
+	userName varchar(75) null,
+	createDate timestamp null,
+	modifiedDate timestamp null,
+	specificParty varchar(75) null,
+	orgSiteId bigint,
+	type_ varchar(75) null,
+	title varchar(250) null,
+	description varchar(500) null,
+	dueDate timestamp null,
+	status varchar(75) null,
+	link varchar(1000) null,
+	displayLink varchar(75) null,
+	calendarBookingId bigint
+);

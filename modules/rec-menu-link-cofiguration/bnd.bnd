@@ -1,0 +1,4 @@
+Bundle-Name: rec-menu-link-cofiguration
+Bundle-SymbolicName: com.everis.rec.menu.link.cofiguration
+Bundle-Version: 1.0.0
+Export-Package: com.everis.rec.menu.link.cofiguration.constants

@@ -1,0 +1,10 @@
+Bundle-Name: rec-sites-api
+Bundle-SymbolicName: com.everis.rec.sites.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.everis.rec.sites.exception,\
+	com.everis.rec.sites.model,\
+	com.everis.rec.sites.service,\
+	com.everis.rec.sites.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../rec-sites-service/service.xml

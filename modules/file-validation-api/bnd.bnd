@@ -1,0 +1,8 @@
+Bundle-Name: file-validation-api
+Bundle-SymbolicName: rec.file.validation.util
+Bundle-Version: 1.0.0
+Export-Package: \
+	rec.file.validation.util.api,\
+	rec.file.validation.util.exceptions
+Import-Package: \
+    *;resolution:=optional

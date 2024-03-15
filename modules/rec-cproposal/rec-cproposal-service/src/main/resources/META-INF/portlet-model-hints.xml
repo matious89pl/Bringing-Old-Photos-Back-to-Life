@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.everis.cproposal.model.recFormArticle">
+		<field name="formId" type="long" />
+		<field name="articleId" type="long" />
+		<field name="articleStatus" type="String" />
+		<field name="articleReleaseSchedule" type="String" />
+		<field name="alternativeFormIds" type="String" />
+		<field name="articleImplementationDate" type="Date" />
+		<field name="articleChangePath" type="String" />
+		<field name="articleResponsibleCommittee" type="String" />
+		<field name="articleImpactedParties" type="String" />
+		<field name="articleChangeCategory" type="String" />
+		<field name="articleImpacts" type="String" />
+	</model>
+</model-hints>

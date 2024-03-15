@@ -1,0 +1,290 @@
+<%--
+/**
+ * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+--%>
+
+<%@ page
+	import="com.liferay.dynamic.data.mapping.service.DDMFormInstanceRecordVersionLocalServiceUtil"%>
+<%@ page
+	import="com.everis.cproposal.service.recFormArticleLocalServiceUtil"%>
+<%@ page
+	import="com.liferay.dynamic.data.mapping.service.DDMContentLocalServiceUtil"%>
+<%@ page
+	import="com.liferay.dynamic.data.mapping.model.DDMFormInstanceRecordVersion"%>
+<%@ page import="com.liferay.dynamic.data.mapping.model.DDMContent"%>
+<%@ page import="com.liferay.dynamic.data.mapping.model.DDMStructure"%>
+<%@ page import="com.liferay.dynamic.data.mapping.model.DDMStorageLink"%>
+<%@ page
+	import="com.liferay.dynamic.data.mapping.service.DDMStorageLinkLocalServiceUtil"%>
+<%@ page
+	import="com.liferay.dynamic.data.mapping.service.DDMStructureLocalServiceUtil"%>
+<%@ page import="com.liferay.portal.kernel.exception.PortalException"%>
+<%@ page import="com.liferay.portal.kernel.util.Validator"%>
+<%@ page import="com.liferay.portal.kernel.json.JSONFactoryUtil"%>
+<%@ page import="com.liferay.portal.kernel.json.JSONObject"%>
+<%@ page import="com.liferay.portal.kernel.json.JSONArray"%>
+<%@ page import="com.liferay.portal.kernel.json.JSONException"%>
+<%@ page import="com.liferay.portal.kernel.util.Validator"%>
+<%@ page import="java.util.Map"%>
+<%@ page import="java.util.HashMap"%>
+<%@ page import="java.util.Iterator"%>
+
+
+
+
+
+<liferay-ui:error exception="<%=WorkflowTaskDueDateException.class%>"
+	message="please-enter-a-valid-due-date" />
+
+<liferay-ui:search-container id="workflowTasks"
+	searchContainer="<%=workflowTaskDisplayContext.getWorkflowTaskSearch()%>">
+	<liferay-ui:search-container-row
+		className="com.liferay.portal.kernel.workflow.WorkflowTask"
+		cssClass="entry-display-style" modelVar="workflowTask"
+		stringKey="<%=true%>">
+		<liferay-ui:search-container-row-parameter name="workflowTask"
+			value="<%=workflowTask%>" />
+
+		<portlet:renderURL var="rowURL">
+			<portlet:param name="mvcPath" value="/edit_workflow_task.jsp" />
+			<portlet:param name="backURL" value="<%=currentURL%>" />
+			<portlet:param name="workflowTaskId"
+				value="<%=String.valueOf(workflowTask.getWorkflowTaskId())%>" />
+		</portlet:renderURL>
+
+		<c:choose>
+			<c:when test='<%=displayStyle.equals("descriptive")%>'>
+				<liferay-ui:search-container-column-icon cssClass="asset-icon"
+					icon="<%=workflowTaskDisplayContext.getAssetIconCssClass(workflowTask)%>" />
+
+				<liferay-ui:search-container-column-text colspan="<%=2%>">
+					<h5 class="text-default">
+
+						<%
+							dateSearchEntry.setDate(workflowTaskDisplayContext.getLastActivityDate(workflowTask));
+						%>
+
+						<liferay-ui:message key="last-activity-date" />
+						,
+						<%=dateSearchEntry.getName(request)%>
+					</h5>
+
+					<h4>
+						<aui:a href="<%=rowURL%>">
+							<%=HtmlUtil.escape(workflowTaskDisplayContext.getAssetTitle(workflowTask))%>
+						</aui:a>
+					</h4>
+
+					<h5 class="text-default">
+						<span class="asset-type"> <liferay-ui:message
+								key="<%=workflowTaskDisplayContext.getAssetType(workflowTask)%>" />
+						</span> <span class="task-name"
+							id="<%=String.valueOf(workflowTask.getWorkflowTaskId())%>">
+							<liferay-ui:message
+								key="<%=workflowTaskDisplayContext.getTaskName(workflowTask)%>" />
+						</span>
+
+						<c:if
+							test="<%=workflowTaskDisplayContext.getDueDate(workflowTask) != null%>">
+
+							<%
+								dateSearchEntry.setDate(workflowTaskDisplayContext.getDueDate(workflowTask));
+							%>
+
+							<span class="due-date"> <liferay-ui:message key="due-date" />:
+								<%=dateSearchEntry.getName(request)%>
+							</span>
+						</c:if>
+					</h5>
+				</liferay-ui:search-container-column-text>
+
+				<c:choose>
+					<c:when test="<%=!workflowTask.isCompleted()%>">
+						<liferay-ui:search-container-column-jsp align="right"
+							path="/workflow_task_action.jsp" />
+					</c:when>
+					<c:otherwise>
+						<liferay-ui:search-container-column-text
+							value="<%=StringPool.BLANK%>" />
+					</c:otherwise>
+				</c:choose>
+			</c:when>
+			<c:otherwise>
+
+				<%
+					boolean assetType = false;
+
+									assetType = workflowTaskDisplayContext.getAssetType(workflowTask).equals("Form Record");
+				%>
+
+				<%
+					long forminstancerecordversionId = workflowTaskDisplayContext
+											.getWorkflowContextEntryClassPK(workflowTask);
+
+									String Change_Proposal_Title = "Change Proposal Title";
+
+									boolean x = false;
+									try {
+										x = DDMFormInstanceRecordVersionLocalServiceUtil
+												.getFormInstanceRecordVersion(forminstancerecordversionId) != null;
+
+										Map<String, String> cpDataFormMap = new HashMap<String, String>();
+										Map<String, String> proposalMgmDataMap = new HashMap<String, String>();
+
+										DDMFormInstanceRecordVersion ddmFormInstanceRecordVersion;
+										try {
+											ddmFormInstanceRecordVersion = DDMFormInstanceRecordVersionLocalServiceUtil
+													.getDDMFormInstanceRecordVersion(forminstancerecordversionId);
+											Long storageId = ddmFormInstanceRecordVersion.getStorageId();
+											DDMContent ddmContent = DDMContentLocalServiceUtil.getContent(storageId);
+											String data = ddmContent.getData();
+											JSONObject dataJsonObject = JSONFactoryUtil.createJSONObject(data);
+											JSONArray dataFieldValuesArray = dataJsonObject.getJSONArray("fieldValues");
+											String name = StringPool.BLANK, value = StringPool.BLANK;
+											for (int i = 0; i < dataFieldValuesArray.length(); i++) {
+												JSONObject eachDataFieldJson = (JSONObject) dataFieldValuesArray.get(i);
+												if (Validator.isNotNull(eachDataFieldJson.getString("nestedFieldValues"))) {
+													JSONArray dataFieldValuesNestedArray = eachDataFieldJson
+															.getJSONArray("nestedFieldValues");
+													for (int j = 0; j < dataFieldValuesNestedArray.length(); j++) {
+														JSONObject eachDataFieldNestedJson = (JSONObject) dataFieldValuesNestedArray
+																.get(j);
+														name = eachDataFieldNestedJson.getString("name");
+														JSONObject valueObject = (JSONObject) eachDataFieldNestedJson
+																.get("value");
+														value = valueObject.getString("en_GB");
+														if (Validator.isNotNull(cpDataFormMap.get(name))) {
+															String previousValue = cpDataFormMap.get(name);
+															value = previousValue.concat(";spt;").concat(value);
+														}
+														cpDataFormMap.put(name, value);
+													}
+												} else {
+													name = eachDataFieldJson.getString("name");
+													try {
+														JSONObject valueObject = (JSONObject) eachDataFieldJson.get("value");
+														value = valueObject.getString("en_GB");
+													} catch (Exception e) {
+														value = (String) eachDataFieldJson.get("value");
+													}
+													if (Validator.isNotNull(cpDataFormMap.get(name))) {
+														String previousValue = cpDataFormMap.get(name);
+														value = previousValue.concat(";spt;").concat(value);
+													}
+													cpDataFormMap.put(name, value);
+												}
+
+											}
+
+										} catch (PortalException e) {
+											System.out.println("There is no ddmFormInstanceRecordVersion with id: "
+													+ forminstancerecordversionId);
+										}
+
+										if (!cpDataFormMap.isEmpty()) {
+											try {
+												ddmFormInstanceRecordVersion = DDMFormInstanceRecordVersionLocalServiceUtil
+														.getDDMFormInstanceRecordVersion(forminstancerecordversionId);
+												long storageId1 = ddmFormInstanceRecordVersion.getStorageId();
+												DDMStorageLink ddmStorageLink = DDMStorageLinkLocalServiceUtil
+														.getClassStorageLink(storageId1);
+												Long structureId = ddmStorageLink.getStructureId();
+												DDMStructure ddmStructure = DDMStructureLocalServiceUtil
+														.getDDMStructure(structureId);
+												String formDefinition = ddmStructure.getDefinition();
+												JSONObject formDefinitionJson = JSONFactoryUtil
+														.createJSONObject(formDefinition);
+												JSONArray formFieldsArray = (JSONArray) formDefinitionJson.get("fields");
+												JSONObject eachFieldJsonObject = JSONFactoryUtil.createJSONObject();
+
+												for (int b = 0; b < formFieldsArray.length(); b++) {
+
+													eachFieldJsonObject = (JSONObject) formFieldsArray.get(b);
+													JSONObject labelJsonObject = eachFieldJsonObject.getJSONObject("label");
+													String fieldLabel = labelJsonObject.getString("en_GB");
+													String nameField = eachFieldJsonObject.getString("name");
+
+													if (Change_Proposal_Title.equals(fieldLabel)) {
+														String cpTitleValue = cpDataFormMap.get(nameField);
+
+														String titleForm = "Change Proposal Form: " + cpTitleValue;
+				%>
+
+				<c:if test="<%=assetType%>">
+					<liferay-ui:search-container-column-text cssClass="asset-title"
+						href="<%=rowURL%>" name="asset-title" value="<%=titleForm%>" />
+				</c:if>
+
+				<%
+					}
+
+												}
+
+											} catch (Exception ex) {
+												System.out.println(ex);
+											}
+										}
+
+									} catch (Exception e) {
+										System.out.println(e);
+									}
+				%>
+
+
+
+				<c:if test="<%=!assetType%>">
+					<liferay-ui:search-container-column-text cssClass="asset-title"
+						href="<%=rowURL%>" name="asset-title"
+						value="<%=HtmlUtil.escape(workflowTaskDisplayContext.getAssetTitle(workflowTask))%>" />
+				</c:if>
+
+				<liferay-ui:search-container-column-text href="<%=rowURL%>"
+					name="asset-type"
+					value="<%=workflowTaskDisplayContext.getAssetType(workflowTask)%>" />
+
+				<liferay-ui:search-container-column-text href="<%=rowURL%>"
+					name="task">
+					<span class="task-name" id="<%=workflowTask.getWorkflowTaskId()%>">
+						<liferay-ui:message
+							key="<%=workflowTaskDisplayContext.getTaskName(workflowTask)%>" />
+					</span>
+				</liferay-ui:search-container-column-text>
+
+				<liferay-ui:search-container-column-date href="<%=rowURL%>"
+					name="last-activity-date"
+					value="<%=workflowTaskDisplayContext.getLastActivityDate(workflowTask)%>" />
+
+				<liferay-ui:search-container-column-date href="<%=rowURL%>"
+					name="due-date" orderable="<%=true%>"
+					value="<%=workflowTaskDisplayContext.getDueDate(workflowTask)%>" />
+
+				<c:choose>
+					<c:when test="<%=!workflowTask.isCompleted()%>">
+						<liferay-ui:search-container-column-jsp align="right"
+							path="/workflow_task_action.jsp" />
+					</c:when>
+					<c:otherwise>
+						<liferay-ui:search-container-column-text
+							value="<%=StringPool.BLANK%>" />
+					</c:otherwise>
+				</c:choose>
+			</c:otherwise>
+		</c:choose>
+	</liferay-ui:search-container-row>
+
+	<liferay-ui:search-iterator displayStyle="<%=displayStyle%>"
+		markupView="lexicon"
+		resultRowSplitter="<%=new WorkflowTaskResultRowSplitter()%>"
+		searchContainer="<%=workflowTaskDisplayContext.getWorkflowTaskSearch()%>" />
+</liferay-ui:search-container>

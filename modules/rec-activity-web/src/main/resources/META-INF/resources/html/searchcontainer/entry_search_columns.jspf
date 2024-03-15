@@ -1,0 +1,89 @@
+ <c:choose>
+ 	 <%-- Card view  --%>
+     <c:when
+         test='${assignmentsManagementToolbarDisplayContext.getDisplayStyle().equals("icon")}'>
+         <liferay-frontend:icon-vertical-card
+			  cssClass="col-md-3 col-sm-4 col-xs-12"
+			  icon="documents-and-media"
+			  resultRow="<%= row %>"
+			  title="<%= entry.getTitle(locale) %>"
+			/>
+     </c:when>
+ 
+ <%-- Descriptive (list) view --%>
+
+     <c:when
+         test='${assignmentsManagementToolbarDisplayContext.getDisplayStyle().equals("descriptive")}'>
+
+        <div class="row align-items-lg-center align-items-sm-center align-items-center align-items-md-center">
+         
+
+         <liferay-ui:search-container-column-text colspan="<%=3%>">
+
+             <%
+                 String modifiedDateDescription =
+                     LanguageUtil.getTimeDescription(
+                             request, System.currentTimeMillis() 
+                             - entry.getModifiedDate().getTime(), true);
+             %>
+
+             <h5 class="text-default">
+                 <liferay-ui:message
+                     arguments="<%=new String[] {entry.getTitle(), modifiedDateDescription}%>"
+                     key="x-modified-x-ago" />
+             </h5>
+
+             <h4>
+                ${entry.description}
+             </h4>
+             
+             <p>
+                ${entry.userName}
+             </p>
+             
+
+         </liferay-ui:search-container-column-text>
+       </div>  
+
+         <liferay-ui:search-container-column-text
+         	 href="#" 
+             name="actions"
+             value="Ver" 
+         />
+     </c:when>
+
+     
+
+     <%-- Table view --%>
+
+     <c:otherwise>
+
+    <div class="row align-items-lg-center align-items-sm-center align-items-center align-items-md-center">
+
+         
+         <liferay-ui:search-container-column-text  
+             name="title" 
+             value="<%= entry.getTitle(locale) %>" 
+         />
+
+         <liferay-ui:search-container-column-text
+             name="description"
+             property="description" 
+         />
+         
+         <liferay-ui:search-container-column-text
+             name="userName"
+             property="userName" 
+         />
+         
+         <liferay-ui:search-container-column-date 
+             name="modifiedDate"
+             property="modifiedDate" 
+         />
+
+       </div>  
+
+     </c:otherwise>
+ </c:choose>
+ 
+ 

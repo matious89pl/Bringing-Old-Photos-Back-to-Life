@@ -1,0 +1,4 @@
+Bundle-Name: rec-schedule
+Bundle-SymbolicName: com.everis.schedule
+Bundle-Version: 1.0.0
+Export-Package: com.everis.schedule.constants

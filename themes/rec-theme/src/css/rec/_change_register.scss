@@ -1,0 +1,246 @@
+#rec-theme {
+
+     #change-register,#change-calendar,#consultation-home,#Horizon-scanner,#code-roadmap,#impact-assessent,#prioritisation-matrix,#new-change-proposal {
+        h2 {
+            font-size: 16px;
+        }
+     }
+
+    @media (max-width: 1100px) {
+      #change-register,
+      #consultation-home,
+      #Horizon-scanner,
+      #code-roadmap,
+      #impact-assessent,
+      #prioritisation-matrix,
+      #new-change-proposal {
+        h2 {
+          font-size: 12px;
+          display: grid;
+        }
+
+        .row {
+          display: block;
+        }
+      }
+
+      #change-register,
+      #change-calendar,
+      #consultation-home,
+      #Horizon-scanner,
+      #code-roadmap,
+      #impact-assessent,
+      #prioritisation-matrix,
+      #new-change-proposal {
+        h2 {
+          font-size: 12px;
+        }
+      }
+
+      .rowFinal{
+        display: grid;
+      }
+    }
+
+    @media (max-width: 900px) {
+      h2.h2CM.final {
+        padding-top: 20px;
+      }
+    }
+
+    #change-register {
+        
+      #register-title {
+        color: rgb(0, 0, 0);
+        font-size: 32px;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        line-height: 48px;
+        font-family: "Roboto-medium" !important;
+      }
+        
+        #register-title::before {
+            content: " " url("../images/forms/grid.svg");
+            padding-right: 1%;
+            vertical-align: middle;
+        }
+
+        .left-align-text {
+            text-align: left;
+        }
+        
+        .center-align-text {
+            text-align: center;
+        }
+        
+        .margin-center {
+            margin: auto;
+        }
+        
+        #instanceReportTable {
+            width: 95%;
+        }
+
+        #table-impact {
+          background-color: white;
+          border-radius: 4px;
+          box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.3);
+          margin-top: 1%;
+          padding-top: 3%;
+      }
+        
+        td.important {
+          color: red;
+          font-size: 20px;
+        }
+        
+        th, td {
+          color: rgb(0, 0, 0);
+          font-size: 12px;
+          font-weight: normal;
+          letter-spacing: 0.25px;
+          line-height: 18px;
+          padding: 5px;
+        }
+        
+        th {
+          color: rgba(0, 0, 0, 0.6);
+        }
+        
+        td:nth-child(2) {
+          font-size: 16px;
+          font-weight: bold;
+          letter-spacing: 0.5px;
+          line-height: 24px;
+          color: black;
+          font-family: "Roboto-bold" !important;
+        }
+
+        td:nth-child(2) a {
+            color: black;
+            font-family: "Roboto-bold" !important;
+          }        
+
+        .open img {
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 4px;
+            padding: 10px;
+            
+        }
+
+        td:first-child {
+            width: 20px;
+            padding: 8px 0px 0px 0px;
+            vertical-align: initial;
+        }       
+    }
+
+    .tdUrgent{
+        width: 2%;
+    }
+
+    .tdTitle{
+        width: 25%;
+    }
+
+    .tdDate, .tdChange{
+        width: 12%;
+    }
+
+    .tdImpacted{
+        width: 20%;
+    }
+
+    .tdCP, .tdRespon{
+        width: 13%;
+    }
+
+    .tdOpen{
+        width: 3%;
+    }
+    
+    #change-register-pop-up1{
+        visibility:hidden;
+    }
+
+    #Proposal-mgt .status, #change-register .status {
+      color: white;
+      padding: 3px;
+      border-radius: 5px;
+      font-size: 10px;
+      letter-spacing: 0.25px;
+      line-height: 15px;
+    }
+    
+    .service-pro {
+      background: #4CDCD2;
+    }
+    
+    .rejected, .withdrawn {
+      background: #1E82CC;
+    }
+    
+    .appeal-prs {
+      background: #7AF021;
+    }
+    
+    .solution {
+      background: #54BDD8;
+    }
+
+    .initial-asse {
+        background: #5C9CD5;
+    }
+
+    .prel-asse {
+        background: #39E37B;
+    }
+
+    .consultation {
+        background: #30E845;
+    }
+
+    .final-asse {
+        background: #46EC27;
+    }
+
+    .approved-wait {
+        background: #e7ab00;
+    }
+
+    .waiting {
+        background: #B3C417;
+    }
+
+    .implement {
+        background: #FFC41B;
+    }
+
+    .party-imp {
+        background: #42E0AA;
+    }
+
+    #change-register-pop-up1 input[type="date"]{
+      color: #9b9b9b;
+    }
+     .Calendar-Release{
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 0px;
+    }
+
+    .col-md-6.c-c-calendar {
+        padding-left: 0;
+        padding-right: 8px;
+    }
+
+    .col-md-6.c-c-release {
+        padding-right: 0;
+        padding-left: 8px;
+    }   
+
+    #change-calendar .row .col-md-8 {
+        max-width: 100%;
+    } 
+
+}
